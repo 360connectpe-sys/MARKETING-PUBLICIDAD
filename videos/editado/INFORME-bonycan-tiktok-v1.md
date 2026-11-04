@@ -45,3 +45,10 @@ La chica explica cómo llegar a la tienda: Sodimac → Av. América Sur → Nues
 3. Subtítulos sincronizados con la voz, si me envías el guion o el texto de lo que dice.
 
 Los textos y tiempos se pueden ajustar en `bonycan-tiktok-ruta-v1.textos.ass`.
+
+## v2: transiciones (`bonycan-tiktok-ruta-v2-transiciones.mp4`)
+Se añadieron transiciones en los 12 cortes sin mover ningún tiempo, así que la voz sigue intacta y sincronizada:
+- **Barrido con desenfoque (whip):** 3,6 s · 8,1 s · 10 s · 16,5 s · 26,5 s, en las tomas de caminata y cambios de lugar.
+- **Destello blanco (flash):** 0,7 s · 22,8 s · 31,8 s y la entrada a la placa final.
+- **Glitch RGB:** 6,8 s · 14,1 s · 24,5 s.
+- **Zoom de impacto más fuerte** en cada corte (de 7 % a 11 %).
