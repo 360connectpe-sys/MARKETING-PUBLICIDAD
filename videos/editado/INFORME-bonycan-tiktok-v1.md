@@ -52,3 +52,9 @@ Se añadieron transiciones en los 12 cortes sin mover ningún tiempo, así que l
 - **Destello blanco (flash):** 0,7 s · 22,8 s · 31,8 s y la entrada a la placa final.
 - **Glitch RGB:** 6,8 s · 14,1 s · 24,5 s.
 - **Zoom de impacto más fuerte** en cada corte (de 7 % a 11 %).
+
+## v3: voz más clara y diseño con más vida (`bonycan-tiktok-ruta-v3.mp4`)
+- **Audio:** se realzó la voz y se bajó la música con un ecualizador: menos graves y más presencia en la frecuencia de la voz. También se comprimió y se normalizó a -14 LUFS, el volumen recomendado para TikTok. No se cambiaron el tono ni la velocidad. No se pudieron separar del todo voz y música porque la red bloqueó la descarga del modelo de separación. Si tienes el audio de la voz sola o el proyecto de CapCut, el resultado mejora mucho.
+- **Textos tipo sticker:** bordes redondeados, sombra, una leve inclinación, entrada con rebote y un balanceo suave mientras están en pantalla.
+- **Placa final de 5 s:** fondo animado con la toma de la tienda desenfocada y teñida de magenta, y huellas de patita flotando. Incluye Bony Can · Boutique & Spa, los servicios (Spa y baño, Veterinaria, Alimento premium, Accesorios), la dirección, el WhatsApp, @bonycan_ofc y "Perros y gatos felices".
+- Los textos se generan con `generar_textos_v3.py`.
