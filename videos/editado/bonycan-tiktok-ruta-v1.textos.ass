@@ -1,0 +1,40 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Hook,Inter ExtraBold,96,&H00FFFFFF,&H00FFFFFF,&H007E00E6,&H00000000,0,0,0,0,100,100,0,0,3,18,0,8,60,60,0,1
+Style: HookSub,Inter ExtraBold,52,&H007E00E6,&H00FFFFFF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,14,0,8,60,60,0,1
+Style: Paso,Inter ExtraBold,48,&H00FFFFFF,&H00FFFFFF,&H007E00E6,&H00000000,0,0,0,0,100,100,2,0,3,12,0,8,60,60,0,1
+Style: Lugar,Inter ExtraBold,62,&H00FFFFFF,&H00FFFFFF,&H00E5881E,&H00000000,0,0,0,0,100,100,0,0,3,16,0,8,60,60,0,1
+Style: Top,Inter ExtraBold,34,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,1,0,1,2,2,7,60,60,0,1
+Style: Card,Inter ExtraBold,60,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,8,60,60,0,1
+Style: CardBox,Inter ExtraBold,62,&H007E00E6,&H00FFFFFF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,18,0,8,60,60,0,1
+Style: CardBlue,Inter ExtraBold,66,&H00FFFFFF,&H00FFFFFF,&H00E5881E,&H00000000,0,0,0,0,100,100,0,0,3,18,0,8,60,60,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:32.36,Top,,0,0,0,,{\pos(60,262)}RUTA A BONY CAN
+Dialogue: 0,0:00:00.00,0:00:32.36,Top,,0,0,0,,{\an9\pos(1020,262)}@bonycan_ofc
+Dialogue: 1,0:00:00.10,0:00:03.60,Hook,,0,0,0,,{\pos(540,1150)\fscx40\fscy40\t(0,180,\fscx110\fscy110)\t(180,300,\fscx100\fscy100)\fad(0,200)}¿Cómo llegar a\NBONY CAN?
+Dialogue: 1,0:00:00.60,0:00:03.60,HookSub,,0,0,0,,{\pos(540,1420)\fad(150,200)}Te guiamos paso a paso
+Dialogue: 1,0:00:03.70,0:00:06.75,Lugar,,0,0,0,,{\pos(540,1330)\fscx40\fscy40\t(0,180,\fscx108\fscy108)\t(180,280,\fscx100\fscy100)\fad(0,150)}Boutique & Spa\Npara tu engreído
+Dialogue: 1,0:00:06.90,0:00:08.10,Paso,,0,0,0,,{\pos(540,1270)\fad(100,0)}PASO 1
+Dialogue: 1,0:00:06.90,0:00:08.10,Lugar,,0,0,0,,{\pos(540,1350)\fscx40\fscy40\t(0,180,\fscx108\fscy108)\t(180,280,\fscx100\fscy100)\fad(0,150)}Frente a Sodimac
+Dialogue: 1,0:00:08.15,0:00:14.10,Paso,,0,0,0,,{\pos(540,1270)}PASO 2
+Dialogue: 1,0:00:08.15,0:00:14.10,Lugar,,0,0,0,,{\pos(540,1350)\fscx40\fscy40\t(0,180,\fscx108\fscy108)\t(180,280,\fscx100\fscy100)\fad(0,150)}Por Av. América Sur
+Dialogue: 1,0:00:14.15,0:00:22.80,Paso,,0,0,0,,{\pos(540,1270)}PASO 3
+Dialogue: 1,0:00:14.15,0:00:22.80,Lugar,,0,0,0,,{\pos(540,1350)\fscx40\fscy40\t(0,180,\fscx108\fscy108)\t(180,280,\fscx100\fscy100)\fad(0,150)}Nuestra Señora\Nde la Correa
+Dialogue: 1,0:00:24.50,0:00:26.45,Lugar,,0,0,0,,{\pos(540,1330)\fscx40\fscy40\t(0,180,\fscx108\fscy108)\t(180,280,\fscx100\fscy100)\fad(0,150)}Alimento premium\N+ accesorios
+Dialogue: 1,0:00:26.55,0:00:31.80,Paso,,0,0,0,,{\pos(540,1270)}¡LLEGASTE!
+Dialogue: 1,0:00:26.55,0:00:31.80,Lugar,,0,0,0,,{\pos(540,1350)\fscx40\fscy40\t(0,180,\fscx108\fscy108)\t(180,280,\fscx100\fscy100)\fad(0,150)}Carlos Wiesse 670
+Dialogue: 1,0:00:32.45,0:00:36.00,Card,,0,0,0,,{\pos(540,380)\fs50\fad(200,0)}¡TE ESPERAMOS!
+Dialogue: 1,0:00:32.55,0:00:36.00,Card,,0,0,0,,{\pos(540,470)\fs170\fscx40\fscy40\t(0,200,\fscx108\fscy108)\t(200,320,\fscx100\fscy100)}Bony Can
+Dialogue: 1,0:00:32.75,0:00:36.00,Card,,0,0,0,,{\pos(540,690)\fs46\fsp10\fad(200,0)}BOUTIQUE & SPA
+Dialogue: 1,0:00:33.05,0:00:36.00,CardBox,,0,0,0,,{\pos(540,860)\fscx40\fscy40\t(0,180,\fscx106\fscy106)\t(180,280,\fscx100\fscy100)}Carlos Wiesse 670\NTrujillo
+Dialogue: 1,0:00:33.35,0:00:36.00,CardBlue,,0,0,0,,{\pos(540,1110)\fscx40\fscy40\t(0,180,\fscx106\fscy106)\t(180,280,\fscx100\fscy100)}WhatsApp 968 827 219
+Dialogue: 1,0:00:33.65,0:00:36.00,Card,,0,0,0,,{\pos(540,1270)\fs50\fad(200,0)}Síguenos en TikTok\N{\fs64}@bonycan_ofc
