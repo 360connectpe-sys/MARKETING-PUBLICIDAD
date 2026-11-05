@@ -1,0 +1,137 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Poppins", sans-serif; }
+    #so-bgA { position: absolute; inset: 0; background: linear-gradient(180deg, #1b2440, #2b3352); }
+    #so-bgB { position: absolute; inset: 0; background: radial-gradient(circle at 50% 55%, #cfe2ff 0, transparent 55%), linear-gradient(180deg, #eaf2ff, #f3f7ff); }
+    .so-title { position: absolute; left: 80px; right: 80px; top: 230px; text-align: center; font-weight: 800; font-size: 74px; line-height: 1.14; letter-spacing: -1px; }
+    #so-t1 { color: #fff; }
+    #so-t1 span { color: #ffb347; }
+    #so-t2 { color: #0a1a3d; }
+    #so-t2 span { color: #1570ff; }
+    #so-sub { position: absolute; left: 80px; right: 80px; top: 430px; text-align: center; font-size: 40px; font-weight: 600; color: #5b6785; }
+    #so-door { position: absolute; left: 760px; top: 680px; width: 240px; height: 520px; border-radius: 120px 120px 0 0; background: #f5b400; opacity: .25; }
+    #so-guy { position: absolute; left: 200px; top: 740px; width: 220px; height: 460px; }
+    #so-head { position: absolute; left: 60px; top: 0; width: 100px; height: 100px; border-radius: 50%; background: #f2c19b; }
+    #so-torso { position: absolute; left: 30px; top: 110px; width: 160px; height: 210px; border-radius: 70px 70px 20px 20px; background: #22c3ff; }
+    #so-legL, #so-legR { position: absolute; top: 310px; width: 46px; height: 150px; border-radius: 20px; background: #0f2556; transform-origin: 50% 0; }
+    #so-legL { left: 56px; } #so-legR { left: 118px; }
+    #so-think { position: absolute; left: 330px; top: 540px; background: #fff; color: #13203d; font-size: 42px; font-weight: 700; padding: 26px 40px; border-radius: 60px; }
+    #so-greystars { position: absolute; left: 0; right: 0; top: 1215px; text-align: center; font-size: 90px; color: #59627e; letter-spacing: 12px; }
+    #so-bot { position: absolute; left: 30px; top: 900px; width: 300px; height: 412px; }
+    #so-plate { position: absolute; left: 300px; top: 590px; width: 440px; height: 580px; border-radius: 30px; overflow: hidden; box-shadow: 0 30px 70px rgba(10,26,61,.3); }
+    #so-plate img { width: 100%; height: 100%; object-fit: cover; }
+    .so-ring { position: absolute; left: 470px; top: 900px; width: 120px; height: 120px; border-radius: 50%; border: 8px solid #22c3ff; }
+    #so-phone { position: absolute; left: 700px; top: 700px; width: 320px; height: 600px; background: #fff; border: 12px solid #141a2e; border-radius: 48px; overflow: hidden; box-shadow: 0 30px 70px rgba(10,26,61,.35); }
+    #so-phone .hd { background: #1570ff; color: #fff; font-size: 30px; font-weight: 700; padding: 46px 20px 24px; text-align: center; }
+    #so-phone .q { text-align: center; font-size: 30px; color: #13203d; font-weight: 600; margin: 50px 16px 20px; }
+    #so-pstars { text-align: center; font-size: 50px; letter-spacing: 2px; }
+    .so-s { color: #b0b8c9; display: inline-block; }
+    #so-ok { margin: 50px 30px 0; background: #22c55e; color: #fff; text-align: center; font-weight: 700; font-size: 28px; padding: 14px; border-radius: 999px; }
+    #so-flash { position: absolute; inset: 0; background: #fff; }
+  </style>
+  <div id="root" data-composition-id="solution" data-width="1080" data-height="1920">
+    <div id="so-bgA"></div>
+    <h1 id="so-t1" class="so-title">Tus clientes felices se van <span>sin calificar</span></h1>
+    <div id="so-door"></div>
+    <div id="so-guy"><div id="so-head"></div><div id="so-torso"></div><div id="so-legL"></div><div id="so-legR"></div></div>
+    <div id="so-think">¿Calificar? Uf… qué pereza</div>
+    <div id="so-greystars">★★★★★</div>
+    <div id="so-bgB"></div>
+    <h1 id="so-t2" class="so-title">Toca o escanea <span>y listo</span></h1>
+    <div id="so-sub">Reseña en 1 segundo · NFC + QR</div>
+    <div id="so-plate"><img src="assets/google-blanca.jpg" alt="Placa Google 360 Connect"></div>
+    <div class="so-ring" id="so-r1"></div>
+    <div class="so-ring" id="so-r2"></div>
+    <div id="so-phone">
+      <div class="hd">Google Maps</div>
+      <div class="q">Califica tu experiencia</div>
+      <div id="so-pstars" data-layout-ignore><span class="so-s">★</span><span class="so-s">★</span><span class="so-s">★</span><span class="so-s">★</span><span class="so-s">★</span></div>
+      <div id="so-ok">¡Gracias!</div>
+    </div>
+    <div id="so-bot"><svg class="connecti" viewBox="0 0 320 440" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="160" cy="428" rx="110" ry="10" fill="rgba(10,26,61,.18)"/>
+  <g id="soc-body">
+    <g id="soc-waves" fill="none" stroke="#22c3ff" stroke-width="7" stroke-linecap="round">
+      <path id="soc-w1" d="M262 38 a18 18 0 0 1 0 30"/>
+      <path id="soc-w2" d="M276 26 a32 32 0 0 1 0 54"/>
+      <path id="soc-w3" d="M290 14 a46 46 0 0 1 0 78"/>
+    </g>
+    <circle cx="248" cy="53" r="8" fill="#1e88f0"/>
+    <line x1="232" y1="70" x2="246" y2="56" stroke="#1e88f0" stroke-width="7" stroke-linecap="round"/>
+    <g id="soc-legs">
+      <rect x="112" y="300" width="22" height="90" rx="10" fill="#141a2e"/>
+      <rect x="186" y="300" width="22" height="90" rx="10" fill="#141a2e"/>
+      <ellipse cx="120" cy="396" rx="30" ry="18" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+      <ellipse cx="200" cy="396" rx="30" ry="18" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+    </g>
+    <g id="soc-armL">
+      <path d="M66 190 L20 120" stroke="#1e88f0" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="20" cy="118" r="17" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+    </g>
+    <g id="soc-armR">
+      <path d="M254 190 L300 230" stroke="#1e88f0" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="302" cy="232" r="17" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+    </g>
+    <rect x="60" y="72" width="200" height="238" rx="34" fill="#1e88f0"/>
+    <rect x="60" y="72" width="200" height="238" rx="34" fill="none" stroke="#0f6fd6" stroke-width="5"/>
+    <rect x="78" y="90" width="164" height="128" rx="18" fill="#fff"/>
+    <g id="soc-eyes">
+      <ellipse cx="130" cy="140" rx="15" ry="18" fill="#0d1226"/>
+      <ellipse cx="190" cy="140" rx="15" ry="18" fill="#0d1226"/>
+      <circle cx="135" cy="133" r="5" fill="#fff"/>
+      <circle cx="195" cy="133" r="5" fill="#fff"/>
+    </g>
+    <ellipse cx="108" cy="170" rx="12" ry="7" fill="#ffb3c1"/>
+    <ellipse cx="212" cy="170" rx="12" ry="7" fill="#ffb3c1"/>
+    <path id="soc-mouth" d="M140 172 Q160 192 180 172" fill="none" stroke="#0d1226" stroke-width="6" stroke-linecap="round"/>
+    <rect x="132" y="232" width="56" height="56" rx="6" fill="#fff"/>
+    <g fill="#0d1226">
+      <rect x="138" y="238" width="14" height="14"/><rect x="168" y="238" width="14" height="14"/>
+      <rect x="138" y="268" width="14" height="14"/><rect x="156" y="256" width="8" height="8"/>
+      <rect x="170" y="258" width="6" height="6"/><rect x="176" y="270" width="6" height="12"/>
+      <rect x="156" y="240" width="6" height="6"/><rect x="160" y="272" width="10" height="6"/>
+    </g>
+  </g>
+</svg>
+</div>
+    <div id="so-flash"></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // ---- Part A: the problem (0–5 s)
+    tl.fromTo("#so-t1", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(2)" }, 0.1);
+    tl.fromTo("#so-guy", { x: 0 }, { x: 330, duration: 3.6, ease: "none" }, 0.6);
+    tl.fromTo("#so-legL", { rotation: 18 }, { rotation: -18, duration: 0.3, yoyo: true, repeat: 11, ease: "sine.inOut" }, 0.6);
+    tl.fromTo("#so-legR", { rotation: -18 }, { rotation: 18, duration: 0.3, yoyo: true, repeat: 11, ease: "sine.inOut" }, 0.6);
+    tl.fromTo("#so-think", { scale: 0, opacity: 0, transformOrigin: "20% 100%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.5)" }, 1.2);
+    tl.fromTo("#so-greystars", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4 }, 1.8);
+    tl.to("#so-guy", { opacity: 0, duration: 0.4 }, 4.0);
+    tl.to(["#so-t1", "#so-greystars", "#so-door"], { opacity: 0, duration: 0.2 }, 4.8);
+    tl.to("#so-think", { opacity: 0, duration: 0.3 }, 4.0);
+    // ---- transition to the solution
+    tl.fromTo("#so-flash", { opacity: 0 }, { keyframes: [{ opacity: 1, duration: 0.12 }, { opacity: 0, duration: 0.35 }] }, 4.85);
+    tl.fromTo(["#so-bgB", "#so-t2", "#so-sub", "#so-plate", "#so-phone", "#so-bot"], { opacity: 0 }, { opacity: 1, duration: 0.01 }, 4.97);
+    tl.fromTo("#so-t2", { y: 40 }, { y: 0, duration: 0.45, ease: "back.out(2)" }, 5.0);
+    tl.fromTo("#so-sub", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4 }, 5.3);
+    tl.fromTo("#so-plate", { scale: 0.6, rotation: -8 }, { scale: 1, rotation: 0, duration: 0.6, ease: "back.out(1.7)" }, 5.0);
+    tl.fromTo("#so-bot", { x: -360 }, { x: 0, duration: 0.6, ease: "power3.out" }, 5.2);
+    tl.fromTo("#soc-armR", { rotation: 0, transformOrigin: "254px 190px" }, { rotation: -55, duration: 0.4, ease: "back.out(2)" }, 5.7);
+    tl.fromTo("#soc-waves", { opacity: 0.2 }, { opacity: 1, duration: 0.35, yoyo: true, repeat: 23, ease: "sine.inOut" }, 5.2);
+    tl.fromTo("#soc-body", { y: 0 }, { y: -10, duration: 0.8, yoyo: true, repeat: 9, ease: "sine.inOut" }, 5.8);
+    tl.fromTo("#soc-eyes", { scaleY: 1, transformOrigin: "160px 140px" }, { keyframes: [{ scaleY: 0.1, duration: 0.07 }, { scaleY: 1, duration: 0.09 }] }, 8.2);
+    // the tap
+    tl.fromTo("#so-phone", { x: 400, rotation: 12 }, { x: 0, rotation: 6, duration: 0.6, ease: "power3.out" }, 5.6);
+    tl.to("#so-phone", { x: -250, y: 60, rotation: -4, duration: 0.55, ease: "power3.inOut" }, 6.6);
+    tl.to("#so-plate", { scale: 0.97, duration: 0.08, yoyo: true, repeat: 1 }, 7.15);
+    tl.fromTo("#so-r1", { scale: 0.4, opacity: 0 }, { keyframes: [{ opacity: 1, duration: 0.05 }, { scale: 3, opacity: 0, duration: 0.8, ease: "power2.out" }] }, 7.15);
+    tl.fromTo("#so-r2", { scale: 0.4, opacity: 0 }, { keyframes: [{ opacity: 1, duration: 0.05 }, { scale: 3, opacity: 0, duration: 0.8, ease: "power2.out" }] }, 7.45);
+    tl.to("#so-phone", { x: 0, y: -40, rotation: 0, scale: 1.08, duration: 0.6, ease: "power3.inOut" }, 8.1);
+    // the stars light up one by one
+    tl.fromTo(".so-s", { color: "#b0b8c9", scale: 1 }, { color: "#e09400", scale: 1.25, duration: 0.2, stagger: 0.22, ease: "back.out(3)" }, 8.8);
+    tl.to(".so-s", { scale: 1, duration: 0.2, stagger: 0.22 }, 9.0);
+    tl.fromTo("#so-ok", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(3)" }, 10.2);
+    tl.to("#soc-mouth", { attr: { d: "M136 170 Q160 200 184 170" }, duration: 0.3 }, 10.2);
+    tl.to(["#so-t2", "#so-sub", "#so-plate", "#so-phone", "#so-bot"], { opacity: 0, y: -30, duration: 0.3, ease: "power2.in" }, 13.6);
+    window.__timelines["solution"] = tl;
+  </script>
+</template>

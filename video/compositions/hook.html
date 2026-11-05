@@ -1,0 +1,59 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Poppins", sans-serif; }
+    #hk-bg { position: absolute; inset: 0; background: radial-gradient(circle at 70% 25%, #1f5fe0 0, transparent 55%), linear-gradient(180deg, #0a1a3d, #0f2556 60%, #0a1a3d); }
+    .hk-title { position: absolute; left: 90px; right: 90px; top: 220px; text-align: center; color: #fff; font-weight: 800; font-size: 80px; line-height: 1.12; letter-spacing: -1px; }
+    .hk-title span { color: #22c3ff; }
+    #hk-phone { position: absolute; left: 270px; top: 600px; width: 540px; height: 760px; background: #fff; border-radius: 56px; border: 14px solid #141a2e; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+    #hk-search { position: absolute; left: 22px; right: 22px; top: 26px; height: 64px; border-radius: 32px; background: #f1f4fa; display: flex; align-items: center; padding-left: 26px; font-size: 28px; color: #3b4766; font-weight: 500; }
+    #hk-map { position: absolute; left: 0; right: 0; top: 108px; height: 170px; background: linear-gradient(135deg, #e6f0e2 0 30%, #d7e8f7 30% 34%, #e9eef3 34% 70%, #f6e7c8 70% 74%, #e6f0e2 74%); }
+    .hk-pin { position: absolute; width: 34px; height: 34px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: #ea4335; }
+    .hk-card { position: absolute; left: 22px; right: 22px; height: 140px; border-radius: 24px; background: #fff; border: 3px solid #e3e9f4; padding: 20px 24px; }
+    .hk-card b { display: block; font-size: 30px; color: #13203d; font-weight: 700; }
+    .hk-card .st { font-size: 28px; color: #5b6785; margin-top: 6px; }
+    .hk-card .st i { font-style: normal; color: #c8871d; letter-spacing: 2px; }
+    #hk-c { border-color: #22c3ff; }
+    #hk-badge { position: absolute; right: 18px; top: -24px; background: #1570ff; color: #fff; font-size: 28px; font-weight: 700; padding: 6px 16px; border-radius: 999px; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1080" data-height="1920">
+    <div id="hk-bg"></div>
+    <h1 id="hk-t1" class="hk-title">¿Por qué Google Maps recomienda a tu <span>competencia?</span></h1>
+    <h1 id="hk-t2" class="hk-title">Más reseñas <span>=</span><br>más arriba</h1>
+    <div id="hk-phone">
+      <div id="hk-search">restaurantes cerca de mí</div>
+      <div id="hk-map">
+        <div class="hk-pin" style="left:90px;top:60px"></div>
+        <div class="hk-pin" style="left:250px;top:40px"></div>
+        <div class="hk-pin" id="hk-pinc" style="left:380px;top:90px;background:#1570ff"></div>
+      </div>
+      <div class="hk-card" id="hk-a"><b>Tu negocio</b><div class="st"><i>★★★★</i> 3.8 · 12 reseñas</div></div>
+      <div class="hk-card" id="hk-b"><b>Pollería Don Lucho</b><div class="st"><i>★★★★★</i> 4.6 · 231 reseñas</div></div>
+      <div class="hk-card" id="hk-c"><b>Cevichería El Puerto</b><div class="st"><i>★★★★★</i> 4.8 · 486 reseñas</div><div id="hk-badge">Recomendado</div></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const slot = (i) => 300 + i * 156;
+    // headline 1 is on screen from frame 0 (thumbnail = hook)
+    tl.fromTo("#hk-t1", { opacity: 1, y: 0 }, { opacity: 1, y: 0, duration: 0.01 }, 0);
+    tl.fromTo("#hk-t1", { scale: 0.96 }, { scale: 1, duration: 0.6, ease: "back.out(2)" }, 0);
+    tl.fromTo("#hk-phone", { y: 160, opacity: 0.6 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 0);
+    tl.fromTo("#hk-a", { y: slot(0) }, { y: slot(0), duration: 0.01 }, 0);
+    tl.fromTo("#hk-b", { y: slot(1) }, { y: slot(1), duration: 0.01 }, 0);
+    tl.fromTo("#hk-c", { y: slot(2) }, { y: slot(2), duration: 0.01 }, 0);
+    tl.fromTo("#hk-badge", { scale: 0, opacity: 0 }, { scale: 0, opacity: 0, duration: 0.01 }, 0);
+    // the reorder: competitor with more reviews climbs to the top
+    tl.to("#hk-c", { y: slot(0) - 20, duration: 0.7, ease: "power3.inOut" }, 2.2);
+    tl.to("#hk-c", { y: slot(0), scale: 1.04, boxShadow: "0 16px 40px rgba(21,112,255,.35)", duration: 0.35, ease: "back.out(3)" }, 2.9);
+    tl.to("#hk-a", { y: slot(2), duration: 0.7, ease: "power3.inOut" }, 2.25);
+    tl.to("#hk-a", { opacity: 0.45, duration: 0.4 }, 2.95);
+    tl.to("#hk-badge", { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(3)" }, 3.1);
+    tl.fromTo("#hk-pinc", { scale: 1 }, { scale: 1.6, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 3.1);
+    // headline swap
+    tl.to("#hk-t1", { opacity: 0, y: -40, duration: 0.35, ease: "power2.in" }, 4.6);
+    tl.fromTo("#hk-t2", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(2)" }, 4.9);
+    tl.to("#hk-phone", { scale: 1.06, duration: 2.5, ease: "sine.inOut" }, 5.2);
+    tl.to(["#hk-t2", "#hk-phone"], { opacity: 0, duration: 0.3 }, 7.65);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

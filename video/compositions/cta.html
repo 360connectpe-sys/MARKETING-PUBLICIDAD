@@ -1,0 +1,91 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Poppins", sans-serif; }
+    #ct-bg { position: absolute; inset: 0; background: radial-gradient(circle at 70% 60%, #cfe2ff 0, transparent 55%), linear-gradient(180deg, #eaf2ff, #f3f7ff); }
+    #ct-q { position: absolute; left: 70px; right: 70px; top: 200px; text-align: center; color: #5b6785; font-weight: 700; font-size: 44px; }
+    #ct-title { position: absolute; left: 70px; right: 70px; top: 270px; text-align: center; color: #0a1a3d; font-weight: 800; font-size: 80px; line-height: 1.1; letter-spacing: -1px; }
+    #ct-title span { color: #1570ff; }
+    #ct-bot { position: absolute; left: 50px; top: 560px; width: 340px; height: 468px; }
+    .ct-chip { position: absolute; left: 430px; width: 590px; background: #fff; border-radius: 26px; padding: 22px 28px; font-size: 34px; font-weight: 700; color: #0a1a3d; box-shadow: 0 12px 30px rgba(21,112,255,.15); }
+    .ct-chip span { color: #15803d; margin-right: 12px; }
+    #ct-ch1 { top: 600px; } #ct-ch2 { top: 730px; } #ct-ch3 { top: 860px; }
+    #ct-wa { position: absolute; left: 90px; right: 90px; top: 1060px; background: #15803d; color: #fff; border-radius: 999px; text-align: center; padding: 26px 0; font-size: 56px; font-weight: 800; box-shadow: 0 18px 40px rgba(34,197,94,.4); }
+    #ct-wa small { display: block; font-size: 28px; font-weight: 600; opacity: .9; margin-top: -4px; }
+    #ct-logo { position: absolute; left: 290px; top: 1236px; width: 500px; height: 136px; object-fit: contain; }
+    #ct-handles { position: absolute; left: 60px; right: 60px; top: 1390px; text-align: center; color: #5b6785; font-size: 30px; font-weight: 600; }
+  </style>
+  <div id="root" data-composition-id="cta" data-width="1080" data-height="1920">
+    <div id="ct-bg"></div>
+    <div id="ct-q">¿Aún no estás en Google Maps?</div>
+    <h1 id="ct-title">¡Te creamos <span>tu ficha!</span></h1>
+    <div id="ct-bot"><svg class="connecti" viewBox="0 0 320 440" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="160" cy="428" rx="110" ry="10" fill="rgba(10,26,61,.18)"/>
+  <g id="ctc-body">
+    <g id="ctc-waves" fill="none" stroke="#22c3ff" stroke-width="7" stroke-linecap="round">
+      <path id="ctc-w1" d="M262 38 a18 18 0 0 1 0 30"/>
+      <path id="ctc-w2" d="M276 26 a32 32 0 0 1 0 54"/>
+      <path id="ctc-w3" d="M290 14 a46 46 0 0 1 0 78"/>
+    </g>
+    <circle cx="248" cy="53" r="8" fill="#1e88f0"/>
+    <line x1="232" y1="70" x2="246" y2="56" stroke="#1e88f0" stroke-width="7" stroke-linecap="round"/>
+    <g id="ctc-legs">
+      <rect x="112" y="300" width="22" height="90" rx="10" fill="#141a2e"/>
+      <rect x="186" y="300" width="22" height="90" rx="10" fill="#141a2e"/>
+      <ellipse cx="120" cy="396" rx="30" ry="18" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+      <ellipse cx="200" cy="396" rx="30" ry="18" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+    </g>
+    <g id="ctc-armL">
+      <path d="M66 190 L20 120" stroke="#1e88f0" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="20" cy="118" r="17" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+    </g>
+    <g id="ctc-armR">
+      <path d="M254 190 L300 230" stroke="#1e88f0" stroke-width="20" stroke-linecap="round"/>
+      <circle cx="302" cy="232" r="17" fill="#fff" stroke="#c9d8f0" stroke-width="3"/>
+    </g>
+    <rect x="60" y="72" width="200" height="238" rx="34" fill="#1e88f0"/>
+    <rect x="60" y="72" width="200" height="238" rx="34" fill="none" stroke="#0f6fd6" stroke-width="5"/>
+    <rect x="78" y="90" width="164" height="128" rx="18" fill="#fff"/>
+    <g id="ctc-eyes">
+      <ellipse cx="130" cy="140" rx="15" ry="18" fill="#0d1226"/>
+      <ellipse cx="190" cy="140" rx="15" ry="18" fill="#0d1226"/>
+      <circle cx="135" cy="133" r="5" fill="#fff"/>
+      <circle cx="195" cy="133" r="5" fill="#fff"/>
+    </g>
+    <ellipse cx="108" cy="170" rx="12" ry="7" fill="#ffb3c1"/>
+    <ellipse cx="212" cy="170" rx="12" ry="7" fill="#ffb3c1"/>
+    <path id="ctc-mouth" d="M140 172 Q160 192 180 172" fill="none" stroke="#0d1226" stroke-width="6" stroke-linecap="round"/>
+    <rect x="132" y="232" width="56" height="56" rx="6" fill="#fff"/>
+    <g fill="#0d1226">
+      <rect x="138" y="238" width="14" height="14"/><rect x="168" y="238" width="14" height="14"/>
+      <rect x="138" y="268" width="14" height="14"/><rect x="156" y="256" width="8" height="8"/>
+      <rect x="170" y="258" width="6" height="6"/><rect x="176" y="270" width="6" height="12"/>
+      <rect x="156" y="240" width="6" height="6"/><rect x="160" y="272" width="10" height="6"/>
+    </g>
+  </g>
+</svg>
+</div>
+    <div class="ct-chip" id="ct-ch1"><span>✓</span>Configuración gratis</div>
+    <div class="ct-chip" id="ct-ch2"><span>✓</span>Ficha de Google Maps</div>
+    <div class="ct-chip" id="ct-ch3"><span>✓</span>Delivery gratis en Trujillo</div>
+    <div id="ct-wa">WhatsApp 974 337 299<small>Escríbenos y pide la tuya</small></div>
+    <img id="ct-logo" src="assets/logo.png" alt="360 Connect">
+    <div id="ct-handles" data-layout-allow-caption-zone>@360connectpe · @360_connect_pe</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ct-q", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4 }, 0.1);
+    tl.fromTo("#ct-title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "back.out(2)" }, 0.5);
+    tl.fromTo("#ct-bot", { y: 500 }, { y: 0, duration: 0.6, ease: "back.out(1.4)" }, 0.3);
+    tl.fromTo("#ctc-armL", { rotation: 0, transformOrigin: "66px 190px" }, { rotation: -24, duration: 0.3, yoyo: true, repeat: 13, ease: "sine.inOut" }, 1.0);
+    tl.fromTo("#ctc-waves", { opacity: 0.2 }, { opacity: 1, duration: 0.35, yoyo: true, repeat: 23, ease: "sine.inOut" }, 0.3);
+    tl.fromTo("#ctc-body", { y: 0 }, { y: -12, duration: 0.8, yoyo: true, repeat: 9, ease: "sine.inOut" }, 1.0);
+    tl.fromTo("#ctc-eyes", { scaleY: 1, transformOrigin: "160px 140px" }, { keyframes: [{ scaleY: 0.1, duration: 0.07 }, { scaleY: 1, duration: 0.09 }] }, 3.4);
+    tl.to("#ctc-eyes", { keyframes: [{ scaleY: 0.1, duration: 0.07 }, { scaleY: 1, duration: 0.09 }] }, 6.8);
+    tl.fromTo(".ct-chip", { x: 300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, stagger: 0.35, ease: "back.out(1.6)" }, 1.4);
+    tl.fromTo("#ct-wa", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2.5)" }, 2.9);
+    tl.to("#ct-wa", { scale: 1.05, duration: 0.5, yoyo: true, repeat: 7, ease: "sine.inOut" }, 3.5);
+    tl.fromTo("#ct-logo", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5 }, 3.3);
+    tl.fromTo("#ct-handles", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 3.7);
+    window.__timelines["cta"] = tl;
+  </script>
+</template>

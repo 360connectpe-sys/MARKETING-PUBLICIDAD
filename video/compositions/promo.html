@@ -1,0 +1,53 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Poppins", sans-serif; }
+    #pr-bg { position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, #1f5fe0 0, transparent 60%), linear-gradient(180deg, #0a1a3d, #0f2556); }
+    #pr-tag { position: absolute; left: 390px; top: 200px; width: 300px; text-align: center; background: #ef4444; color: #fff; font-weight: 800; font-size: 40px; letter-spacing: 4px; padding: 10px 0; border-radius: 999px; }
+    #pr-title { position: absolute; left: 60px; right: 60px; top: 290px; text-align: center; color: #fff; font-weight: 800; font-size: 92px; line-height: 1.05; letter-spacing: -1px; }
+    #pr-sub { position: absolute; left: 60px; right: 60px; top: 410px; text-align: center; color: #bfe9ff; font-size: 38px; font-weight: 600; }
+    .pr-card { position: absolute; top: 560px; width: 330px; height: 470px; border-radius: 28px; overflow: hidden; border: 6px solid #fff; box-shadow: 0 30px 60px rgba(0,0,0,.4); }
+    .pr-card img { width: 100%; height: 100%; object-fit: cover; }
+    #pr-c1 { left: 110px; } #pr-c2 { left: 375px; } #pr-c3 { left: 640px; }
+    #pr-stamp { position: absolute; left: 720px; top: 480px; width: 250px; height: 250px; border-radius: 50%; background: #ffcc00; color: #0a1a3d; display: grid; place-items: center; font-weight: 800; font-size: 82px; border: 10px dashed #0a1a3d; }
+    #pr-price { position: absolute; left: 60px; right: 60px; top: 1130px; text-align: center; color: #fff; font-weight: 800; font-size: 96px; }
+    #pr-old { position: absolute; left: 60px; right: 60px; top: 1075px; text-align: center; color: #bac7e0; font-size: 48px; font-weight: 600; text-decoration: line-through; }
+    #pr-note { position: absolute; left: 60px; right: 60px; top: 1255px; text-align: center; color: #bfe9ff; font-size: 32px; font-weight: 500; }
+  </style>
+  <div id="root" data-composition-id="promo" data-width="1080" data-height="1920">
+    <div id="pr-bg"></div>
+    <div id="pr-tag">PROMO</div>
+    <h1 id="pr-title">Llévate 3 placas</h1>
+    <div id="pr-sub">Combina Google, Instagram y TikTok</div>
+    <div class="pr-card" id="pr-c1"><img src="assets/instagram.jpg" alt="Placa Instagram"></div>
+    <div class="pr-card" id="pr-c3"><img src="assets/tiktok.jpg" alt="Placa TikTok"></div>
+    <div class="pr-card" id="pr-c2"><img src="assets/google-negra.jpg" alt="Placa Google"></div>
+    <div id="pr-stamp">-30%</div>
+    <div id="pr-old">S/ 147.00</div>
+    <div id="pr-price">S/ 102.90</div>
+    <div id="pr-note">por las 3 placas</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#pr-tag", { scale: 0 }, { scale: 1, duration: 0.4, ease: "back.out(3)" }, 0.1);
+    tl.fromTo("#pr-title", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(2)" }, 0.3);
+    tl.fromTo("#pr-sub", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4 }, 0.6);
+    // cards fan out from a single stack
+    tl.fromTo("#pr-c2", { y: 400, opacity: 0, rotation: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 0.8);
+    tl.fromTo("#pr-c1", { x: 265, y: 400, opacity: 0, rotation: 0 }, { x: 265, y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 0.85);
+    tl.fromTo("#pr-c3", { x: -265, y: 400, opacity: 0, rotation: 0 }, { x: -265, y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 0.9);
+    tl.to("#pr-c1", { x: 0, y: 30, rotation: -9, duration: 0.6, ease: "back.out(1.6)" }, 1.6);
+    tl.to("#pr-c3", { x: 0, y: 30, rotation: 9, duration: 0.6, ease: "back.out(1.6)" }, 1.65);
+    tl.to("#pr-c2", { y: -20, scale: 1.05, duration: 0.6, ease: "back.out(1.6)" }, 1.6);
+    // the stamp drops
+    tl.fromTo("#pr-stamp", { scale: 3, opacity: 0, rotation: -40 }, { scale: 1, opacity: 1, rotation: -12, duration: 0.35, ease: "power4.in" }, 2.8);
+    tl.to(["#pr-c1", "#pr-c2", "#pr-c3"], { y: "+=14", duration: 0.08, yoyo: true, repeat: 1 }, 3.15);
+    tl.to("#pr-stamp", { rotation: -6, duration: 1.2, yoyo: true, repeat: 4, ease: "sine.inOut" }, 3.5);
+    // price
+    tl.fromTo("#pr-old", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35 }, 3.8);
+    tl.to("#pr-old", { opacity: 0.8, duration: 0.4 }, 4.6);
+    tl.fromTo("#pr-price", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2.5)" }, 4.7);
+    tl.fromTo("#pr-note", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 5.2);
+    tl.to("#pr-price", { scale: 1.06, duration: 0.6, yoyo: true, repeat: 5, ease: "sine.inOut" }, 5.4);
+    window.__timelines["promo"] = tl;
+  </script>
+</template>
