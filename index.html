@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>360 Connect | Placas NFC + QR para tu negocio en Perú</title>
+<meta name="description" content="Placas NFC con código QR para Google, TikTok, Instagram y WhatsApp. Más reseñas y más seguidores con un solo toque. Envíos a todo el Perú.">
+<meta property="og:title" content="360 Connect | Tu negocio, a un toque">
+<meta property="og:description" content="Placas NFC + QR para Google, TikTok, Instagram y WhatsApp. Envíos a todo el Perú.">
+<meta property="og:image" content="img/connecti.jpg">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1a3d; --navy2:#0f2556; --blue:#1570ff; --cyan:#22c3ff;
+  --bg:#f3f7ff; --card:#ffffff; --text:#13203d; --muted:#5b6785;
+  --green:#22c55e; --radius:20px; --shadow:0 10px 30px rgba(21,112,255,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;font:600 15px 'Poppins',sans-serif;padding:13px 24px;border-radius:999px;transition:.2s}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 8px 20px rgba(21,112,255,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(21,112,255,.45)}
+.btn-ghost{background:#fff;color:var(--navy);border:2px solid #d6e3ff}
+.btn-ghost:hover{border-color:var(--blue)}
+.btn-wa{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(34,197,94,.35)}
+.btn-wa:hover{filter:brightness(1.05);transform:translateY(-2px)}
+.btn[disabled]{opacity:.5;pointer-events:none}
+.tag{display:inline-block;background:#e3edff;color:var(--blue);font-weight:600;font-size:13px;padding:6px 14px;border-radius:999px;letter-spacing:.3px}
+h2.title{font-size:clamp(26px,4vw,38px);line-height:1.2;color:var(--navy);margin:12px 0 10px}
+.sub{color:var(--muted);max-width:620px}
+section{padding:80px 0}
+.center{text-align:center}.center .sub{margin:0 auto}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid #e5edff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav img{height:42px;width:auto}
+.nav-links{display:flex;gap:28px;font-weight:500;font-size:15px}
+.nav-links a:hover{color:var(--blue)}
+.cart-btn{position:relative;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:10px 18px;font:600 14px 'Poppins';cursor:pointer;display:flex;gap:8px;align-items:center}
+.cart-count{background:var(--cyan);color:var(--navy);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:12px;font-weight:800}
+.bump{animation:bump .4s}
+@keyframes bump{50%{transform:scale(1.15)}}
+
+/* PROMO BAR */
+.promo-bar{background:linear-gradient(90deg,var(--navy),var(--blue));color:#fff;text-align:center;font-size:14px;padding:8px 12px;font-weight:500}
+.promo-bar b{color:#ffe14d}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 30%,#cfe2ff 0,transparent 55%),linear-gradient(180deg,#eaf2ff,var(--bg));padding:70px 0 90px}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(21,112,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(21,112,255,.07) 1px,transparent 1px);background-size:40px 40px;mask-image:linear-gradient(180deg,#000 40%,transparent)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(34px,5.6vw,60px);line-height:1.08;color:var(--navy);font-weight:800;margin:16px 0}
+.hero h1 span{background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:520px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap}
+.hero-stats div{font-size:13px;color:var(--muted)}
+.hero-stats b{display:block;font-size:22px;color:var(--navy)}
+.mascot{position:relative}
+.mascot-img{border-radius:32px;box-shadow:0 30px 60px rgba(10,26,61,.18);animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px)}}
+.bubble{position:absolute;top:-18px;left:-10px;background:#fff;border-radius:18px 18px 18px 4px;padding:12px 16px;box-shadow:var(--shadow);font-weight:600;font-size:14px;color:var(--navy);max-width:230px}
+.bubble small{display:block;color:var(--blue);font-size:12px}
+.chip{position:absolute;background:#fff;border-radius:14px;padding:8px 14px;box-shadow:var(--shadow);font-size:13px;font-weight:600;display:flex;gap:6px;align-items:center}
+.chip.c1{bottom:30px;left:-24px}.chip.c2{bottom:-14px;right:20px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.step{background:var(--card);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);position:relative}
+.step .n{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;display:grid;place-items:center;font-weight:800;font-size:20px;margin-bottom:16px}
+.step h3{color:var(--navy);font-size:18px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+
+/* PROMO */
+.promo{background:linear-gradient(135deg,var(--navy),var(--navy2) 60%,var(--blue));color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center;position:relative;overflow:hidden}
+.promo::after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;border:30px solid rgba(34,195,255,.15)}
+.promo .big{font-size:72px;font-weight:800;line-height:1;color:#ffe14d}
+.promo .big small{font-size:22px;display:block;color:#fff}
+.promo h3{font-size:24px;margin-bottom:6px}
+.promo p{opacity:.85}
+
+/* CATALOG */
+.filters{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:30px 0}
+.filter{border:2px solid #d6e3ff;background:#fff;border-radius:999px;padding:8px 18px;font:600 14px 'Poppins';cursor:pointer;color:var(--navy)}
+.filter.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+.product{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.25s}
+.product:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(21,112,255,.18)}
+.p-img{position:relative;aspect-ratio:1/1;background:#eef3fb;overflow:hidden;cursor:zoom-in}
+.p-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.product:hover .p-img img{transform:scale(1.05)}
+.p-badge{position:absolute;top:12px;left:12px;background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px}
+.p-badge.hot{background:#ff4d6d}
+.p-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.p-body h3{font-size:17px;color:var(--navy);line-height:1.3}
+.p-body p{font-size:14px;color:var(--muted);margin:6px 0 14px;flex:1}
+.p-price{font-size:26px;font-weight:800;color:var(--navy)}
+.p-price small{font-size:13px;font-weight:500;color:var(--muted)}
+.p-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.qty{display:flex;align-items:center;background:#eef3fb;border-radius:999px}
+.qty button{width:34px;height:34px;border:0;background:none;font-size:18px;font-weight:700;cursor:pointer;color:var(--navy)}
+.qty span{min-width:24px;text-align:center;font-weight:700}
+.add{padding:10px 16px;font-size:14px}
+
+/* BENEFITS */
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.benefit{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.benefit .ic{font-size:30px;margin-bottom:10px}
+.benefit h3{font-size:16px;color:var(--navy);margin-bottom:4px}
+.benefit p{font-size:14px;color:var(--muted)}
+.ideal{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+.ideal span{background:#fff;border:1px solid #d6e3ff;border-radius:999px;padding:8px 16px;font-size:14px;font-weight:500}
+
+/* SHIPPING */
+.ship{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}
+.ship-card{border-radius:var(--radius);padding:30px;background:#fff;box-shadow:var(--shadow);display:flex;gap:18px;align-items:flex-start}
+.ship-card .ic{font-size:36px}
+.ship-card h3{color:var(--navy);margin-bottom:4px}
+.ship-card p{color:var(--muted);font-size:15px}
+.ship-card.free{background:linear-gradient(135deg,#e7fbef,#fff);border:2px solid #b9efcd}
+
+/* FAQ */
+.faq{max-width:780px;margin:36px auto 0}
+details{background:#fff;border-radius:16px;margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden}
+summary{cursor:pointer;padding:18px 22px;font-weight:600;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";font-size:22px;color:var(--blue);line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 22px 18px;color:var(--muted);font-size:15px}
+
+/* FOOTER */
+footer{background:var(--navy);color:#c9d5f2;padding:56px 0 24px}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer .logo-box{background:#fff;border-radius:16px;padding:10px 14px;display:inline-block;margin-bottom:14px}
+footer .logo-box img{height:40px}
+footer h4{color:#fff;margin-bottom:12px}
+footer li{list-style:none;margin-bottom:8px}
+footer a:hover{color:var(--cyan)}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:18px;font-size:13px;text-align:center}
+
+/* FLOAT WA */
+.float-wa{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 10px 25px rgba(34,197,94,.45);z-index:40}
+.float-wa svg{width:32px;height:32px;fill:#fff}
+
+/* CART DRAWER */
+.overlay{position:fixed;inset:0;background:rgba(10,26,61,.5);opacity:0;pointer-events:none;transition:.3s;z-index:60}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:#fff;z-index:70;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column}
+.drawer.show{transform:none}
+.d-head{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid #eef3fb}
+.d-head h3{color:var(--navy)}
+.x{border:0;background:#eef3fb;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer}
+.d-body{flex:1;overflow:auto;padding:16px 22px}
+.c-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #f0f4fb}
+.c-item img{width:64px;height:64px;object-fit:cover;border-radius:12px}
+.c-item h4{font-size:14px;color:var(--navy);line-height:1.3}
+.c-item .pr{font-size:13px;color:var(--muted)}
+.c-item .rm{border:0;background:none;color:#ff4d6d;font-size:12px;cursor:pointer;margin-top:4px;font-family:inherit}
+.c-item .qty button{width:28px;height:28px;font-size:15px}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+.empty img{width:140px;margin:0 auto 14px;border-radius:20px}
+.d-foot{padding:18px 22px;border-top:1px solid #eef3fb;background:#fafcff}
+.line{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px;color:var(--muted)}
+.line.disc{color:#16a34a;font-weight:600}
+.line.total{font-size:20px;font-weight:800;color:var(--navy);margin-top:8px}
+.hint{background:#fff7d6;color:#7a5b00;border-radius:12px;padding:10px 12px;font-size:13px;margin-bottom:12px}
+.hint.ok{background:#e7fbef;color:#166534}
+.form{display:grid;gap:10px;margin:12px 0}
+.form input,.form select,.form textarea{width:100%;padding:11px 14px;border:1.5px solid #d6e3ff;border-radius:12px;font:14px 'Poppins';background:#fff}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--blue)}
+.form label{font-size:13px;font-weight:600;color:var(--navy)}
+.note{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
+.d-foot .btn{width:100%}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(10,26,61,.85);display:none;align-items:center;justify-content:center;z-index:80;padding:20px}
+.lightbox.show{display:flex}
+.lightbox img{max-height:85vh;border-radius:18px}
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,120px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:500;z-index:90;transition:.3s}
+.toast.show{transform:translate(-50%,0)}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .mascot{max-width:420px;margin:20px auto 0}
+  .steps,.ship{grid-template-columns:1fr}
+  .benefits{grid-template-columns:1fr 1fr}
+  .promo{grid-template-columns:1fr;text-align:center}
+  .f-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+@media(max-width:520px){
+  .hero{padding:40px 0 60px}.promo-bar{font-size:12px}
+  section{padding:56px 0}
+  .benefits{grid-template-columns:1fr}
+  .nav img{height:34px}
+  .cart-btn .lbl{display:none}
+  .promo{padding:30px 22px}
+  .chip.c1{left:0}
+}
+</style>
+</head>
+<body>
+
+<div class="promo-bar">🔥 <b>30% de descuento</b> llevando 3 productos o más (puedes combinarlos) · 🚚 Delivery <b>GRATIS</b> en Trujillo</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio"><img src="img/logo.png" alt="360 Connect"></a>
+    <nav class="nav-links">
+      <a href="#como-funciona">¿Cómo funciona?</a>
+      <a href="#productos">Productos</a>
+      <a href="#envios">Envíos</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrito">🛒 <span class="lbl">Carrito</span> <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">📲 Tecnología NFC + QR</span>
+      <h1>Tu negocio,<br><span>a un solo toque.</span></h1>
+      <p class="lead">Placas inteligentes para que tus clientes te dejen <b>reseñas en Google</b>, te sigan en <b>TikTok e Instagram</b> o te escriban por <b>WhatsApp</b>, con solo acercar su celular o escanear el QR.</p>
+      <div class="hero-ctas">
+        <a href="#productos" class="btn btn-primary">Ver productos →</a>
+        <a href="#como-funciona" class="btn btn-ghost">¿Cómo funciona?</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>NFC + QR</b>Doble acceso</div>
+        <div><b>Desde S/ 39</b>Precios accesibles</div>
+        <div><b>Todo el Perú</b>Envíos nacionales</div>
+      </div>
+    </div>
+    <div class="mascot">
+      <img class="mascot-img" src="img/connecti.jpg" alt="Connecti, la mascota de 360 Connect">
+      <div class="bubble">¡Hola! Soy Connecti 👋<small>Te ayudo a conectar con tus clientes</small></div>
+      <div class="chip c1">⭐⭐⭐⭐⭐ Más reseñas</div>
+      <div class="chip c2">📈 Más seguidores</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="como-funciona">
+  <div class="wrap center">
+    <span class="tag">Fácil y rápido</span>
+    <h2 class="title">¿Cómo funciona?</h2>
+    <p class="sub">Tus clientes no necesitan descargar nada. Funciona con la cámara del celular o con NFC.</p>
+    <div class="steps" style="text-align:left">
+      <div class="step"><div class="n">1</div><h3>Elige tu placa</h3><p>Agrega al carrito las placas que necesitas: Google, TikTok, Instagram o WhatsApp.</p></div>
+      <div class="step"><div class="n">2</div><h3>Envía tu pedido</h3><p>Te escribimos por WhatsApp. Nos pasas el nombre de tu negocio y tus redes para configurarla.</p></div>
+      <div class="step"><div class="n">3</div><h3>¡Recibe y conecta!</h3><p>Tus clientes tocan la placa con su celular o escanean el QR y llegan directo a tu perfil.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<div class="wrap">
+  <div class="promo">
+    <div class="big">30%<small>de descuento</small></div>
+    <div>
+      <h3>Lleva 3 o más y ahorra</h3>
+      <p>Combina cualquier producto: por ejemplo, una placa de Google, una de TikTok y una de Instagram. El descuento se calcula solo en tu carrito.</p>
+    </div>
+    <a href="#productos" class="btn btn-primary">Aprovechar</a>
+  </div>
+</div>
+
+<!-- CATALOG -->
+<section id="productos">
+  <div class="wrap center">
+    <span class="tag">Catálogo</span>
+    <h2 class="title">Nuestros productos</h2>
+    <p class="sub">Elige la cantidad y agrégalos al carrito. Al finalizar, tu pedido llega directo a nuestro WhatsApp.</p>
+    <div class="filters" id="filters">
+      <button class="filter active" data-f="all">Todos</button>
+      <button class="filter" data-f="google">Google reseñas</button>
+      <button class="filter" data-f="redes">Redes sociales</button>
+    </div>
+    <div class="grid" id="grid" style="text-align:left"></div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section style="background:#e9f1ff">
+  <div class="wrap center">
+    <span class="tag">Beneficios</span>
+    <h2 class="title">¿Por qué usar una placa 360 Connect?</h2>
+    <div class="benefits" style="text-align:left">
+      <div class="benefit"><div class="ic">⭐</div><h3>Más reseñas en Google</h3><p>Mejora tu reputación y aparece mejor en Google Maps.</p></div>
+      <div class="benefit"><div class="ic">📱</div><h3>Más seguidores</h3><p>Haz crecer tu TikTok e Instagram desde tu local.</p></div>
+      <div class="benefit"><div class="ic">💬</div><h3>Contacto inmediato</h3><p>Que tus clientes te escriban al WhatsApp en un segundo.</p></div>
+      <div class="benefit"><div class="ic">✨</div><h3>Moderna y elegante</h3><p>Diseño profesional que luce bien en mostradores y paredes.</p></div>
+    </div>
+    <p class="sub" style="margin-top:34px"><b>Ideal para:</b></p>
+    <div class="ideal">
+      <span>🏪 Tiendas</span><span>🍽️ Restaurantes</span><span>☕ Cafeterías</span><span>🏨 Hoteles</span><span>💇 Salones y barberías</span><span>🏢 Oficinas</span><span>🚀 Emprendimientos</span>
+    </div>
+  </div>
+</section>
+
+<!-- SHIPPING -->
+<section id="envios">
+  <div class="wrap center">
+    <span class="tag">Envíos</span>
+    <h2 class="title">Llegamos a todo el Perú 🇵🇪</h2>
+    <div class="ship" style="text-align:left">
+      <div class="ship-card free"><div class="ic">🛵</div><div><h3>Trujillo: delivery GRATIS</h3><p>Llevamos tu pedido sin costo dentro de la ciudad de Trujillo.</p></div></div>
+      <div class="ship-card"><div class="ic">📦</div><div><h3>Resto del Perú: a coordinar</h3><p>Enviamos por la agencia de tu preferencia. El costo del envío se coordina por WhatsApp.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="wrap center">
+    <span class="tag">Dudas</span>
+    <h2 class="title">Preguntas frecuentes</h2>
+    <div class="faq" style="text-align:left">
+      <details><summary>¿Qué es NFC?</summary><p>Es la misma tecnología de los pagos sin contacto. El cliente acerca su celular a la placa y se abre tu enlace automáticamente, sin apps.</p></details>
+      <details><summary>¿Y si el celular del cliente no tiene NFC?</summary><p>No hay problema: todas las placas también tienen código QR, que se escanea con la cámara del celular.</p></details>
+      <details><summary>¿La placa viene con mis datos?</summary><p>Sí. Después de tu pedido nos envías por WhatsApp el nombre comercial de tu negocio y tus redes sociales, y configuramos el NFC y el QR con tu página.</p></details>
+      <details><summary>¿Cómo funciona el 30% de descuento?</summary><p>Si llevas 3 productos o más (pueden ser diferentes), se aplica un 30% de descuento al total. El carrito lo calcula automáticamente.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>Aceptamos Yape, Plin, tarjetas y transferencias. Coordinamos el pago contigo por WhatsApp al confirmar tu pedido.</p></details>
+      <details><summary>¿Hacen envíos fuera de Trujillo?</summary><p>Sí, a todo el Perú por la agencia que prefieras. El costo de envío se coordina por WhatsApp. En Trujillo el delivery es gratis.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f-grid">
+    <div>
+      <div class="logo-box"><img src="img/logo.png" alt="360 Connect"></div>
+      <p>Conecta · Promociona · Crece.<br>Placas NFC + QR para negocios en todo el Perú.</p>
+    </div>
+    <div>
+      <h4>Síguenos</h4>
+      <ul>
+        <li><a href="https://www.tiktok.com/@360connectpe" target="_blank" rel="noopener">🎵 TikTok: @360Connectpe</a></li>
+        <li><a href="https://www.instagram.com/360_connect_pe" target="_blank" rel="noopener">📸 Instagram: @360_connect_pe</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/51974337299" target="_blank" rel="noopener">💬 WhatsApp: 974 337 299</a></li>
+        <li><a href="mailto:360connectpe@gmail.com">✉️ 360connectpe@gmail.com</a></li>
+        <li>📍 Trujillo, Perú · Envíos a todo el país</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap copy">© <span id="year"></span> 360 Connect. Todos los derechos reservados.</div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/51974337299" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.6C28.8 8.6 23 3 16 3zm0 23.2c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1-1.7-1.5-3.6-1.5-5.5 0-5.8 4.8-10.5 10.6-10.5s10.6 4.7 10.6 10.5S21.8 26.2 16 26.2zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.4 1.4.6 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.4z"/></svg>
+</a>
+
+<!-- CART -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito de compras">
+  <div class="d-head"><h3>🛒 Tu carrito</h3><button class="x" id="closeCart" aria-label="Cerrar">✕</button></div>
+  <div class="d-body" id="cartItems"></div>
+  <div class="d-foot" id="cartFoot"></div>
+</aside>
+
+<div class="lightbox" id="lightbox"><img id="lbImg" alt=""></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================================
+   CONFIGURACIÓN — aquí puedes cambiar número, precios y productos
+   ========================================================= */
+const WHATSAPP = "51974337299";      // número con código de Perú (51)
+const DESCUENTO = 0.30;              // 30 %
+const MIN_PROMO = 3;                 // unidades mínimas para el descuento
+
+const PRODUCTOS = [
+  {id:"g-blanca", cat:"google", nombre:"Placa Google con soporte · Blanca", precio:49, img:"img/google-blanca.jpg", img2:"img/google-blanca-lateral.jpg", badge:"Más vendido", hot:true,
+   desc:"Placa de mesa “Rate Your Experience”. Tus clientes te califican en Google tocando o escaneando."},
+  {id:"g-negra", cat:"google", nombre:"Placa Google con soporte · Negra", precio:49, img:"img/google-negra.jpg", badge:"Elegante",
+   desc:"Versión negra de la placa de mesa para reseñas en Google. Luce premium en cualquier mostrador."},
+  {id:"g-pared", cat:"google", nombre:"Placa Google de pared", precio:49, img:"img/google-pared.jpg", badge:"Para pared",
+   desc:"Placa cuadrada adhesiva “We'd love your feedback”. Ideal para paredes, cajas y recepciones."},
+  {id:"g-tarjeta", cat:"google", nombre:"Tarjeta Google negra (pequeña)", precio:39, img:"img/tarjetas-google.jpg", badge:"S/ 39",
+   desc:"Tarjeta compacta negra con NFC y QR para reseñas en Google. Práctica y fácil de colocar."},
+  {id:"tiktok", cat:"redes", nombre:"Placa TikTok", precio:49, img:"img/tiktok.jpg", badge:"Más seguidores",
+   desc:"“Follow us on TikTok”. Tus clientes te siguen en TikTok con un toque o escaneando el QR."},
+  {id:"instagram", cat:"redes", nombre:"Placa Instagram", precio:49, img:"img/instagram.jpg", badge:"Más seguidores",
+   desc:"“Follow us on Instagram”. Lleva a tus clientes directo a tu perfil de Instagram."},
+  {id:"whatsapp", cat:"redes", nombre:"Placa WhatsApp", precio:49, img:"img/whatsapp.jpg", badge:"Contacto directo",
+   desc:"“Contact us on WhatsApp”. Que tus clientes te escriban al instante, sin guardar tu número."}
+];
+/* ========================================================= */
+
+const $ = s => document.querySelector(s);
+const soles = n => "S/ " + n.toFixed(2);
+let cart = JSON.parse(localStorage.getItem("cart360") || "{}");
+const qtySel = {};
+const save = () => localStorage.setItem("cart360", JSON.stringify(cart));
+
+function renderGrid(f="all"){
+  $("#grid").innerHTML = PRODUCTOS.filter(p => f==="all" || p.cat===f).map(p => {
+    qtySel[p.id] = qtySel[p.id] || 1;
+    return `<article class="product">
+      <div class="p-img" data-img="${p.img}">
+        <img src="${p.img}" alt="${p.nombre}" loading="lazy" ${p.img2?`onmouseenter="this.src='${p.img2}'" onmouseleave="this.src='${p.img}'"`:""}>
+        <span class="p-badge ${p.hot?'hot':''}">${p.badge}</span>
+      </div>
+      <div class="p-body">
+        <h3>${p.nombre}</h3>
+        <p>${p.desc}</p>
+        <div class="p-price">S/ ${p.precio} <small>c/u · NFC + QR</small></div>
+        <div class="p-row">
+          <div class="qty"><button data-q="${p.id}" data-d="-1" aria-label="Menos">−</button><span id="q-${p.id}">${qtySel[p.id]}</span><button data-q="${p.id}" data-d="1" aria-label="Más">+</button></div>
+          <button class="btn btn-primary add" data-add="${p.id}">Agregar 🛒</button>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+}
+
+function totals(){
+  let units=0, sub=0;
+  for (const id in cart){ const p=PRODUCTOS.find(x=>x.id===id); if(!p) continue; units+=cart[id]; sub+=cart[id]*p.precio; }
+  const disc = units>=MIN_PROMO ? sub*DESCUENTO : 0;
+  return {units, sub, disc, total: sub-disc};
+}
+
+function renderCart(){
+  const t = totals();
+  const c = $("#cartCount"); c.textContent = t.units; c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
+  const ids = Object.keys(cart).filter(id => PRODUCTOS.some(p=>p.id===id));
+  if (!ids.length){
+    $("#cartItems").innerHTML = `<div class="empty"><img src="img/connecti.jpg" alt=""><p><b>Tu carrito está vacío</b><br>Connecti te espera en el catálogo 😉</p></div>`;
+    $("#cartFoot").innerHTML = `<a href="#productos" class="btn btn-primary" onclick="closeCart()">Ver productos</a>`;
+    return;
+  }
+  $("#cartItems").innerHTML = ids.map(id => { const p=PRODUCTOS.find(x=>x.id===id); return `
+    <div class="c-item"><img src="${p.img}" alt="">
+      <div><h4>${p.nombre}</h4><div class="pr">S/ ${p.precio} c/u</div><button class="rm" data-rm="${id}">Quitar</button></div>
+      <div class="qty"><button data-c="${id}" data-d="-1">−</button><span>${cart[id]}</span><button data-c="${id}" data-d="1">+</button></div>
+    </div>`; }).join("");
+  const falta = MIN_PROMO - t.units;
+  const city = localStorage.getItem("city360") || "";
+  $("#cartFoot").innerHTML = `
+    ${falta>0 ? `<div class="hint">🎁 Agrega <b>${falta}</b> producto${falta>1?'s':''} más y obtén <b>30% de descuento</b>.</div>`
+              : `<div class="hint ok">🎉 ¡Genial! Tienes <b>30% de descuento</b> aplicado.</div>`}
+    <div class="line"><span>Subtotal (${t.units} und.)</span><span>${soles(t.sub)}</span></div>
+    ${t.disc ? `<div class="line disc"><span>Descuento 30%</span><span>− ${soles(t.disc)}</span></div>`:""}
+    <div class="line"><span>Envío</span><span id="shipTxt">${city==="trujillo"?"GRATIS (Trujillo)":"A coordinar"}</span></div>
+    <div class="line total"><span>Total</span><span>${soles(t.total)}</span></div>
+    <div class="form">
+      <div><label for="fName">Tu nombre</label><input id="fName" placeholder="Ej. María Pérez" value="${localStorage.getItem('name360')||''}"></div>
+      <div><label for="fCity">Ciudad de envío</label>
+        <select id="fCity"><option value="">Selecciona…</option><option value="trujillo" ${city==="trujillo"?"selected":""}>Trujillo (delivery gratis)</option><option value="otra" ${city==="otra"?"selected":""}>Otra ciudad del Perú</option></select></div>
+      <div id="otherWrap" style="display:${city==="otra"?"block":"none"}"><input id="fOther" placeholder="¿Qué ciudad?" value="${localStorage.getItem('other360')||''}"></div>
+    </div>
+    <button class="btn btn-wa" id="buy">💬 Comprar por WhatsApp</button>
+    <p class="note">Te escribiremos para coordinar el pago (Yape, Plin, tarjeta o transferencia) y la configuración de tu placa.</p>`;
+}
+
+function buy(){
+  const name = $("#fName").value.trim(), city=$("#fCity").value, other=($("#fOther")||{}).value?.trim()||"";
+  if(!name){ toast("Escribe tu nombre 🙂"); $("#fName").focus(); return; }
+  if(!city){ toast("Selecciona tu ciudad 📍"); $("#fCity").focus(); return; }
+  if(city==="otra" && !other){ toast("Indica tu ciudad 📍"); $("#fOther").focus(); return; }
+  const t = totals();
+  let m = `¡Hola 360 Connect! 👋 Quiero hacer este pedido:\n\n`;
+  for (const id in cart){ const p=PRODUCTOS.find(x=>x.id===id); if(p) m += `• ${cart[id]} x ${p.nombre} (S/ ${p.precio}) = S/ ${(cart[id]*p.precio).toFixed(2)}\n`; }
+  m += `\nSubtotal: ${soles(t.sub)}`;
+  if (t.disc) m += `\nDescuento 30%: -${soles(t.disc)}`;
+  m += `\n*Total: ${soles(t.total)}*`;
+  m += `\nEnvío: ${city==="trujillo" ? "Trujillo – delivery gratis" : other + " – costo a coordinar"}`;
+  m += `\n\nNombre: ${name}\n\nQuedo atento(a) para coordinar el pago y enviar los datos de mi negocio. ¡Gracias!`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`, "_blank");
+}
+
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),2200); }
+function openCart(){ $("#drawer").classList.add("show"); $("#overlay").classList.add("show"); }
+function closeCart(){ $("#drawer").classList.remove("show"); $("#overlay").classList.remove("show"); }
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("button,[data-img]"); if(!b) return;
+  if (b.dataset.q){ const id=b.dataset.q; qtySel[id]=Math.max(1,Math.min(99,qtySel[id]+ +b.dataset.d)); $("#q-"+id).textContent=qtySel[id]; }
+  else if (b.dataset.add){ const id=b.dataset.add; cart[id]=(cart[id]||0)+qtySel[id]; save(); renderCart(); const p=PRODUCTOS.find(x=>x.id===id); toast(`✅ ${qtySel[id]} x ${p.nombre} agregado`); qtySel[id]=1; $("#q-"+id).textContent=1; }
+  else if (b.dataset.c){ const id=b.dataset.c; cart[id]+= +b.dataset.d; if(cart[id]<=0) delete cart[id]; save(); renderCart(); }
+  else if (b.dataset.rm){ delete cart[b.dataset.rm]; save(); renderCart(); }
+  else if (b.dataset.f){ document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b)); renderGrid(b.dataset.f); }
+  else if (b.id==="buy") buy();
+  else if (b.dataset.img){ $("#lbImg").src=b.querySelector("img").src; $("#lightbox").classList.add("show"); }
+});
+document.addEventListener("input", e => {
+  if (e.target.id==="fName") localStorage.setItem("name360", e.target.value);
+  if (e.target.id==="fOther") localStorage.setItem("other360", e.target.value);
+});
+document.addEventListener("change", e => {
+  if (e.target.id==="fCity"){ localStorage.setItem("city360", e.target.value); $("#otherWrap").style.display = e.target.value==="otra"?"block":"none"; $("#shipTxt").textContent = e.target.value==="trujillo"?"GRATIS (Trujillo)":"A coordinar"; }
+});
+$("#openCart").onclick = openCart; $("#closeCart").onclick = closeCart; $("#overlay").onclick = closeCart;
+$("#lightbox").onclick = () => $("#lightbox").classList.remove("show");
+$("#year").textContent = new Date().getFullYear();
+renderGrid(); renderCart();
+</script>
+</body>
+</html>
