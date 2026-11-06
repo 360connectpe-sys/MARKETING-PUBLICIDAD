@@ -94,7 +94,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
 .product{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.25s}
 .product:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(21,112,255,.18)}
-.p-img{position:relative;aspect-ratio:1/1;background:#eef3fb;overflow:hidden;cursor:zoom-in}
+.p-img{position:relative;aspect-ratio:3/2;background:#eef3fb;overflow:hidden;cursor:zoom-in}
 .p-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
 .product:hover .p-img img{transform:scale(1.05)}
 .p-badge{position:absolute;top:12px;left:12px;background:var(--navy);color:#fff;font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px}
@@ -385,19 +385,23 @@ const DESCUENTO = 0.30;              // 30 %
 const MIN_PROMO = 3;                 // unidades mínimas para el descuento
 
 const PRODUCTOS = [
-  {id:"g-blanca", cat:"google", nombre:"Placa Google con soporte · Blanca", precio:49, img:"img/google-blanca.jpg", img2:"img/google-blanca-lateral.jpg", badge:"Más vendido", hot:true,
+  {id:"g-soporte-blanca", cat:"google", nombre:"Placa Google con soporte · Blanca", precio:49, img:"img/google-soporte-blanca.jpg", badge:"Más vendido", hot:true,
    desc:"Placa de mesa “Rate Your Experience”. Tus clientes te califican en Google tocando o escaneando."},
-  {id:"g-negra", cat:"google", nombre:"Placa Google con soporte · Negra", precio:49, img:"img/google-negra.jpg", badge:"Elegante",
+  {id:"g-soporte-negra", cat:"google", nombre:"Placa Google con soporte · Negra", precio:49, img:"img/google-soporte-negra.jpg", badge:"Elegante",
    desc:"Versión negra de la placa de mesa para reseñas en Google. Luce premium en cualquier mostrador."},
-  {id:"g-pared", cat:"google", nombre:"Placa Google de pared", precio:49, img:"img/google-pared.jpg", badge:"Para pared",
-   desc:"Placa cuadrada adhesiva “We'd love your feedback”. Ideal para paredes, cajas y recepciones."},
-  {id:"g-tarjeta", cat:"google", nombre:"Tarjeta Google negra (pequeña)", precio:39, img:"img/tarjetas-google.jpg", badge:"S/ 39",
+  {id:"g-adhesiva-blanca", cat:"google", nombre:"Placa Google adhesiva · Blanca", precio:49, img:"img/google-adhesiva-blanca.jpg", badge:"Adhesivo 3M",
+   desc:"Placa cuadrada “We'd love your feedback” con adhesivo 3M. Ideal para paredes, cajas y recepciones."},
+  {id:"g-adhesiva-negra", cat:"google", nombre:"Placa Google adhesiva · Negra", precio:49, img:"img/google-adhesiva-negra.jpg", badge:"Adhesivo 3M",
+   desc:"Placa cuadrada negra “Review us on Google” con adhesivo 3M. Moderna y fácil de instalar."},
+  {id:"g-tarjeta", cat:"google", nombre:"Tarjeta Google negra (pequeña)", precio:39, img:"img/tarjeta-google-negra.jpg", badge:"S/ 39",
    desc:"Tarjeta compacta negra con NFC y QR para reseñas en Google. Práctica y fácil de colocar."},
-  {id:"tiktok", cat:"redes", nombre:"Placa TikTok", precio:49, img:"img/tiktok.jpg", badge:"Más seguidores",
+  {id:"tiktok", cat:"redes", nombre:"Placa TikTok con soporte", precio:49, img:"img/tiktok.jpg", badge:"Más seguidores",
    desc:"“Follow us on TikTok”. Tus clientes te siguen en TikTok con un toque o escaneando el QR."},
-  {id:"instagram", cat:"redes", nombre:"Placa Instagram", precio:49, img:"img/instagram.jpg", badge:"Más seguidores",
-   desc:"“Follow us on Instagram”. Lleva a tus clientes directo a tu perfil de Instagram."},
-  {id:"whatsapp", cat:"redes", nombre:"Placa WhatsApp", precio:49, img:"img/whatsapp.jpg", badge:"Contacto directo",
+  {id:"ig-clasica", cat:"redes", nombre:"Placa Instagram adhesiva · Clásica", precio:49, img:"img/instagram-clasica.jpg", badge:"Adhesivo 3M",
+   desc:"“Follow us on Instagram” con adhesivo 3M. Lleva a tus clientes directo a tu perfil."},
+  {id:"ig-estrellas", cat:"redes", nombre:"Placa Instagram adhesiva · Estrellas", precio:49, img:"img/instagram-estrellas.jpg", badge:"Adhesivo 3M",
+   desc:"Diseño con estrellas “Follow us on Instagram” y adhesivo 3M. Más seguidores desde tu local."},
+  {id:"whatsapp", cat:"redes", nombre:"Placa WhatsApp con soporte", precio:49, img:"img/whatsapp.jpg", badge:"Contacto directo",
    desc:"“Contact us on WhatsApp”. Que tus clientes te escriban al instante, sin guardar tu número."}
 ];
 /* ========================================================= */
