@@ -1,0 +1,126 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Archivo Black", sans-serif; }
+    .hd-cap { position: absolute; left: 70px; right: 70px; top: 250px; text-align: center; color: #fff; font-size: 92px; line-height: 1.04; text-transform: uppercase; -webkit-text-stroke: 14px #111; paint-order: stroke fill; letter-spacing: -1px; }
+    .hd-cap em { font-style: normal; color: #ffd23f; }
+    .hd-small { font-size: 62px; top: 220px; -webkit-text-stroke: 11px #111; }
+    .hd-paper { position: absolute; inset: 0; background:
+        radial-gradient(circle at 20% 15%, rgba(255,255,255,.10), transparent 40%),
+        radial-gradient(circle at 80% 85%, rgba(0,0,0,.18), transparent 45%),
+        repeating-linear-gradient(17deg, rgba(255,255,255,.035) 0 2px, transparent 2px 7px),
+        repeating-linear-gradient(-23deg, rgba(0,0,0,.04) 0 1px, transparent 1px 5px),
+        #d42a2f; }
+    .hd-paper-t { position: absolute; left: 60px; right: 60px; top: 640px; text-align: center; color: #fff; font-size: 112px; line-height: 1.02; text-transform: uppercase; }
+    .hd-paper-t em { font-style: normal; color: #ffd23f; }
+    /* Google profile card */
+    .hd-card { position: absolute; left: 140px; width: 800px; top: 900px; background: #fff; border-radius: 34px; padding: 34px 40px; box-shadow: 0 30px 70px rgba(0,0,0,.35); font-family: "Poppins", sans-serif; color: #202124; }
+    .hd-card b { display: block; font-size: 46px; font-weight: 700; }
+    .hd-card .r { font-size: 36px; color: #5f6368; margin-top: 6px; }
+    .hd-card .r i { font-style: normal; color: #e29b00; letter-spacing: 3px; }
+    .hd-card .row { display: flex; gap: 14px; margin-top: 22px; }
+    .hd-card .btn { flex: 1; text-align: center; border: 3px solid #d2e3fc; color: #1a73e8; border-radius: 999px; font-size: 30px; font-weight: 700; padding: 12px 0; }
+    .hd-card .ph { flex: 1; height: 130px; border-radius: 18px; background: linear-gradient(135deg, #f4a259, #e8893f); }
+    .hd-card .ph:nth-child(2) { background: linear-gradient(135deg, #8ecfff, #4a90d9); }
+    .hd-card .ph:nth-child(3) { background: linear-gradient(135deg, #7cc47f, #3f8f50); }
+    .hd-chk { color: #188038; font-size: 32px; margin-top: 8px; font-weight: 600; }
+    /* factor chips */
+    .hd-chip { position: absolute; left: 120px; right: 120px; top: 420px; text-align: center; background: #fff; color: #111; border-radius: 30px; font-size: 64px; padding: 18px 0; box-shadow: 0 16px 40px rgba(0,0,0,.25); }
+    .hd-chip span { color: #1e6fff; }
+    /* product photos */
+    .hd-photo { position: absolute; width: 760px; height: 507px; left: 160px; top: 760px; border-radius: 36px; overflow: hidden; border: 10px solid #fff; box-shadow: 0 30px 70px rgba(0,0,0,.35); }
+    .hd-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .hd-tag { position: absolute; left: 230px; right: 230px; top: 1170px; text-align: center; background: #1e6fff; color: #fff; font-size: 44px; border-radius: 999px; padding: 14px 0; }
+    /* calendar */
+    #hd-cal { position: absolute; left: 380px; top: 820px; width: 320px; height: 330px; background: #fff; border-radius: 30px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.3); text-align: center; }
+    #hd-cal .top { background: #e53935; color: #fff; font-size: 40px; padding: 16px 0; }
+    #hd-cal .day { position: absolute; left: 0; right: 0; top: 96px; font-size: 170px; color: #111; line-height: 1.2; }
+    #hd-count { position: absolute; left: 140px; right: 140px; top: 1190px; text-align: center; color: #fff; font-size: 64px; -webkit-text-stroke: 10px #111; paint-order: stroke fill; }
+    #hd-count i { font-style: normal; color: #ffd23f; }
+    /* promo */
+    #hd-promo { position: absolute; left: 250px; right: 250px; top: 1230px; text-align: center; background: #ffd23f; color: #111; font-size: 56px; border-radius: 26px; padding: 14px 0; transform: rotate(-3deg); box-shadow: 0 16px 40px rgba(0,0,0,.3); }
+    #hd-wa { position: absolute; left: 130px; right: 130px; top: 930px; text-align: center; background: #15803d; color: #fff; font-family: "Poppins", sans-serif; font-weight: 800; font-size: 58px; border-radius: 999px; padding: 22px 0; }
+    #hd-wa small { display: block; font-size: 30px; font-weight: 600; }
+    #hd-logo { position: absolute; left: 315px; top: 1150px; width: 450px; height: 130px; object-fit: contain; background: #fff; border-radius: 26px; padding: 12px 24px; }
+  </style>
+  <div id="root" data-composition-id="hud" data-width="1080" data-height="1920">
+    <!-- 1 hook -->
+    <h1 id="hd-c1" class="hd-cap clip" data-start="0" data-duration="5.5" data-track-index="1">¿Por qué Google manda a tus clientes a la <em>competencia?</em></h1>
+    <!-- 2 not luck -->
+    <div id="hd-p1" class="hd-paper clip" data-start="5.5" data-duration="1.7" data-track-index="1"><div id="hd-p1t" class="hd-paper-t">Y no es <em>suerte.</em></div></div>
+    <h1 id="hd-c2" class="hd-cap clip" data-start="7.2" data-duration="2.8" data-track-index="1">Te digo por dónde <em>empezaría yo</em></h1>
+    <!-- 3 three factors -->
+    <h1 id="hd-c3" class="hd-cap clip" data-start="10.05" data-duration="10.4" data-track-index="1">Google decide con <em>3 cosas</em></h1>
+    <div id="hd-f1" class="hd-chip clip" data-start="12.05" data-duration="2.5" data-track-index="2">1. <span>RELEVANCIA</span></div>
+    <div id="hd-card1" class="hd-card clip" data-start="12.05" data-duration="2.5" data-track-index="3"><b>Tu Negocio</b><div class="r">Restaurante · Abierto ahora</div><div class="hd-chk">✓ Fotos ✓ Horario ✓ Teléfono</div></div>
+    <div id="hd-f2" class="hd-chip clip" data-start="14.55" data-duration="2.3" data-track-index="2">2. <span>DISTANCIA</span></div>
+    <div id="hd-f3" class="hd-chip clip" data-start="16.85" data-duration="3.6" data-track-index="2">3. <span>PROMINENCIA</span> ★</div>
+    <!-- 4 solution -->
+    <h1 id="hd-c4" class="hd-cap clip" data-start="20.45" data-duration="2.25" data-track-index="1">La distancia <em>no la puedes mover</em></h1>
+    <h1 id="hd-c5" class="hd-cap clip" data-start="22.7" data-duration="5.5" data-track-index="1">Las reseñas, <em>sí.</em></h1>
+    <div id="hd-ph1" class="hd-photo clip" data-start="24.0" data-duration="4.2" data-track-index="2"><img src="assets/img/google-blanca.png" alt="Placa Google 360 Connect"></div>
+    <div id="hd-tag1" class="hd-tag clip" data-start="25.9" data-duration="2.3" data-track-index="3">Toca o escanea · 1 segundo</div>
+    <h1 id="hd-c6" class="hd-cap clip" data-start="28.2" data-duration="4.2" data-track-index="1">Más reseñas <em>cada día</em></h1>
+    <div id="hd-cal" class="clip" data-start="28.2" data-duration="2.0" data-track-index="2"><div class="top">DÍA</div><div class="day" id="hd-day">1</div></div>
+    <div id="hd-count" class="clip" data-start="28.2" data-duration="4.2" data-track-index="3"><i id="hd-n">12</i> reseñas</div>
+    <!-- 5 golden hour -->
+    <h1 id="hd-c7" class="hd-cap clip" data-start="32.45" data-duration="2.1" data-track-index="1">¿Por dónde <em>empezaría yo?</em></h1>
+    <h1 id="hd-c8" class="hd-cap clip" data-start="34.55" data-duration="1.6" data-track-index="1">Por tu <em>perfil.</em></h1>
+    <h1 id="hd-c9" class="hd-cap clip" data-start="36.15" data-duration="5.3" data-track-index="1">Placas <em>NFC + QR</em></h1>
+    <div id="hd-card2" class="hd-card clip" data-start="34.55" data-duration="1.6" data-track-index="2"><b>Tu Negocio</b><div class="r"><i>★★★★★</i> 4.9 · 312 reseñas</div><div class="row"><div class="ph"></div><div class="ph"></div><div class="ph"></div></div><div class="row"><div class="btn">Llamar</div><div class="btn">Cómo llegar</div><div class="btn">Reseñar</div></div></div>
+    <div id="hd-ph2" class="hd-photo clip" data-start="36.15" data-duration="0.6" data-track-index="2"><img src="assets/img/google-negra-cuadrada.png" alt="Placa Google"></div>
+    <div id="hd-ph3" class="hd-photo clip" data-start="36.75" data-duration="0.7" data-track-index="3"><img src="assets/img/instagram-b.png" alt="Placa Instagram"></div>
+    <div id="hd-ph4" class="hd-photo clip" data-start="37.45" data-duration="0.6" data-track-index="4"><img src="assets/img/tiktok.png" alt="Placa TikTok"></div>
+    <div id="hd-ph5" class="hd-photo clip" data-start="38.05" data-duration="3.4" data-track-index="5"><img src="assets/img/whatsapp.png" alt="Placa WhatsApp"></div>
+    <div id="hd-promo" class="clip" data-start="38.5" data-duration="2.95" data-track-index="6">3 PLACAS · -30%</div>
+    <!-- 6 CTA -->
+    <div id="hd-p2" class="hd-paper clip" data-start="41.45" data-duration="6.55" data-track-index="1"></div>
+    <div id="hd-p2t" class="hd-paper-t clip" data-start="41.45" data-duration="6.55" data-track-index="2" style="top:330px">Comenta <em>"MAPS"</em></div>
+    <div id="hd-p2s" class="hd-paper-t clip" data-start="41.9" data-duration="6.1" data-track-index="3" style="top:600px;font-size:54px;line-height:1.15">y te digo qué mejorar primero en el tuyo</div>
+    <div id="hd-wa" class="clip" data-start="44.1" data-duration="3.9" data-track-index="4">WhatsApp 974 337 299<small>Delivery gratis en Trujillo</small></div>
+    <img id="hd-logo" class="clip" src="assets/img/logo.png" alt="360 Connect" data-start="44.5" data-duration="3.5" data-track-index="5">
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const pop = (sel, at) => tl.fromTo(sel, { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.32, ease: "back.out(2.6)" }, at);
+    const rise = (sel, at) => tl.fromTo(sel, { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, at);
+    // hook is on screen at frame 0, with a punch
+    tl.fromTo("#hd-c1", { scale: 1.08 }, { scale: 1, duration: 0.5, ease: "power3.out" }, 0);
+    tl.fromTo("#hd-p1t", { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power4.out" }, 5.55);
+    pop("#hd-c2", 7.25);
+    pop("#hd-c3", 10.1);
+    tl.to("#hd-c3", { scale: 0.68, y: -60, duration: 0.4, ease: "power2.inOut" }, 11.7);
+    pop("#hd-f1", 12.1); rise("#hd-card1", 12.4);
+    pop("#hd-f2", 14.6);
+    pop("#hd-f3", 16.9);
+    pop("#hd-c4", 20.5);
+    tl.fromTo("#hd-c5", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power4.out" }, 22.7);
+    tl.fromTo("#hd-ph1", { y: 500, rotation: 8, opacity: 0 }, { y: 0, rotation: -3, opacity: 1, duration: 0.5, ease: "back.out(1.6)" }, 24.0);
+    tl.to("#hd-ph1", { scale: 0.96, duration: 0.08, yoyo: true, repeat: 1 }, 26.1);
+    pop("#hd-tag1", 25.95);
+    tl.to(["#hd-ph1", "#hd-tag1"], { opacity: 0, y: -40, duration: 0.25 }, 27.9);
+    pop("#hd-c6", 28.25);
+    pop("#hd-cal", 28.25);
+    const day = { d: 1 };
+    tl.fromTo(day, { d: 1 }, { d: 30, duration: 1.6, ease: "power1.in", onUpdate: () => { document.querySelector("#hd-day").textContent = Math.round(day.d); } }, 28.4);
+    tl.to("#hd-cal", { opacity: 0, scale: 0.8, duration: 0.2 }, 29.95);
+    pop("#hd-count", 28.3);
+    const n = { v: 12 };
+    tl.fromTo(n, { v: 12 }, { v: 312, duration: 1.8, ease: "power2.out", onUpdate: () => { document.querySelector("#hd-n").textContent = Math.round(n.v); } }, 28.4);
+    pop("#hd-c7", 32.5);
+    pop("#hd-c8", 34.6);
+    rise("#hd-card2", 34.7);
+    pop("#hd-c9", 36.15);
+    tl.fromTo("#hd-ph2", { x: 300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.2, ease: "power3.out" }, 36.15);
+    tl.fromTo("#hd-ph3", { x: 300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.2, ease: "power3.out" }, 36.75);
+    tl.fromTo("#hd-ph4", { x: 300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.2, ease: "power3.out" }, 37.45);
+    tl.fromTo("#hd-ph5", { x: 300, opacity: 0 }, { x: 0, opacity: 1, duration: 0.2, ease: "power3.out" }, 38.05);
+    tl.fromTo("#hd-promo", { scale: 2.4, opacity: 0, rotation: -14 }, { scale: 1, opacity: 1, rotation: -3, duration: 0.3, ease: "power4.in" }, 38.5);
+    tl.to("#hd-promo", { scale: 1.06, duration: 0.45, yoyo: true, repeat: 4, ease: "sine.inOut" }, 39.0);
+    tl.fromTo("#hd-p2t", { scale: 1.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "power4.out" }, 41.5);
+    rise("#hd-p2s", 41.95);
+    pop("#hd-wa", 44.15);
+    tl.to("#hd-wa", { scale: 1.05, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, 44.6);
+    rise("#hd-logo", 44.55);
+    window.__timelines["hud"] = tl;
+  </script>
+</template>
