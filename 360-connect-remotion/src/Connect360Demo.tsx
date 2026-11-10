@@ -23,7 +23,7 @@ export type Connect360DemoProps = {
 };
 
 /**
- * Anuncio «360 Connect · Casa Nativa (demo)» — 1080 x 1920, 30 fps, 64 s.
+ * Anuncio «360 Connect · Casa Nativa (demo)» — 1080 x 1920, 30 fps, ~87 s (la duracion sale de edl.json).
  *
  * Capas, de abajo arriba:
  *   1. Imagen: planos a camara, plano de apoyo del telefono y demo de Casa Nativa.

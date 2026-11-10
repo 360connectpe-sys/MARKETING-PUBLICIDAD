@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import data from "../edit/captions.json";
-import { at, MARKS, WIDTH } from "../edit/timeline";
+import { at, atSource, MARKS, type SourceKey, WIDTH } from "../edit/timeline";
 import { CLAMP, COLORS, FONT, outline } from "../theme";
 
 /**
@@ -12,7 +12,7 @@ import { CLAMP, COLORS, FONT, outline } from "../theme";
  * y se resalta la palabra que se esta diciendo.
  */
 
-type RawToken = { seg: string; text: string; in: number; out: number; key?: boolean; pageEnd?: boolean };
+type RawToken = { src: SourceKey; text: string; in: number; out: number; key?: boolean; pageEnd?: boolean };
 type Word = { text: string; start: number; end: number; key: boolean };
 type Page = { words: Word[]; start: number; end: number };
 
@@ -23,10 +23,11 @@ const buildPages = (): Page[] => {
   const pages: Page[] = [];
   let current: Word[] = [];
   for (const token of data.tokens as RawToken[]) {
+    const start = atSource(token.src, token.in);
     current.push({
       text: token.text,
-      start: at(token.seg, token.in),
-      end: at(token.seg, token.out),
+      start,
+      end: Math.max(start + 2, atSource(token.src, token.out)),
       key: Boolean(token.key),
     });
     if (token.pageEnd) {
@@ -34,6 +35,7 @@ const buildPages = (): Page[] => {
       current = [];
     }
   }
+  pages.sort((a, b) => a.start - b.start);
   return pages.map((page, i) => {
     const next = pages[i + 1];
     const lastEnd = page.end;

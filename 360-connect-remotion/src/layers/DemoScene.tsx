@@ -12,7 +12,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import { Icon, type IconName } from "../components/Icon";
-import { at, HEIGHT, MARKS, seg, videoFile, WIDTH } from "../edit/timeline";
+import { atSource, HEIGHT, MARKS, seg, videoFile, WIDTH } from "../edit/timeline";
 import { CLAMP, COLORS, FONT, PIXEL_FONT } from "../theme";
 
 /**
@@ -66,26 +66,26 @@ type Shot = {
   tap?: { at: number; point: readonly [number, number] };
 };
 
-const B = "demo-abajo-b";
 const D0 = MARKS.demoFrom;
 const D1 = MARKS.demoTo;
 
 const T = {
-  menu: at(B, 266),
-  promos: at(B, 298),
-  wifi: at(B, 334),
-  redes: at(B, 374),
-  ranking: at(B, 404),
-  premios: at(B, 436),
+  menu: atSource("RP", 266),
+  promos: seg("demo-promos").from,
+  wifi: seg("demo-wifi").from,
+  redes: seg("demo-redes").from,
+  ranking: atSource("RP", 404),
+  premios: atSource("RP", 436),
   teaser: seg("demo-juegos").from,
   reveal: MARKS.gamesReveal,
+  seleccion: atSource("RP", 1150),
   rankGames: seg("demo-ranking").from,
-  prize: at("demo-ranking", 1441),
+  prize: atSource("RP", 1441),
   friends: seg("demo-sala").from,
-  amigos: at("demo-sala", 2378),
-  mesa: at("demo-sala", 2412),
-  sala: at("demo-sala", 2431),
-  tapSala: at("demo-sala", 2466),
+  amigos: atSource("RP", 2378),
+  mesa: atSource("RP", 2412),
+  sala: atSource("RP", 2431),
+  tapSala: atSource("RP", 2466),
 };
 
 export const DEMO_TIMES = T;
@@ -105,7 +105,8 @@ export const SHOTS: Shot[] = [
     id: "menu",
     from: T.menu,
     to: T.promos,
-    source: 553,
+    source: 556,
+    freeze: true,
     cropTop: BAR_CLOSED,
     zoom: [1.02, 1.08],
     focus: [366, 420],
@@ -141,7 +142,7 @@ export const SHOTS: Shot[] = [
     id: "ranking",
     from: T.ranking,
     to: T.teaser,
-    source: 735,
+    source: 702,
     cropTop: BAR_OPEN,
     zoom: [1.0, 1.12],
     focus: [366, 360],
@@ -171,6 +172,7 @@ export const SHOTS: Shot[] = [
     zoom: [1.16, 1.0],
     focus: [366, 420],
     label: { text: "Zona de juegos", icon: "gamepad", arcade: true },
+    labelSwap: { at: T.seleccion, label: { text: "Elige 5 juegos", icon: "gamepad", arcade: true } },
   },
   {
     id: "ranking-juegos",

@@ -22,7 +22,7 @@ const LOGO_RATIO = 2152 / 622;
 
 // ------------------------------------------------- «Mientras llega el pedido»
 export const HookTitle: React.FC = () => {
-  const until = seg("promesa").from + 2;
+  const until = seg("gancho-3").from + 30;
   return (
     <Sequence name="Rotulo · Mientras llega el pedido" from={0} durationInFrames={until} layout="none">
       <HookTitleInner duration={until} />

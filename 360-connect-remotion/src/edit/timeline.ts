@@ -66,6 +66,22 @@ export const at = (id: string, sourceFrame: number): number => {
   return s.from + (sourceFrame - s.in);
 };
 
+/**
+ * Fotograma del montaje para un fotograma de un video original, buscando el
+ * corte de voz de ese video que lo contiene (o el mas cercano).
+ */
+export const atSource = (src: SourceKey, sourceFrame: number): number => {
+  const candidates = SEGMENTS.filter((s) => s.src === src);
+  if (candidates.length === 0) {
+    throw new Error(`El video "${src}" no se usa en edl.json`);
+  }
+  const distance = (s: Segment) =>
+    sourceFrame < s.in ? s.in - sourceFrame : sourceFrame >= s.out ? sourceFrame - s.out + 1 : 0;
+  const best = candidates.reduce((a, b) => (distance(b) < distance(a) ? b : a));
+  const clamped = Math.min(Math.max(sourceFrame, best.in), best.out);
+  return best.from + (clamped - best.in);
+};
+
 export const videoFile = (key: SourceKey) => staticFile(`media/${edl.sources[key]}.mp4`);
 export const voiceFile = (key: SourceKey) => staticFile(`media/voice/${edl.sources[key]}.wav`);
 
@@ -81,7 +97,7 @@ export const MARKS = {
   demoFrom: seg("pausa-demo").from,
   /** Palabra «juegos»: entrada a la Zona de Juegos */
   gamesReveal: at("demo-juegos", 1078),
-  demoTo: seg("lo-mejor").from,
+  demoTo: seg("idea").from,
   /** «¿implementarias esta idea?» */
   ctaQuestion: at("cta-1", 310) - 4,
   endCardFrom: seg("cierre").from,

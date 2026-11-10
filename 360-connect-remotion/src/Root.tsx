@@ -1,6 +1,7 @@
 import React from "react";
 import { Composition } from "remotion";
 import { Connect360Demo } from "./Connect360Demo";
+import { TOTAL_FRAMES } from "./edit/timeline";
 import "./theme";
 
 export const RemotionRoot: React.FC = () => {
@@ -8,7 +9,7 @@ export const RemotionRoot: React.FC = () => {
     <Composition
       id="Connect360Demo"
       component={Connect360Demo}
-      durationInFrames={1920}
+      durationInFrames={TOTAL_FRAMES}
       fps={30}
       width={1080}
       height={1920}

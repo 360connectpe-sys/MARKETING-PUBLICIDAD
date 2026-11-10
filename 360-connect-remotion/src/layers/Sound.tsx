@@ -59,8 +59,26 @@ const musicCurve = (frame: number): number => {
   );
 };
 
+/** Pausas sin voz dentro de la demo: la musica sube para que no se sienta vacio. */
+const PAUSES = SEGMENTS.filter((s) => s.src === null && s.from > MARKS.demoFrom && s.from < MARKS.demoTo);
+const pauseBoost = (frame: number): number =>
+  PAUSES.reduce(
+    (acc, s) =>
+      Math.max(
+        acc,
+        interpolate(frame, [s.from, s.from + 4, s.from + s.duration - 3, s.from + s.duration], [0, 1, 1, 0], CLAMP),
+      ),
+    0,
+  ) * 0.1;
+
 export const Music: React.FC<{ readonly gain: number }> = ({ gain }) => {
-  return <Audio name="Musica base" src={staticFile("music/base.wav")} volume={(f) => gain * musicCurve(f)} />;
+  return (
+    <Audio
+      name="Musica base"
+      src={staticFile("music/base.wav")}
+      volume={(f) => gain * (musicCurve(f) + pauseBoost(f))}
+    />
+  );
 };
 
 // ------------------------------------------------------------------ efectos
@@ -93,6 +111,8 @@ const CUES: Cue[] = [
   { at: T.reveal - 9, file: "click", volume: 0.4, note: "toque en la Zona de Juegos" },
   { at: T.reveal, file: "impact", volume: 0.6, note: "entra la Zona de Juegos" },
   { at: T.reveal + 2, file: "arcade-start", volume: 0.34, note: "melodia arcade" },
+  { at: T.seleccion, file: "swish", volume: 0.2, note: "elige 5 juegos" },
+  { at: T.seleccion + 2, file: "blip", volume: 0.24, note: "elige 5 juegos" },
   { at: T.rankGames - 1, file: "swish", volume: 0.2, note: "ranking de juegos" },
   { at: T.rankGames + 8, file: "blip", volume: 0.26, note: "resalta" },
   { at: T.prize - 1, file: "swish", volume: 0.2, note: "premio" },

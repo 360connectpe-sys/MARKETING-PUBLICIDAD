@@ -1,20 +1,20 @@
 {
- "_nota": "Subtitulos palabra por palabra. in/out = fotogramas del video ORIGINAL (30 fps) dentro del segmento de voz indicado en edl.json. key = palabra clave resaltada. pageEnd = ultima palabra de la pagina.",
+ "_nota": "Subtitulos palabra por palabra. src = video original; in/out = fotogramas de ese video (30 fps). Se ubican solos en el montaje segun edl.json. key = palabra clave resaltada. pageEnd = ultima palabra de la pagina.",
  "tokens": [
   {
-   "seg": "gancho-1",
+   "src": "IMG_0319",
    "text": "¿Tienes",
    "in": 3,
    "out": 8
   },
   {
-   "seg": "gancho-1",
+   "src": "IMG_0319",
    "text": "una",
    "in": 8,
    "out": 11
   },
   {
-   "seg": "gancho-1",
+   "src": "IMG_0319",
    "text": "cafetería",
    "in": 11,
    "out": 29,
@@ -22,19 +22,19 @@
    "pageEnd": true
   },
   {
-   "seg": "gancho-1",
+   "src": "IMG_0319",
    "text": "o",
    "in": 29,
    "out": 34
   },
   {
-   "seg": "gancho-1",
+   "src": "IMG_0319",
    "text": "un",
    "in": 34,
    "out": 38
   },
   {
-   "seg": "gancho-1",
+   "src": "IMG_0319",
    "text": "restaurante?",
    "in": 38,
    "out": 55,
@@ -42,25 +42,25 @@
    "pageEnd": true
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "¿Qué",
    "in": 104,
    "out": 108
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "hacen",
    "in": 108,
    "out": 112
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "tus",
    "in": 112,
    "out": 115
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "clientes",
    "in": 115,
    "out": 123,
@@ -68,25 +68,25 @@
    "pageEnd": true
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "mientras",
    "in": 123,
    "out": 132
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "esperan",
    "in": 133,
    "out": 142
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "su",
    "in": 142,
    "out": 145
   },
   {
-   "seg": "gancho-2",
+   "src": "IMG_0319",
    "text": "pedido?",
    "in": 145,
    "out": 158,
@@ -94,38 +94,123 @@
    "pageEnd": true
   },
   {
-   "seg": "promesa",
-   "text": "¿Y si",
+   "src": "IMG_0319",
+   "text": "Normalmente",
+   "in": 164,
+   "out": 176
+  },
+  {
+   "src": "IMG_0319",
+   "text": "están",
+   "in": 176,
+   "out": 182
+  },
+  {
+   "src": "IMG_0319",
+   "text": "en",
+   "in": 182,
+   "out": 187
+  },
+  {
+   "src": "IMG_0319",
+   "text": "Instagram",
+   "in": 187,
+   "out": 197,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0319",
+   "text": "o",
+   "in": 197,
+   "out": 205
+  },
+  {
+   "src": "IMG_0319",
+   "text": "en",
+   "in": 205,
+   "out": 209
+  },
+  {
+   "src": "IMG_0319",
+   "text": "TikTok,",
+   "in": 209,
+   "out": 216,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0319",
+   "text": "o",
+   "in": 218,
+   "out": 227
+  },
+  {
+   "src": "IMG_0319",
+   "text": "simplemente",
+   "in": 227,
+   "out": 242
+  },
+  {
+   "src": "IMG_0319",
+   "text": "su",
+   "in": 242,
+   "out": 254
+  },
+  {
+   "src": "IMG_0319",
+   "text": "celular,",
+   "in": 254,
+   "out": 266,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0319",
+   "text": "¿verdad?",
+   "in": 268,
+   "out": 283,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0319",
+   "text": "¿Y",
+   "in": 288,
+   "out": 298
+  },
+  {
+   "src": "IMG_0319",
+   "text": "si",
    "in": 306,
    "out": 309
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "te",
    "in": 309,
    "out": 311
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "dijera",
    "in": 311,
    "out": 318,
    "pageEnd": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "que",
    "in": 318,
    "out": 322
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "podemos",
    "in": 322,
    "out": 328
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "convertir",
    "in": 328,
    "out": 342,
@@ -133,26 +218,26 @@
    "pageEnd": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "ese",
    "in": 343,
    "out": 347
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "tiempo",
    "in": 347,
    "out": 354,
    "key": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "de",
    "in": 354,
    "out": 358
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "espera",
    "in": 358,
    "out": 364,
@@ -160,19 +245,19 @@
    "pageEnd": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "en",
    "in": 366,
    "out": 378
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "una",
    "in": 386,
    "out": 391
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "experiencia",
    "in": 391,
    "out": 403,
@@ -180,7 +265,7 @@
    "pageEnd": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "maravillosa",
    "in": 403,
    "out": 418,
@@ -188,63 +273,63 @@
    "pageEnd": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "que",
    "in": 418,
    "out": 424
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "anime",
    "in": 424,
    "out": 442
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "a",
    "in": 442,
    "out": 443
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "tu",
    "in": 443,
    "out": 446
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "cliente",
    "in": 446,
    "out": 460,
    "pageEnd": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "a",
    "in": 460,
    "out": 464
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "volver",
    "in": 467,
    "out": 473,
    "key": true
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "a",
    "in": 473,
    "out": 478
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "tu",
    "in": 478,
    "out": 481
   },
   {
-   "seg": "promesa",
+   "src": "IMG_0319",
    "text": "negocio?",
    "in": 481,
    "out": 498,
@@ -252,52 +337,52 @@
    "pageEnd": true
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "Y",
    "in": 0,
    "out": 2
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "justamente",
    "in": 2,
    "out": 12
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "por",
    "in": 12,
    "out": 16
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "eso",
    "in": 16,
    "out": 22,
    "pageEnd": true
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "estamos",
    "in": 22,
    "out": 28
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "creando",
    "in": 28,
    "out": 39,
    "pageEnd": true
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "360",
    "in": 39,
    "out": 53,
    "key": true
   },
   {
-   "seg": "marca",
+   "src": "IMG_0322",
    "text": "Connect",
    "in": 53,
    "out": 73,
@@ -305,13 +390,79 @@
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
-   "text": "¿Cómo",
-   "in": 204,
+   "src": "IMG_0322",
+   "text": "una",
+   "in": 90,
+   "out": 103
+  },
+  {
+   "src": "IMG_0322",
+   "text": "nueva",
+   "in": 103,
+   "out": 110
+  },
+  {
+   "src": "IMG_0322",
+   "text": "forma",
+   "in": 110,
+   "out": 120,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0322",
+   "text": "de",
+   "in": 120,
+   "out": 125
+  },
+  {
+   "src": "IMG_0322",
+   "text": "conectar",
+   "in": 125,
+   "out": 140,
+   "key": true
+  },
+  {
+   "src": "IMG_0322",
+   "text": "tu",
+   "in": 140,
+   "out": 146
+  },
+  {
+   "src": "IMG_0322",
+   "text": "restaurante",
+   "in": 146,
+   "out": 163,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0322",
+   "text": "con",
+   "in": 163,
+   "out": 170
+  },
+  {
+   "src": "IMG_0322",
+   "text": "tus",
+   "in": 170,
+   "out": 181
+  },
+  {
+   "src": "IMG_0322",
+   "text": "clientes.",
+   "in": 181,
+   "out": 195,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0322",
+   "text": "¿Y cómo",
+   "in": 196,
    "out": 210
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "funciona?",
    "in": 210,
    "out": 228,
@@ -319,20 +470,20 @@
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "Es",
    "in": 231,
    "out": 234
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "súper",
    "in": 234,
    "out": 246,
    "key": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "sencillo.",
    "in": 246,
    "out": 262,
@@ -340,25 +491,25 @@
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "Solo",
    "in": 263,
    "out": 269
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "acerca",
    "in": 269,
    "out": 277
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "tu",
    "in": 277,
    "out": 282
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "celular",
    "in": 282,
    "out": 292,
@@ -366,19 +517,19 @@
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "a",
    "in": 292,
    "out": 295
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "la",
    "in": 295,
    "out": 298
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "placa",
    "in": 298,
    "out": 311,
@@ -386,31 +537,31 @@
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "o",
    "in": 311,
    "out": 316
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "escanea",
    "in": 318,
    "out": 330
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "el",
    "in": 330,
    "out": 334
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "código",
    "in": 334,
    "out": 341
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "QR",
    "in": 341,
    "out": 353,
@@ -418,64 +569,64 @@
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "en",
    "in": 353,
    "out": 359
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "el",
    "in": 359,
    "out": 361
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "reverso",
    "in": 361,
    "out": 386,
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "y",
    "in": 386,
    "out": 398
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "te",
    "in": 398,
    "out": 404
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "dirigirá",
    "in": 404,
    "out": 422,
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "a",
    "in": 422,
    "out": 442
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "una",
    "in": 442,
    "out": 448
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "página",
    "in": 448,
    "out": 458,
    "key": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "exclusiva",
    "in": 458,
    "out": 477,
@@ -483,19 +634,19 @@
    "pageEnd": true
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "de",
    "in": 477,
    "out": 483
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "tu",
    "in": 483,
    "out": 489
   },
   {
-   "seg": "como-funciona",
+   "src": "IMG_0322",
    "text": "restaurante.",
    "in": 489,
    "out": 508,
@@ -503,31 +654,31 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-abajo-a",
+   "src": "RP",
    "text": "En",
    "in": 215,
    "out": 222
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "la",
    "in": 230,
    "out": 240
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "parte",
    "in": 240,
    "out": 248
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "de",
    "in": 248,
    "out": 252
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "abajo",
    "in": 252,
    "out": 258,
@@ -535,26 +686,26 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "estará",
    "in": 258,
    "out": 269
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "el",
    "in": 269,
    "out": 274
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "menú",
    "in": 274,
    "out": 281,
    "key": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "digital,",
    "in": 281,
    "out": 296,
@@ -562,33 +713,33 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "promociones",
    "in": 301,
    "out": 314,
    "key": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "que",
    "in": 314,
    "out": 318
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "tú",
    "in": 319,
    "out": 321
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "coloques,",
    "in": 321,
    "out": 332,
    "pageEnd": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "Wi-Fi,",
    "in": 336,
    "out": 366,
@@ -596,20 +747,20 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "tus",
    "in": 377,
    "out": 382
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "redes",
    "in": 382,
    "out": 388,
    "key": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "sociales,",
    "in": 388,
    "out": 402,
@@ -617,14 +768,14 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "ranking",
    "in": 407,
    "out": 417,
    "key": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "semanal",
    "in": 417,
    "out": 433,
@@ -632,38 +783,38 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "y",
    "in": 433,
    "out": 436
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "los",
    "in": 438,
    "out": 440
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "premios",
    "in": 440,
    "out": 454,
    "key": true
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "para",
    "in": 454,
    "out": 458
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "el",
    "in": 458,
    "out": 463
   },
   {
-   "seg": "demo-abajo-b",
+   "src": "RP",
    "text": "top 3.",
    "in": 463,
    "out": 472,
@@ -671,25 +822,25 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "La",
    "in": 1000,
    "out": 1008
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "parte",
    "in": 1008,
    "out": 1016
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "más",
    "in": 1016,
    "out": 1025
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "interesante",
    "in": 1025,
    "out": 1044,
@@ -697,26 +848,26 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "de",
    "in": 1044,
    "out": 1050
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "esto:",
    "in": 1050,
    "out": 1064,
    "pageEnd": true
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "¡los",
    "in": 1064,
    "out": 1078
   },
   {
-   "seg": "demo-juegos",
+   "src": "RP",
    "text": "juegos!",
    "in": 1078,
    "out": 1097,
@@ -724,57 +875,130 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
+   "text": "Que",
+   "in": 1110,
+   "out": 1118
+  },
+  {
+   "src": "RP",
+   "text": "tú",
+   "in": 1118,
+   "out": 1126
+  },
+  {
+   "src": "RP",
+   "text": "vas",
+   "in": 1126,
+   "out": 1145
+  },
+  {
+   "src": "RP",
+   "text": "a",
+   "in": 1145,
+   "out": 1149
+  },
+  {
+   "src": "RP",
+   "text": "poder",
+   "in": 1149,
+   "out": 1156,
+   "pageEnd": true
+  },
+  {
+   "src": "RP",
+   "text": "seleccionar",
+   "in": 1156,
+   "out": 1171,
+   "key": true
+  },
+  {
+   "src": "RP",
+   "text": "5",
+   "in": 1171,
+   "out": 1181,
+   "key": true
+  },
+  {
+   "src": "RP",
+   "text": "juegos",
+   "in": 1181,
+   "out": 1193,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "RP",
+   "text": "para",
+   "in": 1193,
+   "out": 1201
+  },
+  {
+   "src": "RP",
+   "text": "tu",
+   "in": 1201,
+   "out": 1208
+  },
+  {
+   "src": "RP",
+   "text": "negocio.",
+   "in": 1208,
+   "out": 1223,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "RP",
    "text": "Mientras",
    "in": 1404,
    "out": 1412
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "más",
    "in": 1412,
    "out": 1418
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "puntos",
    "in": 1418,
    "out": 1428,
    "key": true
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "ganas,",
    "in": 1428,
    "out": 1440,
    "pageEnd": true
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "más",
    "in": 1441,
    "out": 1447
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "subes",
    "in": 1447,
    "out": 1454
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "en",
    "in": 1454,
    "out": 1457
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "la",
    "in": 1457,
    "out": 1459
   },
   {
-   "seg": "demo-ranking",
+   "src": "RP",
    "text": "clasificación.",
    "in": 1459,
    "out": 1486,
@@ -782,26 +1006,26 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "Puedes",
    "in": 2314,
    "out": 2332
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "jugar",
    "in": 2336,
    "out": 2343,
    "key": true
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "en",
    "in": 2343,
    "out": 2347
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "línea",
    "in": 2347,
    "out": 2359,
@@ -809,19 +1033,19 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "con",
    "in": 2359,
    "out": 2370
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "tus",
    "in": 2370,
    "out": 2376
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "amigos,",
    "in": 2378,
    "out": 2400,
@@ -829,19 +1053,19 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "compañeros",
    "in": 2403,
    "out": 2414
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "de",
    "in": 2414,
    "out": 2418
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "mesa,",
    "in": 2418,
    "out": 2427,
@@ -849,44 +1073,44 @@
    "pageEnd": true
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "y",
    "in": 2427,
    "out": 2435
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "crear",
    "in": 2435,
    "out": 2442
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "cada",
    "in": 2442,
    "out": 2448
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "uno",
    "in": 2448,
    "out": 2458,
    "pageEnd": true
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "su",
    "in": 2458,
    "out": 2462
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "propia",
    "in": 2462,
    "out": 2469
   },
   {
-   "seg": "demo-sala",
+   "src": "RP",
    "text": "sala.",
    "in": 2469,
    "out": 2478,
@@ -894,13 +1118,118 @@
    "pageEnd": true
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
+   "text": "Porque",
+   "in": 13,
+   "out": 26
+  },
+  {
+   "src": "IMG_0330",
+   "text": "nuestra",
+   "in": 26,
+   "out": 34
+  },
+  {
+   "src": "IMG_0330",
+   "text": "idea",
+   "in": 34,
+   "out": 41,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0330",
+   "text": "no",
+   "in": 41,
+   "out": 53
+  },
+  {
+   "src": "IMG_0330",
+   "text": "es",
+   "in": 53,
+   "out": 60
+  },
+  {
+   "src": "IMG_0330",
+   "text": "solo",
+   "in": 60,
+   "out": 68
+  },
+  {
+   "src": "IMG_0330",
+   "text": "vender",
+   "in": 68,
+   "out": 76,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0330",
+   "text": "placas",
+   "in": 76,
+   "out": 88,
+   "key": true
+  },
+  {
+   "src": "IMG_0330",
+   "text": "NFC,",
+   "in": 88,
+   "out": 101,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0330",
+   "text": "queremos",
+   "in": 103,
+   "out": 120
+  },
+  {
+   "src": "IMG_0330",
+   "text": "que",
+   "in": 126,
+   "out": 136
+  },
+  {
+   "src": "IMG_0330",
+   "text": "los",
+   "in": 136,
+   "out": 138
+  },
+  {
+   "src": "IMG_0330",
+   "text": "restaurantes",
+   "in": 138,
+   "out": 154,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0330",
+   "text": "ofrezcan",
+   "in": 154,
+   "out": 167
+  },
+  {
+   "src": "IMG_0330",
+   "text": "algo",
+   "in": 167,
+   "out": 176
+  },
+  {
+   "src": "IMG_0330",
+   "text": "novedoso.",
+   "in": 176,
+   "out": 196,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0330",
    "text": "Lo",
    "in": 338,
    "out": 340
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "mejor:",
    "in": 340,
    "out": 350,
@@ -908,50 +1237,50 @@
    "pageEnd": true
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "cada",
    "in": 350,
    "out": 363
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "restaurante",
    "in": 366,
    "out": 384,
    "pageEnd": true
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "va",
    "in": 384,
    "out": 388
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "a",
    "in": 388,
    "out": 389
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "tener",
    "in": 389,
    "out": 394
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "su",
    "in": 394,
    "out": 398
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "propia",
    "in": 398,
    "out": 404
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "página,",
    "in": 404,
    "out": 415,
@@ -959,7 +1288,7 @@
    "pageEnd": true
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "promociones,",
    "in": 417,
    "out": 445,
@@ -967,13 +1296,13 @@
    "pageEnd": true
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "propios",
    "in": 449,
    "out": 458
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "juegos",
    "in": 458,
    "out": 468,
@@ -981,19 +1310,19 @@
    "pageEnd": true
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "y",
    "in": 468,
    "out": 477
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "todo",
    "in": 479,
    "out": 487
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "personalizado",
    "in": 487,
    "out": 511,
@@ -1001,19 +1330,19 @@
    "pageEnd": true
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "con",
    "in": 511,
    "out": 521
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "tu",
    "in": 521,
    "out": 528
   },
   {
-   "seg": "lo-mejor",
+   "src": "IMG_0330",
    "text": "negocio.",
    "in": 528,
    "out": 550,
@@ -1021,20 +1350,20 @@
    "pageEnd": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "Somos",
    "in": 10,
    "out": 24
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "360",
    "in": 24,
    "out": 38,
    "key": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "Connect:",
    "in": 38,
    "out": 57,
@@ -1042,78 +1371,78 @@
    "pageEnd": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "conectamos",
    "in": 63,
    "out": 80,
    "key": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "negocios",
    "in": 80,
    "out": 96,
    "pageEnd": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "y",
    "in": 96,
    "out": 99
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "mejoramos",
    "in": 99,
    "out": 114,
    "key": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "la",
    "in": 114,
    "out": 118
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "experiencia",
    "in": 118,
    "out": 130,
    "pageEnd": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "para",
    "in": 130,
    "out": 139
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "ti",
    "in": 147,
    "out": 156,
    "key": true
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "y",
    "in": 156,
    "out": 164
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "para",
    "in": 164,
    "out": 171
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "tu",
    "in": 171,
    "out": 177
   },
   {
-   "seg": "somos",
+   "src": "IMG_0331",
    "text": "cliente.",
    "in": 181,
    "out": 208,
@@ -1121,19 +1450,19 @@
    "pageEnd": true
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "Así",
    "in": 233,
    "out": 236
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "que",
    "in": 236,
    "out": 239
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "dime:",
    "in": 239,
    "out": 250,
@@ -1141,70 +1470,70 @@
    "pageEnd": true
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "si",
    "in": 256,
    "out": 259
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "tú",
    "in": 259,
    "out": 263
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "tuvieras",
    "in": 263,
    "out": 273
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "un",
    "in": 273,
    "out": 275
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "restaurante",
    "in": 275,
    "out": 290,
    "pageEnd": true
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "o",
    "in": 290,
    "out": 291
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "una",
    "in": 291,
    "out": 294
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "cafetería,",
    "in": 294,
    "out": 310,
    "pageEnd": true
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "¿implementarías",
    "in": 310,
    "out": 329,
    "key": true
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "esta",
    "in": 329,
    "out": 335
   },
   {
-   "seg": "cta-1",
+   "src": "IMG_0333",
    "text": "idea?",
    "in": 335,
    "out": 350,
@@ -1212,7 +1541,7 @@
    "pageEnd": true
   },
   {
-   "seg": "cta-2",
+   "src": "IMG_0333",
    "text": "¡Cuéntame!",
    "in": 463,
    "out": 478,

@@ -2,7 +2,7 @@
 
 Anuncio vertical para dueños de restaurantes y cafeterías, hecho con Remotion (React + TypeScript).
 
-- Composición: `Connect360Demo` — 1080 × 1920, 30 fps, 1920 fotogramas (64 s).
+- Composición: `Connect360Demo` — 1080 × 1920, 30 fps, 2620 fotogramas (≈ 87 s). La duración sale sola de `src/edit/edl.json`.
 - Salida: `out/360_Connect_Casa_Nativa_Demo.mp4`.
 
 ## Abrir y editar
@@ -25,18 +25,18 @@ npx remotion render src/index.ts Connect360Demo out/360_Connect_Casa_Nativa_Demo
 
 | Tramo | Fotogramas | Contenido |
 |---|---|---|
-| Gancho | 0–313 | «¿Qué hacen tus clientes mientras esperan su pedido?» + rótulo «Mientras llega el pedido» |
-| Marca | 313–697 | «Estamos creando 360 Connect», cómo funciona la placa NFC / QR, plano del teléfono en la mesa |
-| Demo | 697–1323 | Casa Nativa dentro de un teléfono: menú, promos, Wi-Fi, redes, ranking y **Zona de Juegos** (ranking, premios, jugar con la mesa, «Crear sala») |
-| Propuesta | 1323–1744 | Página propia, promociones y juegos personalizados · «Somos 360 Connect» |
-| Cierre | 1744–1920 | «¿Implementarías esta idea?» + «¿Lo probarías en tu local?» + tarjeta final con logo |
+| Gancho | 0–454 | «¿Qué hacen tus clientes mientras esperan su pedido? Instagram, TikTok, el celular…» + rótulo «Mientras llega el pedido» |
+| Marca | 454–966 | «Estamos creando 360 Connect, una nueva forma de conectar tu restaurante con tus clientes», cómo funciona la placa NFC / QR, plano del teléfono en la mesa |
+| Demo | 966–1811 | Casa Nativa dentro de un teléfono, con pausas para leer cada pantalla: menú, promos, Wi-Fi, redes, ranking y **Zona de Juegos** (elige 5 juegos, ranking, jugar con la mesa, «Crear sala») |
+| Propuesta | 1811–2422 | «No es solo vender placas NFC…», página propia, promociones y juegos personalizados · «Somos 360 Connect» |
+| Cierre | 2422–2620 | «¿Implementarías esta idea?» + «¿Lo probarías en tu local?» + tarjeta final con logo |
 
 ## Dónde cambiar cada cosa
 
 | Qué | Archivo |
 |---|---|
-| Cortes de voz (video de origen y rango de fotogramas) | `src/edit/edl.json` — todo lo demás se recoloca solo |
-| Texto y tiempos de los subtítulos | `src/edit/captions.json` (`*` palabras clave = `key: true`) |
+| Cortes de voz y pausas (`gap`) | `src/edit/edl.json` — todo lo demás (subtítulos, demo, rótulos, música) se recoloca solo; tras cambiarlo, ejecuta `python3 scripts/make-audio.py` para rehacer la música a la nueva duración |
+| Texto y tiempos de los subtítulos | `src/edit/captions.json` (fotogramas del video original; `key: true` = palabra resaltada) |
 | Planos a cámara, zoom, espejo, plano de apoyo | `src/layers/CameraTrack.tsx` |
 | Pantallas de la demo, rótulos, resaltados, stickers | `src/layers/DemoScene.tsx` (`SHOTS`, `STICKERS`) |
 | Rótulos, logo, pregunta final, tarjeta de cierre | `src/layers/Titles.tsx` |

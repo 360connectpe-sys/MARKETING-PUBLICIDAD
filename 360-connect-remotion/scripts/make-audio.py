@@ -234,18 +234,36 @@ def sfx_swish():
 FPS = 30
 BEAT = 16 / FPS          # 112,5 BPM
 BAR = 4 * BEAT
-TOTAL = 64.0
-OFFSET = 57 / FPS        # el primer tiempo fuerte cae en el fotograma 57 (y luego 313, 569, 697...)
 
-# Secciones en fotogramas del montaje
-F_GROOVE = 313           # «...estamos creando 360 Connect»
-F_DEMO = 697
-F_BUILD = 1017
-F_BREAK = 1049           # palabra «juegos»: corte + efecto arcade
-F_ARCADE = 1081
-F_OUT = 1337
-F_CTA = 1721
-F_END = 1881
+
+def _timeline():
+    """Lee src/edit/edl.json y devuelve el inicio de cada corte (fotogramas del montaje)."""
+    import json
+    edl = json.load(open(os.path.join(ROOT, "src/edit/edl.json")))
+    pos, starts = 0, {}
+    for item in edl["voice"]:
+        starts[item["id"]] = (pos, item.get("in", 0))
+        pos += item.get("gap") or item["out"] - item["in"]
+    return starts, pos
+
+
+_STARTS, _TOTAL_FRAMES = _timeline()
+_from = lambda seg_id: _STARTS[seg_id][0]
+_at = lambda seg_id, src_frame: _STARTS[seg_id][0] + src_frame - _STARTS[seg_id][1]
+
+TOTAL = _TOTAL_FRAMES / FPS
+# Secciones en fotogramas del montaje (se recalculan solas si cambian los cortes)
+F_PROMESA = _from("promesa")
+F_GROOVE = _from("marca")          # «...estamos creando 360 Connect»
+F_DEMO = _from("pausa-demo")
+_REVEAL = _at("demo-juegos", 1078)  # palabra «juegos»
+F_BUILD = _REVEAL - 40
+F_BREAK = _REVEAL - 6              # silencio + impacto + melodia arcade
+F_ARCADE = _REVEAL + 16
+F_OUT = _from("idea")
+F_CTA = _from("cta-1")
+F_END = _from("cierre")
+OFFSET = (F_GROOVE % 64) / FPS     # un tiempo fuerte cae justo en «360 Connect»
 
 CHORDS = [  # IV - V - vi - I en do mayor: (bajo, notas del acorde)
     (41, [65, 69, 72, 76]),   # Fmaj7
@@ -352,7 +370,7 @@ def music():
     tm = OFFSET - 3 * BEAT
     while tm < sec(F_GROOVE) - BEAT * 0.5:
         if tm >= 0:
-            lvl = 0.5 if tm < sec(120) else 0.5 * max(0.0, 1 - (tm - sec(120)) / (sec(F_GROOVE) - sec(120)))
+            lvl = 0.5 if tm < sec(120) else 0.5 * max(0.0, 1 - (tm - sec(120)) / (sec(F_PROMESA) - sec(120)))
             add(tonal, tick if b % 2 == 0 else tock, tm, lvl, -0.3 if b % 2 == 0 else 0.3)
         tm += BEAT
         b += 1
@@ -369,7 +387,7 @@ def music():
             if s in ("break", "end"):
                 continue
             # ---- bateria
-            if s in ("groove", "arcade", "groove2") or (s == "demo" and beat in (0, 2)) or (s == "intro" and tb >= sec(185) and beat == 0):
+            if s in ("groove", "arcade", "groove2") or (s == "demo" and beat in (0, 2)) or (s == "intro" and tb >= sec(F_PROMESA + 72) and beat == 0):
                 add(drums, k, tb, 0.9 if s != "intro" else 0.55)
                 i = int(tb * SR)
                 d = np.minimum(1.0, 0.35 + np.arange(int(0.26 * SR)) / (0.26 * SR) * 0.65)
@@ -388,7 +406,7 @@ def music():
                     u = (tb + q * BEAT / 4 - sec(F_BUILD)) / (sec(F_BREAK) - sec(F_BUILD))
                     add(drums, c, tb + q * BEAT / 4, 0.1 + 0.3 * u)
             # ---- bajo
-            if s in ("groove", "demo", "arcade", "groove2") or (s == "intro" and tb >= sec(185)):
+            if s in ("groove", "demo", "arcade", "groove2") or (s == "intro" and tb >= sec(F_PROMESA + 72)):
                 add(tonal, bass_note(root, BEAT * 0.45), tb + BEAT / 2, 0.5)
                 if s in ("arcade", "groove"):
                     add(tonal, bass_note(root + 12, BEAT * 0.22), tb + 3 * BEAT / 4, 0.26)
@@ -401,7 +419,7 @@ def music():
                     idx = (beat * 2 + e) % 8
                     pat = [0, 2, 1, 3, 2, 1, 3, 2]
                     note = notes[pat[idx]] + (12 if idx in (3, 6) else 0)
-                    lvl = {"intro": 0.16 if te >= sec(113) else 0.0, "groove": 0.3, "demo": 0.27, "build": 0.2,
+                    lvl = {"intro": 0.16 if te >= sec(F_PROMESA) else 0.0, "groove": 0.3, "demo": 0.27, "build": 0.2,
                            "arcade": 0.2, "groove2": 0.27, "cta": 0.3}.get(section(te + 0.001), 0)
                     if lvl:
                         add(tonal, pluck(note), te, lvl, 0.5 if idx % 2 else -0.5)
