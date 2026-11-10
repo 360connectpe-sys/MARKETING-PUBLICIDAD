@@ -5,7 +5,7 @@ import { CameraTrack, Cutaway, CutFlashes } from "./layers/CameraTrack";
 import { Captions } from "./layers/Captions";
 import { DemoScene } from "./layers/DemoScene";
 import { Dialogue, Music, SoundEffects } from "./layers/Sound";
-import { CtaTitle, EndCard, HookTitle, LogoBadge } from "./layers/Titles";
+import { CtaTitle, EndCard, HookQuestion, HookTitle, LogoBadge } from "./layers/Titles";
 
 export type Connect360DemoProps = {
   /** Subtitulos palabra por palabra. */
@@ -51,6 +51,7 @@ export const Connect360Demo: React.FC<Connect360DemoProps> = ({
 
       {/* 2 · Rotulos */}
       <HookTitle />
+      <HookQuestion />
       <LogoBadge />
       <CtaTitle />
 

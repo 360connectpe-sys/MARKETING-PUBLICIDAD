@@ -87,7 +87,11 @@ type Cue = { at: number; file: string; volume: number; note: string };
 const CUES: Cue[] = [
   { at: 0, file: "impact", volume: 0.3, note: "arranque" },
   { at: 2, file: "pop", volume: 0.4, note: "rotulo del gancho" },
-  { at: seg("gancho-2").from - 2, file: "whoosh-short", volume: 0.22, note: "acercamiento a la pregunta" },
+  { at: MARKS.hookQuestion - 2, file: "pop", volume: 0.4, note: "pregunta del gancho" },
+  { at: MARKS.hookQuestionPart2, file: "pop", volume: 0.32, note: "«mientras esperan su pedido?»" },
+  { at: seg("respiro-pregunta").from + 4, file: "tick", volume: 0.4, note: "tic-tac de espera" },
+  { at: seg("respiro-pregunta").from + 18, file: "tick", volume: 0.32, note: "tic-tac de espera" },
+  { at: seg("respiro-pregunta").from + 32, file: "tick", volume: 0.4, note: "tic-tac de espera" },
   { at: seg("promesa").from - 2, file: "whoosh-short", volume: 0.2, note: "corte" },
   { at: seg("marca").from - 3, file: "whoosh", volume: 0.3, note: "cambio de video" },
   { at: MARKS.brandReveal - 38, file: "riser", volume: 0.2, note: "subida hacia el logo" },

@@ -90,6 +90,12 @@ export const CAMERA_SOURCES: SourceKey[] = ["IMG_0319", "IMG_0322", "IMG_0330", 
 
 // ----- Hitos del montaje (todos derivados de los cortes) -----
 export const MARKS = {
+  /** «¿Que hacen tus clientes...» (gancho) */
+  hookQuestion: atSource("IMG_0319", 102),
+  /** «...mientras esperan su pedido?» */
+  hookQuestionPart2: atSource("IMG_0319", 122),
+  /** Fin de la pausa tras la pregunta */
+  hookQuestionEnd: seg("gancho-3").from,
   /** «...estamos creando 360 Connect» */
   brandReveal: at("marca", 39),
   /** Plano de apoyo del telefono sobre la mesa: «y te dirigira a una pagina exclusiva...» */

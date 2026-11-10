@@ -22,7 +22,7 @@ const LOGO_RATIO = 2152 / 622;
 
 // ------------------------------------------------- «Mientras llega el pedido»
 export const HookTitle: React.FC = () => {
-  const until = seg("gancho-3").from + 30;
+  const until = MARKS.hookQuestion - 1;
   return (
     <Sequence name="Rotulo · Mientras llega el pedido" from={0} durationInFrames={until} layout="none">
       <HookTitleInner duration={until} />
@@ -80,6 +80,79 @@ const HookTitleInner: React.FC<{ readonly duration: number }> = ({ duration }) =
           Mientras llega <span style={{ color: COLORS.yellow }}>el pedido</span>
           <span style={{ display: "inline-block", width: 44, textAlign: "left" }}>{".".repeat(dots)}</span>
         </span>
+      </div>
+    </div>
+  );
+};
+
+// ------------------------- «¿Que hacen tus clientes mientras esperan su pedido?»
+export const HookQuestion: React.FC = () => {
+  const from = MARKS.hookQuestion - 2;
+  return (
+    <Sequence name="Gancho · pregunta" from={from} durationInFrames={MARKS.hookQuestionEnd - from}>
+      <HookQuestionInner part2At={MARKS.hookQuestionPart2 - from} duration={MARKS.hookQuestionEnd - from} />
+    </Sequence>
+  );
+};
+
+const HookQuestionInner: React.FC<{ readonly part2At: number; readonly duration: number }> = ({ part2At, duration }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const l1 = spring({ frame, fps, config: { damping: 11, stiffness: 180, mass: 0.6 } });
+  const l2 = spring({ frame: frame - part2At, fps, config: { damping: 9, stiffness: 190, mass: 0.6 } });
+  const out = interpolate(frame, [duration - 6, duration], [0, 1], { ...CLAMP, easing: Easing.in(Easing.cubic) });
+  const pulse = 1 + 0.025 * Math.sin(Math.max(0, frame - part2At - 10) / 4);
+  const dots = ".".repeat(Math.floor(Math.max(0, frame - part2At) / 8) % 4);
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 1236,
+        left: 0,
+        width: WIDTH,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 14,
+        fontFamily: FONT,
+        fontWeight: 900,
+        textTransform: "uppercase",
+        lineHeight: 1.02,
+        textAlign: "center",
+        opacity: 1 - out,
+        scale: String(1 - out * 0.15),
+      }}
+    >
+      <div
+        style={{
+          fontSize: 86,
+          color: COLORS.white,
+          textShadow: outline(8, COLORS.navy, "0 10px 22px rgba(0,0,0,0.5)"),
+          scale: String(interpolate(l1, [0, 1], [0.4, 1])),
+          opacity: interpolate(frame, [0, 3], [0, 1], CLAMP),
+        }}
+      >
+        ¿Qué hacen
+        <br />
+        tus clientes
+      </div>
+      <div
+        style={{
+          fontSize: 62,
+          padding: "12px 30px 8px",
+          borderRadius: 24,
+          background: COLORS.yellow,
+          color: COLORS.navy,
+          border: `6px solid ${COLORS.navy}`,
+          boxShadow: "0 14px 30px rgba(0,0,0,0.4)",
+          scale: String(interpolate(l2, [0, 1], [0.3, 1]) * pulse),
+          rotate: "-2deg",
+          opacity: interpolate(frame, [part2At, part2At + 3], [0, 1], CLAMP),
+        }}
+      >
+        mientras esperan
+        <br />
+        su pedido?<span style={{ display: "inline-block", width: 60, textAlign: "left" }}>{dots}</span>
       </div>
     </div>
   );

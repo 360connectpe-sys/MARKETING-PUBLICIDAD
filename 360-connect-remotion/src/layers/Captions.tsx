@@ -96,6 +96,10 @@ export const Captions: React.FC = () => {
   const { fps } = useVideoConfig();
   const pages = useMemo(buildPages, []);
   const page = pages.find((p) => frame >= p.start && frame < p.end);
+  // Durante el gancho la pregunta va como titulo grande (Titles.tsx).
+  if (frame >= MARKS.hookQuestion - 2 && frame < MARKS.hookQuestionEnd) {
+    return null;
+  }
   if (!page) {
     return null;
   }

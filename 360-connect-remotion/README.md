@@ -2,7 +2,7 @@
 
 Anuncio vertical para dueños de restaurantes y cafeterías, hecho con Remotion (React + TypeScript).
 
-- Composición: `Connect360Demo` — 1080 × 1920, 30 fps, 2698 fotogramas (≈ 90 s). La duración sale sola de `src/edit/edl.json`.
+- Composición: `Connect360Demo` — 1080 × 1920, 30 fps, 2724 fotogramas (≈ 91 s). La duración sale sola de `src/edit/edl.json`.
 - Salida: `out/360_Connect_Casa_Nativa_Demo.mp4`.
 
 ## Abrir y editar
