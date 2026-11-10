@@ -89,6 +89,7 @@ const CUES: Cue[] = [
   { at: 2, file: "pop", volume: 0.4, note: "rotulo del gancho" },
   { at: MARKS.hookQuestion - 2, file: "pop", volume: 0.4, note: "pregunta del gancho" },
   { at: MARKS.hookQuestionPart2, file: "pop", volume: 0.32, note: "«mientras esperan su pedido?»" },
+  { at: seg("respiro-pregunta").from, file: "pop", volume: 0.34, note: "aparece el reloj" },
   { at: seg("respiro-pregunta").from + 4, file: "tick", volume: 0.4, note: "tic-tac de espera" },
   { at: seg("respiro-pregunta").from + 18, file: "tick", volume: 0.32, note: "tic-tac de espera" },
   { at: seg("respiro-pregunta").from + 32, file: "tick", volume: 0.4, note: "tic-tac de espera" },

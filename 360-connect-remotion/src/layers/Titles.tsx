@@ -158,6 +158,113 @@ const HookQuestionInner: React.FC<{ readonly part2At: number; readonly duration:
   );
 };
 
+// ------------------------------------------- reloj sobre la cara en la pausa
+/** Centro de la cara en el plano congelado (px del lienzo). */
+const FACE = { x: 690, y: 880, size: 560 };
+/** Fotogramas (dentro de la pausa) en que suena cada tic-tac (ver Sound.tsx). */
+const TICKS = [4, 18, 32];
+
+export const FaceClock: React.FC = () => {
+  const pause = seg("respiro-pregunta");
+  return (
+    <Sequence name="Reloj sobre la cara" from={pause.from} durationInFrames={pause.duration}>
+      <FaceClockInner duration={pause.duration} />
+    </Sequence>
+  );
+};
+
+const FaceClockInner: React.FC<{ readonly duration: number }> = ({ duration }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const pop = spring({ frame, fps, config: { damping: 9, stiffness: 210, mass: 0.6 } });
+  const out = interpolate(frame, [duration - 5, duration], [0, 1], { ...CLAMP, easing: Easing.in(Easing.cubic) });
+  const ticksDone = TICKS.filter((t) => frame >= t).length;
+  const lastTick = [...TICKS].reverse().find((t) => frame >= t) ?? -99;
+  const sinceTick = frame - lastTick;
+  // Segundero: salta 30° en cada tic con un pequeno rebote.
+  const jump = spring({ frame: sinceTick, fps, config: { damping: 8, stiffness: 320, mass: 0.3 } });
+  const second = (ticksDone - 1 + Math.min(1, jump)) * 30 + (ticksDone === 0 ? 30 : 0);
+  // Minutero que corre rapido: «el tiempo pasa».
+  const minute = 300 + frame * 7;
+  const hour = 240 + frame * 0.6;
+  const shake = sinceTick >= 0 && sinceTick < 6 ? Math.sin(sinceTick * 2.6) * (6 - sinceTick) * 0.9 : 0;
+  const s = FACE.size;
+  const r = 50;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: FACE.x - s / 2,
+        top: FACE.y - s / 2 - 40,
+        width: s,
+        height: s + 80,
+        scale: String(interpolate(pop, [0, 1], [0.2, 1]) * (1 - out * 0.6)),
+        opacity: 1 - out,
+        rotate: `${interpolate(pop, [0, 1], [-25, 0]) + shake}deg`,
+        filter: "drop-shadow(0 22px 34px rgba(4,12,40,0.55))",
+      }}
+    >
+      <svg width={s} height={s + 80} viewBox="-60 -72 120 132">
+        {/* boton y asas de cronometro */}
+        <rect x={-9} y={-70} width={18} height={10} rx={3} fill={COLORS.cyan} stroke={COLORS.navy} strokeWidth={2.5} />
+        <rect x={-4} y={-62} width={8} height={9} fill={COLORS.navy} />
+        <rect x={34} y={-50} width={12} height={8} rx={2.5} fill={COLORS.cyan} stroke={COLORS.navy} strokeWidth={2.5} transform="rotate(45 40 -46)" />
+        <rect x={-46} y={-50} width={12} height={8} rx={2.5} fill={COLORS.cyan} stroke={COLORS.navy} strokeWidth={2.5} transform="rotate(-45 -40 -46)" />
+        {/* caja */}
+        <circle r={r + 6} fill={COLORS.blue} stroke={COLORS.navy} strokeWidth={3} />
+        <circle r={r + 2} fill={COLORS.cyan} opacity={0.55} />
+        <circle r={r - 1} fill="#ffffff" stroke={COLORS.navy} strokeWidth={2} />
+        {/* marcas */}
+        {new Array(12).fill(0).map((_, i) => {
+          const a = (i * 30 * Math.PI) / 180;
+          const big = i % 3 === 0;
+          const r1 = r - (big ? 11 : 7);
+          return (
+            <line
+              key={i}
+              x1={Math.sin(a) * r1}
+              y1={-Math.cos(a) * r1}
+              x2={Math.sin(a) * (r - 4)}
+              y2={-Math.cos(a) * (r - 4)}
+              stroke={COLORS.navy}
+              strokeWidth={big ? 3.2 : 1.8}
+              strokeLinecap="round"
+            />
+          );
+        })}
+        {/* arco del tiempo que pasa */}
+        <path
+          d={describeArc(r - 17, 0, Math.min(359.9, frame * 8.6))}
+          fill="none"
+          stroke={COLORS.yellow}
+          strokeWidth={6}
+          strokeLinecap="round"
+          opacity={0.9}
+        />
+        {/* agujas */}
+        <line x1={0} y1={0} x2={0} y2={-22} stroke={COLORS.navy} strokeWidth={4.5} strokeLinecap="round" transform={`rotate(${hour})`} />
+        <line x1={0} y1={0} x2={0} y2={-33} stroke={COLORS.navy} strokeWidth={3.2} strokeLinecap="round" transform={`rotate(${minute})`} />
+        <g transform={`rotate(${second})`}>
+          <line x1={0} y1={8} x2={0} y2={-40} stroke="#ff3b5c" strokeWidth={1.8} strokeLinecap="round" />
+          <circle cy={-40} r={2.2} fill="#ff3b5c" />
+        </g>
+        <circle r={4} fill={COLORS.navy} />
+        <circle r={1.8} fill="#ff3b5c" />
+      </svg>
+    </div>
+  );
+};
+
+/** Arco SVG centrado en el origen, de `start` a `end` grados (0 = arriba). */
+const describeArc = (radius: number, start: number, end: number): string => {
+  const p = (deg: number) => {
+    const a = (deg * Math.PI) / 180;
+    return `${(Math.sin(a) * radius).toFixed(2)} ${(-Math.cos(a) * radius).toFixed(2)}`;
+  };
+  const large = end - start > 180 ? 1 : 0;
+  return `M ${p(start)} A ${radius} ${radius} 0 ${large} 1 ${p(end)}`;
+};
+
 // ----------------------------------------------------------- logo 360 Connect
 const STING = { logoW: 600, padX: 44, padY: 30, top: 178 };
 const BUG = { logoW: 232, padX: 22, padY: 13, top: 134, left: 44 };
