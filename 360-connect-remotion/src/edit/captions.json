@@ -43,6 +43,38 @@
   },
   {
    "src": "IMG_0319",
+   "text": "Te",
+   "in": 58,
+   "out": 63
+  },
+  {
+   "src": "IMG_0319",
+   "text": "quiero",
+   "in": 63,
+   "out": 71
+  },
+  {
+   "src": "IMG_0319",
+   "text": "hacer",
+   "in": 71,
+   "out": 75
+  },
+  {
+   "src": "IMG_0319",
+   "text": "una",
+   "in": 75,
+   "out": 81
+  },
+  {
+   "src": "IMG_0319",
+   "text": "consulta.",
+   "in": 81,
+   "out": 98,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "src": "IMG_0319",
    "text": "¿Qué",
    "in": 104,
    "out": 108

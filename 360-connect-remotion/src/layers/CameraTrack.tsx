@@ -1,6 +1,6 @@
 import { Video } from "@remotion/media";
 import React from "react";
-import { AbsoluteFill, Easing, interpolate, Sequence, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Easing, Freeze, interpolate, Sequence, useCurrentFrame } from "remotion";
 import { CAMERA_SOURCES, MARKS, SEGMENTS, type Segment, videoFile } from "../edit/timeline";
 import { CLAMP } from "../theme";
 
@@ -76,11 +76,24 @@ export const CameraTrack: React.FC<{ readonly mirror: boolean }> = ({ mirror }) 
     <AbsoluteFill style={{ backgroundColor: "black" }}>
       {SEGMENTS.map((segment, i) => {
         if (!isCamera(segment)) {
-          return null;
+          // Pausas dramaticas: imagen congelada del plano vecino («entrada» usa el
+          // primer fotograma del siguiente; «respiro-*» el ultimo del anterior).
+          const isIntro = segment.id === "entrada";
+          const ref = isIntro ? SEGMENTS[i + 1] : SEGMENTS[i - 1];
+          if (!(isIntro || segment.id.startsWith("respiro")) || !isCamera(ref)) {
+            return null;
+          }
+          return (
+            <Sequence key={segment.id} name={`Pausa · ${segment.id}`} from={segment.from} durationInFrames={segment.duration}>
+              <Freeze frame={isIntro ? 0 : ref.duration - 1}>
+                <Shot segment={ref} duration={ref.duration} enter={false} exit={false} mirror={mirror} />
+              </Freeze>
+            </Sequence>
+          );
         }
         const prev = SEGMENTS[i - 1];
         const next = SEGMENTS[i + 1];
-        const enter = i > 0 && prev?.src !== segment.src;
+        const enter = i > 0 && prev?.src !== segment.src && prev?.src !== null;
         const exit = isCamera(next) && next?.src !== segment.src;
         // El ultimo plano sigue unos fotogramas bajo la tarjeta de cierre.
         const tail = next && next.src === null && next.id === "cierre" ? 12 : 0;

@@ -11,16 +11,24 @@
   },
   "voice": [
     {
+      "id": "entrada",
+      "gap": 15
+    },
+    {
       "id": "gancho-1",
       "src": "IMG_0319",
       "in": 1,
-      "out": 56
+      "out": 100
     },
     {
       "id": "gancho-2",
       "src": "IMG_0319",
-      "in": 103,
+      "in": 100,
       "out": 161
+    },
+    {
+      "id": "respiro-pregunta",
+      "gap": 16
     },
     {
       "id": "gancho-3",
