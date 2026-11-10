@@ -441,7 +441,7 @@ def music():
     te = sec(F_END)
     for note, a in [(48, 0.5), (60, 0.5), (67, 0.45), (72, 0.5), (76, 0.45), (86, 0.3)]:
         add(tonal, pluck(note, 1.25, cutoff=3200) * np.exp(-t_axis(1.25) / 0.6), te, a * 0.8)
-    add(tonal, pad_chord([60, 64, 67, 74], 1.3), te, 0.3)
+    add(tonal, pad_chord([60, 64, 67, 74], max(1.3, TOTAL - te)), te, 0.3)  # el acorde cubre toda la tarjeta final
     add(drums, k, te, 0.9)
 
     tonal *= duck[:, None]            # efecto de bombeo suave con el bombo

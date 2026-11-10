@@ -2,7 +2,7 @@
 
 Anuncio vertical para dueños de restaurantes y cafeterías, hecho con Remotion (React + TypeScript).
 
-- Composición: `Connect360Demo` — 1080 × 1920, 30 fps, 2724 fotogramas (≈ 91 s). La duración sale sola de `src/edit/edl.json`.
+- Composición: `Connect360Demo` — 1080 × 1920, 30 fps, 2754 fotogramas (≈ 92 s). La duración sale sola de `src/edit/edl.json`.
 - Salida: `out/360_Connect_Casa_Nativa_Demo.mp4`.
 
 ## Abrir y editar
@@ -29,7 +29,7 @@ npx remotion render src/index.ts Connect360Demo out/360_Connect_Casa_Nativa_Demo
 | Marca | 454–966 | «Estamos creando 360 Connect, una nueva forma de conectar tu restaurante con tus clientes», cómo funciona la placa NFC / QR, plano del teléfono en la mesa |
 | Demo | 966–1811 | Casa Nativa dentro de un teléfono, con pausas para leer cada pantalla: menú, promos, Wi-Fi, redes, ranking y **Zona de Juegos** (elige 5 juegos, ranking, jugar con la mesa, «Crear sala») |
 | Propuesta | 1811–2422 | «No es solo vender placas NFC…», página propia, promociones y juegos personalizados · «Somos 360 Connect» |
-| Cierre | 2422–2620 | «¿Implementarías esta idea?» + «¿Lo probarías en tu local?» + tarjeta final con logo |
+| Cierre | ...–fin | «¿Implementarías esta idea?» + «¿Lo probarías en tu local?» + tarjeta final con logo |
 
 ## Dónde cambiar cada cosa
 
