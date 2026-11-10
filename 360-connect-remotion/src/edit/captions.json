@@ -1,0 +1,1223 @@
+{
+ "_nota": "Subtitulos palabra por palabra. in/out = fotogramas del video ORIGINAL (30 fps) dentro del segmento de voz indicado en edl.json. key = palabra clave resaltada. pageEnd = ultima palabra de la pagina.",
+ "tokens": [
+  {
+   "seg": "gancho-1",
+   "text": "¿Tienes",
+   "in": 3,
+   "out": 8
+  },
+  {
+   "seg": "gancho-1",
+   "text": "una",
+   "in": 8,
+   "out": 11
+  },
+  {
+   "seg": "gancho-1",
+   "text": "cafetería",
+   "in": 11,
+   "out": 29,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "gancho-1",
+   "text": "o",
+   "in": 29,
+   "out": 34
+  },
+  {
+   "seg": "gancho-1",
+   "text": "un",
+   "in": 34,
+   "out": 38
+  },
+  {
+   "seg": "gancho-1",
+   "text": "restaurante?",
+   "in": 38,
+   "out": 55,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "gancho-2",
+   "text": "¿Qué",
+   "in": 104,
+   "out": 108
+  },
+  {
+   "seg": "gancho-2",
+   "text": "hacen",
+   "in": 108,
+   "out": 112
+  },
+  {
+   "seg": "gancho-2",
+   "text": "tus",
+   "in": 112,
+   "out": 115
+  },
+  {
+   "seg": "gancho-2",
+   "text": "clientes",
+   "in": 115,
+   "out": 123,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "gancho-2",
+   "text": "mientras",
+   "in": 123,
+   "out": 132
+  },
+  {
+   "seg": "gancho-2",
+   "text": "esperan",
+   "in": 133,
+   "out": 142
+  },
+  {
+   "seg": "gancho-2",
+   "text": "su",
+   "in": 142,
+   "out": 145
+  },
+  {
+   "seg": "gancho-2",
+   "text": "pedido?",
+   "in": 145,
+   "out": 158,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "promesa",
+   "text": "¿Y si",
+   "in": 306,
+   "out": 309
+  },
+  {
+   "seg": "promesa",
+   "text": "te",
+   "in": 309,
+   "out": 311
+  },
+  {
+   "seg": "promesa",
+   "text": "dijera",
+   "in": 311,
+   "out": 318,
+   "pageEnd": true
+  },
+  {
+   "seg": "promesa",
+   "text": "que",
+   "in": 318,
+   "out": 322
+  },
+  {
+   "seg": "promesa",
+   "text": "podemos",
+   "in": 322,
+   "out": 328
+  },
+  {
+   "seg": "promesa",
+   "text": "convertir",
+   "in": 328,
+   "out": 342,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "promesa",
+   "text": "ese",
+   "in": 343,
+   "out": 347
+  },
+  {
+   "seg": "promesa",
+   "text": "tiempo",
+   "in": 347,
+   "out": 354,
+   "key": true
+  },
+  {
+   "seg": "promesa",
+   "text": "de",
+   "in": 354,
+   "out": 358
+  },
+  {
+   "seg": "promesa",
+   "text": "espera",
+   "in": 358,
+   "out": 364,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "promesa",
+   "text": "en",
+   "in": 366,
+   "out": 378
+  },
+  {
+   "seg": "promesa",
+   "text": "una",
+   "in": 386,
+   "out": 391
+  },
+  {
+   "seg": "promesa",
+   "text": "experiencia",
+   "in": 391,
+   "out": 403,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "promesa",
+   "text": "maravillosa",
+   "in": 403,
+   "out": 418,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "promesa",
+   "text": "que",
+   "in": 418,
+   "out": 424
+  },
+  {
+   "seg": "promesa",
+   "text": "anime",
+   "in": 424,
+   "out": 442
+  },
+  {
+   "seg": "promesa",
+   "text": "a",
+   "in": 442,
+   "out": 443
+  },
+  {
+   "seg": "promesa",
+   "text": "tu",
+   "in": 443,
+   "out": 446
+  },
+  {
+   "seg": "promesa",
+   "text": "cliente",
+   "in": 446,
+   "out": 460,
+   "pageEnd": true
+  },
+  {
+   "seg": "promesa",
+   "text": "a",
+   "in": 460,
+   "out": 464
+  },
+  {
+   "seg": "promesa",
+   "text": "volver",
+   "in": 467,
+   "out": 473,
+   "key": true
+  },
+  {
+   "seg": "promesa",
+   "text": "a",
+   "in": 473,
+   "out": 478
+  },
+  {
+   "seg": "promesa",
+   "text": "tu",
+   "in": 478,
+   "out": 481
+  },
+  {
+   "seg": "promesa",
+   "text": "negocio?",
+   "in": 481,
+   "out": 498,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "marca",
+   "text": "Y",
+   "in": 0,
+   "out": 2
+  },
+  {
+   "seg": "marca",
+   "text": "justamente",
+   "in": 2,
+   "out": 12
+  },
+  {
+   "seg": "marca",
+   "text": "por",
+   "in": 12,
+   "out": 16
+  },
+  {
+   "seg": "marca",
+   "text": "eso",
+   "in": 16,
+   "out": 22,
+   "pageEnd": true
+  },
+  {
+   "seg": "marca",
+   "text": "estamos",
+   "in": 22,
+   "out": 28
+  },
+  {
+   "seg": "marca",
+   "text": "creando",
+   "in": 28,
+   "out": 39,
+   "pageEnd": true
+  },
+  {
+   "seg": "marca",
+   "text": "360",
+   "in": 39,
+   "out": 53,
+   "key": true
+  },
+  {
+   "seg": "marca",
+   "text": "Connect",
+   "in": 53,
+   "out": 73,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "¿Cómo",
+   "in": 204,
+   "out": 210
+  },
+  {
+   "seg": "como-funciona",
+   "text": "funciona?",
+   "in": 210,
+   "out": 228,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "Es",
+   "in": 231,
+   "out": 234
+  },
+  {
+   "seg": "como-funciona",
+   "text": "súper",
+   "in": 234,
+   "out": 246,
+   "key": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "sencillo.",
+   "in": 246,
+   "out": 262,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "Solo",
+   "in": 263,
+   "out": 269
+  },
+  {
+   "seg": "como-funciona",
+   "text": "acerca",
+   "in": 269,
+   "out": 277
+  },
+  {
+   "seg": "como-funciona",
+   "text": "tu",
+   "in": 277,
+   "out": 282
+  },
+  {
+   "seg": "como-funciona",
+   "text": "celular",
+   "in": 282,
+   "out": 292,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "a",
+   "in": 292,
+   "out": 295
+  },
+  {
+   "seg": "como-funciona",
+   "text": "la",
+   "in": 295,
+   "out": 298
+  },
+  {
+   "seg": "como-funciona",
+   "text": "placa",
+   "in": 298,
+   "out": 311,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "o",
+   "in": 311,
+   "out": 316
+  },
+  {
+   "seg": "como-funciona",
+   "text": "escanea",
+   "in": 318,
+   "out": 330
+  },
+  {
+   "seg": "como-funciona",
+   "text": "el",
+   "in": 330,
+   "out": 334
+  },
+  {
+   "seg": "como-funciona",
+   "text": "código",
+   "in": 334,
+   "out": 341
+  },
+  {
+   "seg": "como-funciona",
+   "text": "QR",
+   "in": 341,
+   "out": 353,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "en",
+   "in": 353,
+   "out": 359
+  },
+  {
+   "seg": "como-funciona",
+   "text": "el",
+   "in": 359,
+   "out": 361
+  },
+  {
+   "seg": "como-funciona",
+   "text": "reverso",
+   "in": 361,
+   "out": 386,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "y",
+   "in": 386,
+   "out": 398
+  },
+  {
+   "seg": "como-funciona",
+   "text": "te",
+   "in": 398,
+   "out": 404
+  },
+  {
+   "seg": "como-funciona",
+   "text": "dirigirá",
+   "in": 404,
+   "out": 422,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "a",
+   "in": 422,
+   "out": 442
+  },
+  {
+   "seg": "como-funciona",
+   "text": "una",
+   "in": 442,
+   "out": 448
+  },
+  {
+   "seg": "como-funciona",
+   "text": "página",
+   "in": 448,
+   "out": 458,
+   "key": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "exclusiva",
+   "in": 458,
+   "out": 477,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "como-funciona",
+   "text": "de",
+   "in": 477,
+   "out": 483
+  },
+  {
+   "seg": "como-funciona",
+   "text": "tu",
+   "in": 483,
+   "out": 489
+  },
+  {
+   "seg": "como-funciona",
+   "text": "restaurante.",
+   "in": 489,
+   "out": 508,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-abajo-a",
+   "text": "En",
+   "in": 215,
+   "out": 222
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "la",
+   "in": 230,
+   "out": 240
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "parte",
+   "in": 240,
+   "out": 248
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "de",
+   "in": 248,
+   "out": 252
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "abajo",
+   "in": 252,
+   "out": 258,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "estará",
+   "in": 258,
+   "out": 269
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "el",
+   "in": 269,
+   "out": 274
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "menú",
+   "in": 274,
+   "out": 281,
+   "key": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "digital,",
+   "in": 281,
+   "out": 296,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "promociones",
+   "in": 301,
+   "out": 314,
+   "key": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "que",
+   "in": 314,
+   "out": 318
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "tú",
+   "in": 319,
+   "out": 321
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "coloques,",
+   "in": 321,
+   "out": 332,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "Wi-Fi,",
+   "in": 336,
+   "out": 366,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "tus",
+   "in": 377,
+   "out": 382
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "redes",
+   "in": 382,
+   "out": 388,
+   "key": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "sociales,",
+   "in": 388,
+   "out": 402,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "ranking",
+   "in": 407,
+   "out": 417,
+   "key": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "semanal",
+   "in": 417,
+   "out": 433,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "y",
+   "in": 433,
+   "out": 436
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "los",
+   "in": 438,
+   "out": 440
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "premios",
+   "in": 440,
+   "out": 454,
+   "key": true
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "para",
+   "in": 454,
+   "out": 458
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "el",
+   "in": 458,
+   "out": 463
+  },
+  {
+   "seg": "demo-abajo-b",
+   "text": "top 3.",
+   "in": 463,
+   "out": 472,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "La",
+   "in": 1000,
+   "out": 1008
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "parte",
+   "in": 1008,
+   "out": 1016
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "más",
+   "in": 1016,
+   "out": 1025
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "interesante",
+   "in": 1025,
+   "out": 1044,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "de",
+   "in": 1044,
+   "out": 1050
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "esto:",
+   "in": 1050,
+   "out": 1064,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "¡los",
+   "in": 1064,
+   "out": 1078
+  },
+  {
+   "seg": "demo-juegos",
+   "text": "juegos!",
+   "in": 1078,
+   "out": 1097,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "Mientras",
+   "in": 1404,
+   "out": 1412
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "más",
+   "in": 1412,
+   "out": 1418
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "puntos",
+   "in": 1418,
+   "out": 1428,
+   "key": true
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "ganas,",
+   "in": 1428,
+   "out": 1440,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "más",
+   "in": 1441,
+   "out": 1447
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "subes",
+   "in": 1447,
+   "out": 1454
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "en",
+   "in": 1454,
+   "out": 1457
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "la",
+   "in": 1457,
+   "out": 1459
+  },
+  {
+   "seg": "demo-ranking",
+   "text": "clasificación.",
+   "in": 1459,
+   "out": 1486,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-sala",
+   "text": "Puedes",
+   "in": 2314,
+   "out": 2332
+  },
+  {
+   "seg": "demo-sala",
+   "text": "jugar",
+   "in": 2336,
+   "out": 2343,
+   "key": true
+  },
+  {
+   "seg": "demo-sala",
+   "text": "en",
+   "in": 2343,
+   "out": 2347
+  },
+  {
+   "seg": "demo-sala",
+   "text": "línea",
+   "in": 2347,
+   "out": 2359,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-sala",
+   "text": "con",
+   "in": 2359,
+   "out": 2370
+  },
+  {
+   "seg": "demo-sala",
+   "text": "tus",
+   "in": 2370,
+   "out": 2376
+  },
+  {
+   "seg": "demo-sala",
+   "text": "amigos,",
+   "in": 2378,
+   "out": 2400,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-sala",
+   "text": "compañeros",
+   "in": 2403,
+   "out": 2414
+  },
+  {
+   "seg": "demo-sala",
+   "text": "de",
+   "in": 2414,
+   "out": 2418
+  },
+  {
+   "seg": "demo-sala",
+   "text": "mesa,",
+   "in": 2418,
+   "out": 2427,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-sala",
+   "text": "y",
+   "in": 2427,
+   "out": 2435
+  },
+  {
+   "seg": "demo-sala",
+   "text": "crear",
+   "in": 2435,
+   "out": 2442
+  },
+  {
+   "seg": "demo-sala",
+   "text": "cada",
+   "in": 2442,
+   "out": 2448
+  },
+  {
+   "seg": "demo-sala",
+   "text": "uno",
+   "in": 2448,
+   "out": 2458,
+   "pageEnd": true
+  },
+  {
+   "seg": "demo-sala",
+   "text": "su",
+   "in": 2458,
+   "out": 2462
+  },
+  {
+   "seg": "demo-sala",
+   "text": "propia",
+   "in": 2462,
+   "out": 2469
+  },
+  {
+   "seg": "demo-sala",
+   "text": "sala.",
+   "in": 2469,
+   "out": 2478,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "Lo",
+   "in": 338,
+   "out": 340
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "mejor:",
+   "in": 340,
+   "out": 350,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "cada",
+   "in": 350,
+   "out": 363
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "restaurante",
+   "in": 366,
+   "out": 384,
+   "pageEnd": true
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "va",
+   "in": 384,
+   "out": 388
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "a",
+   "in": 388,
+   "out": 389
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "tener",
+   "in": 389,
+   "out": 394
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "su",
+   "in": 394,
+   "out": 398
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "propia",
+   "in": 398,
+   "out": 404
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "página,",
+   "in": 404,
+   "out": 415,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "promociones,",
+   "in": 417,
+   "out": 445,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "propios",
+   "in": 449,
+   "out": 458
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "juegos",
+   "in": 458,
+   "out": 468,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "y",
+   "in": 468,
+   "out": 477
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "todo",
+   "in": 479,
+   "out": 487
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "personalizado",
+   "in": 487,
+   "out": 511,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "con",
+   "in": 511,
+   "out": 521
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "tu",
+   "in": 521,
+   "out": 528
+  },
+  {
+   "seg": "lo-mejor",
+   "text": "negocio.",
+   "in": 528,
+   "out": 550,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "somos",
+   "text": "Somos",
+   "in": 10,
+   "out": 24
+  },
+  {
+   "seg": "somos",
+   "text": "360",
+   "in": 24,
+   "out": 38,
+   "key": true
+  },
+  {
+   "seg": "somos",
+   "text": "Connect:",
+   "in": 38,
+   "out": 57,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "somos",
+   "text": "conectamos",
+   "in": 63,
+   "out": 80,
+   "key": true
+  },
+  {
+   "seg": "somos",
+   "text": "negocios",
+   "in": 80,
+   "out": 96,
+   "pageEnd": true
+  },
+  {
+   "seg": "somos",
+   "text": "y",
+   "in": 96,
+   "out": 99
+  },
+  {
+   "seg": "somos",
+   "text": "mejoramos",
+   "in": 99,
+   "out": 114,
+   "key": true
+  },
+  {
+   "seg": "somos",
+   "text": "la",
+   "in": 114,
+   "out": 118
+  },
+  {
+   "seg": "somos",
+   "text": "experiencia",
+   "in": 118,
+   "out": 130,
+   "pageEnd": true
+  },
+  {
+   "seg": "somos",
+   "text": "para",
+   "in": 130,
+   "out": 139
+  },
+  {
+   "seg": "somos",
+   "text": "ti",
+   "in": 147,
+   "out": 156,
+   "key": true
+  },
+  {
+   "seg": "somos",
+   "text": "y",
+   "in": 156,
+   "out": 164
+  },
+  {
+   "seg": "somos",
+   "text": "para",
+   "in": 164,
+   "out": 171
+  },
+  {
+   "seg": "somos",
+   "text": "tu",
+   "in": 171,
+   "out": 177
+  },
+  {
+   "seg": "somos",
+   "text": "cliente.",
+   "in": 181,
+   "out": 208,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "cta-1",
+   "text": "Así",
+   "in": 233,
+   "out": 236
+  },
+  {
+   "seg": "cta-1",
+   "text": "que",
+   "in": 236,
+   "out": 239
+  },
+  {
+   "seg": "cta-1",
+   "text": "dime:",
+   "in": 239,
+   "out": 250,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "cta-1",
+   "text": "si",
+   "in": 256,
+   "out": 259
+  },
+  {
+   "seg": "cta-1",
+   "text": "tú",
+   "in": 259,
+   "out": 263
+  },
+  {
+   "seg": "cta-1",
+   "text": "tuvieras",
+   "in": 263,
+   "out": 273
+  },
+  {
+   "seg": "cta-1",
+   "text": "un",
+   "in": 273,
+   "out": 275
+  },
+  {
+   "seg": "cta-1",
+   "text": "restaurante",
+   "in": 275,
+   "out": 290,
+   "pageEnd": true
+  },
+  {
+   "seg": "cta-1",
+   "text": "o",
+   "in": 290,
+   "out": 291
+  },
+  {
+   "seg": "cta-1",
+   "text": "una",
+   "in": 291,
+   "out": 294
+  },
+  {
+   "seg": "cta-1",
+   "text": "cafetería,",
+   "in": 294,
+   "out": 310,
+   "pageEnd": true
+  },
+  {
+   "seg": "cta-1",
+   "text": "¿implementarías",
+   "in": 310,
+   "out": 329,
+   "key": true
+  },
+  {
+   "seg": "cta-1",
+   "text": "esta",
+   "in": 329,
+   "out": 335
+  },
+  {
+   "seg": "cta-1",
+   "text": "idea?",
+   "in": 335,
+   "out": 350,
+   "key": true,
+   "pageEnd": true
+  },
+  {
+   "seg": "cta-2",
+   "text": "¡Cuéntame!",
+   "in": 463,
+   "out": 478,
+   "key": true,
+   "pageEnd": true
+  }
+ ]
+}

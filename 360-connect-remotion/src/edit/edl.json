@@ -1,0 +1,31 @@
+{
+  "fps": 30,
+  "sources": {
+    "IMG_0319": "IMG_0319",
+    "IMG_0322": "IMG_0322",
+    "IMG_0330": "IMG_0330",
+    "IMG_0331": "IMG_0331",
+    "IMG_0333": "IMG_0333",
+    "IMG_0340": "IMG_0340",
+    "RP": "RPReplay_Final1794281552"
+  },
+  "voice": [
+    { "id": "gancho-1", "src": "IMG_0319", "in": 1, "out": 56 },
+    { "id": "gancho-2", "src": "IMG_0319", "in": 103, "out": 161 },
+    { "id": "promesa", "src": "IMG_0319", "in": 303, "out": 503 },
+    { "id": "marca", "src": "IMG_0322", "in": 0, "out": 75 },
+    { "id": "como-funciona", "src": "IMG_0322", "in": 203, "out": 512 },
+    { "id": "pausa-demo", "gap": 8 },
+    { "id": "demo-abajo-a", "src": "RP", "in": 215, "out": 222 },
+    { "id": "demo-abajo-b", "src": "RP", "in": 229, "out": 473 },
+    { "id": "demo-juegos", "src": "RP", "in": 998, "out": 1100 },
+    { "id": "pausa-juegos", "gap": 12 },
+    { "id": "demo-ranking", "src": "RP", "in": 1401, "out": 1488 },
+    { "id": "demo-sala", "src": "RP", "in": 2312, "out": 2478 },
+    { "id": "lo-mejor", "src": "IMG_0330", "in": 337, "out": 553 },
+    { "id": "somos", "src": "IMG_0331", "in": 7, "out": 212 },
+    { "id": "cta-1", "src": "IMG_0333", "in": 232, "out": 352 },
+    { "id": "cta-2", "src": "IMG_0333", "in": 462, "out": 480 },
+    { "id": "cierre", "gap": 38 }
+  ]
+}
