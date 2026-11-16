@@ -294,8 +294,9 @@ footer a:hover{color:var(--cyan)}
   .m-card{grid-template-columns:1fr}
 }
 @media(max-width:520px){
+  .grid{grid-template-columns:1fr 1fr;gap:12px}.p-body{padding:12px}.p-body h3{font-size:14px}.p-body p{display:none}.p-price{font-size:20px}.p-price small{display:block;font-size:11px}.p-row{flex-direction:column;align-items:stretch;gap:8px}.p-row .qty{justify-content:space-between}.add{padding:9px 8px;font-size:13px}.p-badge{font-size:10px;padding:4px 8px;top:8px;left:8px}.see{display:none}
   section{padding:56px 0}
-  .hero{padding:44px 0 70px}.promo-bar{font-size:12px}
+  .hero{padding:28px 0 36px}.hero-stats,.mascot,.platforms{display:none}.hero-ctas{flex-wrap:nowrap;gap:8px}.hero-ctas .btn{flex:1;padding:12px 10px;font-size:14px}.hero h1{font-size:34px}.hero h1{margin:12px 0}.hero p.lead{font-size:16px}.hero-ctas{margin:20px 0}.hero-stats div{padding:8px 12px}.mascot{max-width:260px;margin-top:20px}.chip{display:none}.bubble{font-size:12px;padding:8px 12px;top:-10px}.promo-bar{font-size:12px}
   .benefits,.plan-feats{grid-template-columns:1fr}
   .nav img{height:34px}
   .cart-btn .lbl{display:none}
@@ -333,7 +334,7 @@ footer a:hover{color:var(--cyan)}
       <h1>Tu negocio,<br><span class="grad">a un solo toque.</span></h1>
       <p class="lead">Placas inteligentes para que tus clientes te dejen <b>reseñas en Google</b>, te sigan en <b>TikTok e Instagram</b> o te escriban por <b>WhatsApp</b>, con solo acercar su celular o escanear el QR.</p>
       <div class="hero-ctas">
-        <a href="#productos" class="btn btn-primary">Ver productos →</a>
+        <a href="#productos" class="btn btn-primary">🛒 Ver productos</a>
         <a href="#plan-web" class="btn btn-glass">🎮 Plan NFC + Web</a>
       </div>
       <div class="hero-stats">
@@ -351,6 +352,10 @@ footer a:hover{color:var(--cyan)}
   </div>
 </section>
 
+
+
+
+
 <div class="platforms">
   <div class="wrap">
     <span>Placas para:</span>
@@ -362,22 +367,8 @@ footer a:hover{color:var(--cyan)}
   </div>
 </div>
 
-<!-- HOW -->
-<section id="como-funciona">
-  <div class="wrap center">
-    <span class="tag reveal">Fácil y rápido</span>
-    <h2 class="title reveal">¿Cómo funciona?</h2>
-    <p class="sub reveal">Tus clientes no necesitan descargar nada. Funciona con la cámara del celular o con NFC.</p>
-    <div class="steps" style="text-align:left">
-      <div class="step reveal"><div class="n">1</div><h3>Elige tu placa</h3><p>Agrega al carrito las placas que necesitas: Google, TikTok, Instagram o WhatsApp.</p></div>
-      <div class="step reveal"><div class="n">2</div><h3>Envía tu pedido</h3><p>Tu pedido nos llega por WhatsApp. Nos pasas el nombre de tu negocio y tus redes para configurarla.</p></div>
-      <div class="step reveal"><div class="n">3</div><h3>¡Recibe y conecta!</h3><p>Tus clientes tocan la placa con su celular o escanean el QR y llegan directo a tu perfil.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- CATALOG -->
-<section id="productos" style="padding-top:0">
+<section id="productos">
   <div class="wrap center">
     <span class="tag reveal">Catálogo</span>
     <h2 class="title reveal">Nuestros productos</h2>
@@ -398,6 +389,20 @@ footer a:hover{color:var(--cyan)}
     <h2 class="title reveal">Packs listos para tu negocio</h2>
     <p class="sub reveal">Ya vienen con el 30% de descuento. Si prefieres otros modelos, arma tu propio pack: con 3 placas o más el descuento se aplica solo.</p>
     <div class="packs" id="packsGrid"></div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="como-funciona">
+  <div class="wrap center">
+    <span class="tag reveal">Fácil y rápido</span>
+    <h2 class="title reveal">¿Cómo funciona?</h2>
+    <p class="sub reveal">Tus clientes no necesitan descargar nada. Funciona con la cámara del celular o con NFC.</p>
+    <div class="steps" style="text-align:left">
+      <div class="step reveal"><div class="n">1</div><h3>Elige tu placa</h3><p>Agrega al carrito las placas que necesitas: Google, TikTok, Instagram o WhatsApp.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>Envía tu pedido</h3><p>Tu pedido nos llega por WhatsApp. Nos pasas el nombre de tu negocio y tus redes para configurarla.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>¡Recibe y conecta!</h3><p>Tus clientes tocan la placa con su celular o escanean el QR y llegan directo a tu perfil.</p></div>
+    </div>
   </div>
 </section>
 
