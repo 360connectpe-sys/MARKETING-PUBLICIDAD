@@ -290,6 +290,60 @@ footer a:hover{color:var(--cyan)}
 .btn-link:hover{color:var(--blue)}
 .d-foot .line.total{margin-bottom:12px}
 .d-foot .hint{margin-bottom:8px}@media(max-width:520px){.d-foot{padding:14px 18px}.d-foot .line{margin-bottom:3px}.d-foot .line.total{font-size:18px;margin:4px 0 10px}.d-body{padding:10px 18px}.c-item{padding:9px 0}}
+/* DEMO PLACA NFC + QR */
+.pd-cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.pd-cta small{color:var(--muted);font-size:13px}
+.pd-modal{position:fixed;inset:0;z-index:85;background:rgba(6,15,38,.78);display:flex;align-items:center;justify-content:center;padding:16px}
+.pd-modal[hidden]{display:none}
+.pd-box{background:#fff;border-radius:26px;width:min(820px,100%);max-height:100%;overflow-y:auto;overscroll-behavior:contain;padding:18px 20px 16px;display:flex;flex-direction:column;gap:12px;animation:pop .25s}
+.pd-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pd-top h3{color:var(--navy);font-size:20px}
+.pd-modes{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#eef3fb;padding:5px;border-radius:999px}
+.pd-modes button{border:0;background:none;border-radius:999px;padding:10px 8px;font:600 14px 'Poppins';color:var(--navy);cursor:pointer}
+.pd-modes button.on{background:var(--navy);color:#fff;box-shadow:0 4px 12px rgba(10,26,61,.25)}
+.pd-hint{min-height:42px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px;font-weight:600;color:var(--navy);background:#f3f7ff;border-radius:14px;padding:8px 12px}
+.pd-hint.ok{background:#e7fbef;color:#166534}
+.pd-scene{position:relative;height:var(--sh,470px);border-radius:22px;overflow:hidden;overflow:clip;perspective:900px;user-select:none;-webkit-user-select:none;
+  background:radial-gradient(circle at 75% 10%,rgba(255,226,170,.55),transparent 45%),linear-gradient(180deg,#f3e3cc,#e8d2b2 50%,#d9bd96)}
+.pd-wall{position:absolute;left:0;right:0;top:0;height:42%;background:repeating-linear-gradient(90deg,rgba(120,80,40,.05) 0 2px,transparent 2px 46px)}
+.pd-wall::after{content:"☕ CAFÉ DEMO";position:absolute;left:18px;top:14px;font:800 13px 'Poppins';letter-spacing:2px;color:rgba(110,70,35,.45)}
+.pd-table{position:absolute;left:-12%;right:-12%;bottom:-8%;height:70%;transform:rotateX(52deg);transform-origin:50% 100%;border-radius:30px 30px 0 0;
+  background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 3px,transparent 3px 26px),linear-gradient(180deg,#a8703f,#8c5629 60%,#6e4220);box-shadow:inset 0 14px 0 #c48a55}
+.pd-cup{position:absolute;left:30%;top:52%;font-size:46px;filter:drop-shadow(0 10px 8px rgba(60,30,10,.35));pointer-events:none}
+.pd-plate{position:absolute;transform-origin:50% 100%;transform:rotateX(9deg) rotateY(-10deg);pointer-events:none;filter:drop-shadow(10px 18px 14px rgba(60,30,10,.4))}
+.pd-plate img{width:100%;display:block}
+.pd-nfc{position:absolute;left:22%;top:12%;width:56%;height:28%;border:2.5px dashed rgba(21,112,255,.75);border-radius:16px;display:grid;place-items:start end;transition:.2s}
+.pd-nfc i{font:700 10px 'Poppins';font-style:normal;background:var(--blue);color:#fff;border-radius:999px;padding:2px 7px;margin:-9px -9px 0 0}
+.pd-nfc.hot{border-style:solid;border-color:#22c55e;background:rgba(34,197,94,.18);box-shadow:0 0 0 6px rgba(34,197,94,.25),0 0 30px rgba(34,197,94,.6)}
+.pd-nfc.hot i{background:#16a34a}
+.pd-plate.qr .pd-nfc{display:none}
+.pd-phone{position:absolute;left:0;top:0;width:var(--pw);height:var(--ph);border-radius:calc(var(--pw)*.15);background:#0b1220;padding:calc(var(--pw)*.045);border:2px solid #31457a;
+  box-shadow:0 26px 40px rgba(20,10,5,.45);cursor:grab;touch-action:none;z-index:3;outline:none;transition:box-shadow .2s}
+.pd-phone::before{content:"";position:absolute;top:calc(var(--pw)*.07);left:50%;transform:translateX(-50%);width:28%;height:4px;border-radius:9px;background:#31457a;z-index:2}
+.pd-phone:focus-visible{box-shadow:0 0 0 4px rgba(34,195,255,.8),0 26px 40px rgba(20,10,5,.45)}
+.pd-phone.drag{cursor:grabbing;box-shadow:0 36px 50px rgba(20,10,5,.5)}
+.pd-phone.anim{transition:transform .45s cubic-bezier(.2,.8,.2,1),width .45s,height .45s,border-radius .45s}
+.pd-phone.open{cursor:default;touch-action:auto}
+.pd-screen{position:relative;height:100%;border-radius:calc(var(--pw)*.11);overflow:hidden;background:linear-gradient(160deg,#0f2556,#1570ff);color:#fff}
+.pd-lock{height:100%;display:flex;flex-direction:column;align-items:center;padding:22% 8% 8%;text-align:center}
+.pd-lock b{font-size:calc(var(--pw)*.24);font-weight:700;line-height:1}
+.pd-lock small{font-size:11px;opacity:.85;margin-top:6px}
+.pd-notif{margin-top:auto;width:100%;border:0;border-radius:14px;background:rgba(255,255,255,.95);color:var(--navy);text-align:left;padding:9px 10px;font:600 11px/1.3 'Poppins';cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.25);animation:pop .25s}
+.pd-notif span{display:block;font-weight:500;color:var(--muted);font-size:10px}
+.pd-cam{position:absolute;inset:0;overflow:hidden;background:linear-gradient(180deg,#d9c2a0,#8c5629)}
+.pd-cam img{position:absolute;max-width:none;filter:saturate(.95) brightness(.97)}
+.pd-frame{position:absolute;left:50%;top:44%;width:62%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:14px;box-shadow:0 0 0 999px rgba(0,0,0,.38);border:3px solid rgba(255,255,255,.9);transition:border-color .15s}
+.pd-frame.ok{border-color:#22c55e;box-shadow:0 0 0 999px rgba(0,0,0,.38),0 0 22px rgba(34,197,94,.9)}
+.pd-camtxt{position:absolute;left:6%;right:6%;top:6%;text-align:center;font:600 10px 'Poppins';background:rgba(0,0,0,.45);border-radius:999px;padding:4px 6px}
+.pd-qrok{position:absolute;left:6%;right:6%;bottom:6%;display:flex;flex-direction:column;gap:6px;align-items:stretch}
+.pd-qrok em{font:700 11px 'Poppins';font-style:normal;text-align:center;background:#16a34a;border-radius:999px;padding:4px}
+.pd-site{height:100%;border-radius:inherit;font-size:13px}
+.pd-site .ph-head{padding:16px 14px 10px}
+.pd-site .ph-body{overscroll-behavior:contain}
+.pd-foot{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pd-foot .btn{padding:11px 18px}
+.pd-foot .btn-link{width:auto}
+@media(max-width:520px){.pd-modal{padding:0}.pd-box{border-radius:0;height:100%;padding:12px 14px}.pd-top h3{font-size:17px}.pd-modes button{font-size:13px;padding:9px 4px}.pd-hint{font-size:13px;min-height:38px}.pd-foot .btn{flex:1}}
 /* MODAL */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:80;padding:16px;background:rgba(6,15,38,.75)}
 .modal.show{display:flex}
@@ -424,6 +478,7 @@ footer a:hover{color:var(--cyan)}
       <div class="step reveal"><div class="n">2</div><h3>Envía tu pedido</h3><p>Tu pedido nos llega por WhatsApp. Nos pasas el nombre de tu negocio y tus redes para configurarla.</p></div>
       <div class="step reveal"><div class="n">3</div><h3>¡Recibe y conecta!</h3><p>Tus clientes tocan la placa con su celular o escanean el QR y llegan directo a tu perfil.</p></div>
     </div>
+    <div class="pd-cta reveal"><button class="btn btn-primary" data-act="demo-open">📲 Prueba la placa</button><small>Simulación interactiva: acerca el celular por NFC o escanea el QR</small></div>
   </div>
 </section>
 
@@ -447,7 +502,7 @@ footer a:hover{color:var(--cyan)}
       <p class="plan-note">Coordinamos por WhatsApp el estilo de tus 6 placas y el contenido de tu web. El 20% de descuento aplica solo a placas sueltas.</p>
     </div>
     <div class="phone-wrap reveal">
-      <div class="phone"><div class="screen">
+      <div class="phone" id="planPhone"><div class="screen">
         <div class="ph-head"><b>☕ Café Demo</b><small>Así se vería la web de tu negocio</small></div>
         <div class="ph-body" id="phBody"></div>
         <div class="ph-tabs" id="phTabs">
@@ -571,6 +626,7 @@ footer a:hover{color:var(--cyan)}
   <div class="d-foot" id="cartFoot"></div>
 </aside>
 
+<div class="pd-modal" id="pdModal" hidden role="dialog" aria-modal="true" aria-labelledby="pdTitle"></div>
 <div class="modal" id="modal" data-act="close-modal"><div class="m-card" id="mCard"></div></div>
 <div class="toast" id="toast"></div>
 
@@ -800,19 +856,19 @@ const closeModal = () => $("#modal").classList.remove("show");
 const DEMO_RANK = [["Lucía",18],["Mateo",15],["Valeria",12],["Diego",9]];
 let myScore = 0, game = {on:false,score:0,t:0,pos:-1,iv:null,mv:null};
 function stopGame(){ clearInterval(game.iv); clearInterval(game.mv); game.on=false; }
-function renderPhone(tab){
-  stopGame();
-  document.querySelectorAll("#phTabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===tab));
-  const b = $("#phBody");
+function renderPhone(tab, root=$("#planPhone")){
+  stopGame(); game.root = root;
+  root.querySelectorAll(".ph-tabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===tab));
+  const b = root.querySelector(".ph-body");
   if (tab==="menu") b.innerHTML = `<h5>🍽️ Nuestra carta</h5>` + [["Café americano","Recién pasado","S/ 6"],["Capuccino","Con espuma de leche","S/ 9"],["Sándwich mixto","Jamón y queso caliente","S/ 12"],["Torta de chocolate","Porción húmeda","S/ 10"],["Jugo de fresa","Con leche o agua","S/ 8"]]
     .map(i=>`<div class="m-item"><div><b>${i[0]}</b><small>${i[1]}</small></div><span>${i[2]}</span></div>`).join("");
   else if (tab==="redes") b.innerHTML = `<h5>📱 Síguenos y escríbenos</h5>` + [["📸 Instagram","linear-gradient(135deg,#f58529,#dd2a7b,#8134af)"],["🎵 TikTok","#111"],["💬 WhatsApp","#25d366"],["⭐ Déjanos tu reseña en Google","#4285f4"]]
     .map(s=>`<div class="s-btn" style="background:${s[1]}">${s[0]}</div>`).join("") + `<p class="g-msg">En tu web real, cada botón abre tu perfil.</p>`;
   else if (tab==="juego") b.innerHTML = `<h5>🎮 ¡Atrapa a Connecti!</h5>
-    <div class="g-hud"><span>⏱️ <span id="gT">15</span> s</span><span>Puntos: <span id="gS">0</span></span></div>
+    <div class="g-hud"><span>⏱️ <span class="gT">15</span> s</span><span>Puntos: <span class="gS">0</span></span></div>
     <div class="g-grid">${Array.from({length:9},(_,i)=>`<button class="g-cell" data-act="hit" data-i="${i}" aria-label="Casilla ${i+1}"><img src="img/connecti.jpg" alt=""></button>`).join("")}</div>
-    <div class="g-msg" id="gMsg">Toca a Connecti todas las veces que puedas en 15 segundos.</div>
-    <button class="btn btn-primary g-start" data-act="start" id="gStart">▶ Jugar</button>`;
+    <div class="g-msg gMsg">Toca a Connecti todas las veces que puedas en 15 segundos.</div>
+    <button class="btn btn-primary g-start" data-act="start">▶ Jugar</button>`;
   else {
     const rows = DEMO_RANK.map(r=>[...r]); if (myScore>0) rows.push(["Tú",myScore,true]);
     rows.sort((a,z)=>z[1]-a[1]);
@@ -821,22 +877,182 @@ function renderPhone(tab){
       + `<p class="g-msg">${myScore?"":"Juega para aparecer en el ranking. "}Los premios los decides tú.</p>`;
   }
 }
+const gq = s => game.root && game.root.querySelector(s);
 function moveC(){
   let n; do { n=Math.floor(Math.random()*9); } while(n===game.pos);
-  game.pos=n; document.querySelectorAll(".g-cell").forEach((c,i)=>c.classList.toggle("on",i===n));
+  game.pos=n; game.root.querySelectorAll(".g-cell").forEach((c,i)=>c.classList.toggle("on",i===n));
 }
-function startGame(){
-  stopGame(); game.on=true; game.score=0; game.t=15; game.pos=-1;
-  $("#gS").textContent=0; $("#gT").textContent=15; $("#gStart").style.display="none"; $("#gMsg").textContent="¡Rápido, tócalo!";
+function startGame(root){
+  stopGame(); game.root=root; game.on=true; game.score=0; game.t=15; game.pos=-1;
+  gq(".gS").textContent=0; gq(".gT").textContent=15; gq(".g-start").style.display="none"; gq(".gMsg").textContent="¡Rápido, tócalo!";
   moveC(); game.mv=setInterval(moveC,750);
-  game.iv=setInterval(()=>{ game.t--; if($("#gT")) $("#gT").textContent=game.t; if(game.t<=0) endGame(); },1000);
+  game.iv=setInterval(()=>{ game.t--; if(gq(".gT")) gq(".gT").textContent=game.t; if(game.t<=0) endGame(); },1000);
 }
 function endGame(){
   stopGame(); myScore=Math.max(myScore,game.score);
-  document.querySelectorAll(".g-cell").forEach(c=>c.classList.remove("on"));
-  $("#gMsg").innerHTML=`<b>¡Hiciste ${game.score} punto${game.score===1?"":"s"}!</b><br>Mira tu puesto en el 🏆 Ranking.`;
-  const s=$("#gStart"); s.style.display=""; s.textContent="↻ Jugar otra vez";
+  game.root.querySelectorAll(".g-cell").forEach(c=>c.classList.remove("on"));
+  const hasRank = !!game.root.querySelector('.ph-tabs [data-t="rank"]');
+  gq(".gMsg").innerHTML=`<b>¡Hiciste ${game.score} punto${game.score===1?"":"s"}!</b><br>${hasRank?"Mira tu puesto en el 🏆 Ranking.":"Así se divierten tus clientes en tu web."}`;
+  const s=gq(".g-start"); s.style.display=""; s.textContent="↻ Jugar otra vez";
 }
+
+/* ---------- Demo interactiva: placa NFC + QR ---------- */
+const Demo = (() => {
+  const PLATE = {img:"img/demo-placa.png", ratio:486/360, qrX:.565, qrY:.602, qrS:.374}; // QR medido sobre la foto
+  let el = {}, st = {}, opener = null, drag = null;
+  const R = n => Math.round(n);
+
+  function markup(){
+    return `<div class="pd-box">
+      <div class="pd-top"><h3 id="pdTitle">📲 Prueba la placa</h3><button class="x" data-act="demo-close" aria-label="Cerrar demo">✕</button></div>
+      <div class="pd-modes" role="group" aria-label="Modo de prueba">
+        <button data-act="demo-mode" data-m="nfc" aria-pressed="true">📶 Acercar por NFC</button>
+        <button data-act="demo-mode" data-m="qr" aria-pressed="false">📷 Escanear QR</button>
+      </div>
+      <p class="pd-hint" id="pdHint" aria-live="polite"></p>
+      <div class="pd-scene" id="pdScene">
+        <div class="pd-wall"></div><div class="pd-table"></div><div class="pd-cup" aria-hidden="true">☕</div>
+        <div class="pd-plate" id="pdPlate"><img src="${PLATE.img}" alt="Placa NFC + QR de Google sobre la mesa del café" draggable="false"><span class="pd-nfc" id="pdNfc"><i>NFC</i></span></div>
+        <div class="pd-phone" id="pdPhone" tabindex="0" role="group" aria-roledescription="celular movible" aria-label="Celular. Arrástralo o usa las flechas del teclado para moverlo.">
+          <div class="pd-screen" id="pdScreen"></div>
+        </div>
+      </div>
+      <div class="pd-foot"><button class="btn btn-ghost" data-act="demo-reset">↻ Volver a probar</button><button class="btn-link" data-act="demo-close">Cerrar demo</button></div>
+    </div>`;
+  }
+
+  function layout(){
+    const box = el.modal.querySelector(".pd-box"), mobile = innerWidth <= 520;
+    const sh = Math.max(360, Math.min(500, innerHeight - (mobile ? 250 : 270)));
+    el.scene.style.setProperty("--sh", sh+"px");
+    const W = el.scene.clientWidth, H = sh;
+    st.W = W; st.H = H;
+    const pw = R(Math.min(130, Math.max(104, W*.3))); st.pw = pw; st.ph = pw*2;
+    const plW = R(Math.min(190, W*.38));
+    const plLeft = W > 600 ? W*.6 : W - plW - Math.max(12, W*.06);
+    Object.assign(el.plate.style, {width:plW+"px", left:R(plLeft)+"px", top:R(Math.max(10, H*.69 - plW*PLATE.ratio))+"px"});  // base apoyada en la mesa
+    if (!st.open){ el.phone.style.setProperty("--pw", pw+"px"); el.phone.style.setProperty("--ph", st.ph+"px"); }
+  }
+
+  function clamp(){ st.x = Math.max(6, Math.min(st.W - st.pw - 6, st.x)); st.y = Math.max(6, Math.min(st.H - st.ph*.55, st.y)); }
+  function place(){ clamp(); el.phone.style.transform = `translate(${R(st.x)}px,${R(st.y)}px)`; detect(); }
+
+  function home(){ st.x = 14; st.y = st.H - st.ph*.62; }  // abajo a la izquierda, lejos de la placa
+
+  function setMode(m){
+    st.mode = m; st.open = false; st.hit = false;
+    el.modal.querySelectorAll(".pd-modes button").forEach(b => { const on=b.dataset.m===m; b.classList.toggle("on",on); b.setAttribute("aria-pressed",on); });
+    el.plate.classList.toggle("qr", m==="qr");
+    el.phone.classList.remove("open"); el.phone.classList.add("anim");
+    el.phone.style.setProperty("--pw", st.pw+"px"); el.phone.style.setProperty("--ph", st.ph+"px");
+    stopGame();
+    screenIdle(); home(); place();
+    setTimeout(()=>el.phone && el.phone.classList.remove("anim"), 460);
+  }
+
+  function screenIdle(){
+    if (st.mode==="nfc"){
+      el.screen.innerHTML = `<div class="pd-lock"><b>9:41</b><small>📶 NFC activado</small><div id="pdSlot" style="margin-top:auto;width:100%"></div></div>`;
+      hint("👆 Acerca la parte superior del celular a la placa");
+    } else {
+      el.screen.innerHTML = `<div class="pd-cam"><img id="pdCamImg" src="${PLATE.img}" alt="" draggable="false"><div class="pd-frame" id="pdFrame"></div><div class="pd-camtxt">📷 Cámara · apunta al QR</div><div class="pd-qrok" id="pdSlot"></div></div>`;
+      hint("📷 Mueve el celular hasta que el marco encierre el código QR");
+    }
+  }
+  function hint(t, ok){ el.hint.textContent = t; el.hint.classList.toggle("ok", !!ok); }
+
+  function rel(r){ const s = el.scene.getBoundingClientRect(); return {l:r.left-s.left, t:r.top-s.top, r:r.right-s.left, b:r.bottom-s.top, w:r.width, h:r.height}; }
+
+  function detect(){
+    if (st.open) return;
+    const ph = rel(el.phone.getBoundingClientRect());
+    let hit = false;
+    if (st.mode==="nfc"){
+      const z = rel(el.nfc.getBoundingClientRect());
+      const top = {l:ph.l+ph.w*.15, r:ph.r-ph.w*.15, t:ph.t, b:ph.t+ph.h*.12};   // borde superior (antena)
+      hit = top.l < z.r && top.r > z.l && top.t < z.b && top.b > z.t;
+      el.nfc.classList.toggle("hot", hit);
+    } else {
+      const p = rel(el.plate.getBoundingClientRect());
+      const qx = p.l + p.w*PLATE.qrX, qy = p.t + p.w*PLATE.ratio*PLATE.qrY, qs = p.w*PLATE.qrS;
+      const sc = el.screen.getBoundingClientRect(), fr = $("#pdFrame").getBoundingClientRect();
+      const cx = ph.l + (fr.left + fr.width/2 - el.scene.getBoundingClientRect().left - ph.l);   // centro del marco en la escena
+      const cy = ph.t + (fr.top + fr.height/2 - el.scene.getBoundingClientRect().top - ph.t);
+      const dx = cx - qx, dy = cy - qy, Z = fr.width*.86 / qs;                       // zoom de la cámara
+      const img = $("#pdCamImg"), iw = p.w*Z;
+      img.style.width = iw+"px";
+      img.style.left = (fr.left - sc.left + fr.width/2 - iw*PLATE.qrX - dx*Z)+"px";
+      img.style.top  = (fr.top - sc.top + fr.height/2 - iw*PLATE.ratio*PLATE.qrY - dy*Z)+"px";
+      hit = Math.hypot(dx,dy) < Math.max(9, qs*.16);
+      $("#pdFrame").classList.toggle("ok", hit);
+    }
+    if (hit === st.hit) return;
+    st.hit = hit;
+    const slot = $("#pdSlot");
+    if (hit){
+      slot.innerHTML = st.mode==="nfc"
+        ? `<button class="pd-notif" data-act="demo-site">🔗 Abrir Café Demo<span>Etiqueta NFC detectada · toca para abrir</span></button>`
+        : `<em>✅ QR detectado</em><button class="pd-notif" data-act="demo-site" style="text-align:center">🔗 Abrir Café Demo</button>`;
+      hint(st.mode==="nfc" ? "✅ ¡Placa detectada! Toca la notificación en el celular" : "✅ QR detectado. Toca «Abrir Café Demo» en el celular", true);
+    } else { slot.innerHTML = ""; screenIdleHint(); }
+  }
+  function screenIdleHint(){ hint(st.mode==="nfc" ? "👆 Acerca la parte superior del celular a la placa" : "📷 Mueve el celular hasta que el marco encierre el código QR"); }
+
+  function openSite(){
+    if (!st.hit) return;
+    st.open = true; el.nfc.classList.remove("hot");
+    const pw = Math.min(300, st.W - 24), ph = st.H - 20;
+    el.phone.classList.add("anim","open");
+    el.phone.style.setProperty("--pw", pw+"px"); el.phone.style.setProperty("--ph", ph+"px");
+    el.phone.style.transform = `translate(${R((st.W-pw)/2)}px,10px)`;
+    el.screen.innerHTML = `<div class="screen pd-site">
+      <div class="ph-head"><b>☕ Café Demo</b><small>Abierto desde la placa por ${st.mode==="nfc"?"NFC":"QR"}</small></div>
+      <div class="ph-body"></div>
+      <div class="ph-tabs" style="grid-template-columns:repeat(3,1fr)">
+        <button data-act="tab" data-t="menu" class="on"><i>🍽️</i>Carta</button><button data-act="tab" data-t="redes"><i>📱</i>Redes</button><button data-act="tab" data-t="juego"><i>🎮</i>Juegos</button>
+      </div></div>`;
+    renderPhone("menu", el.screen);
+    hint("🎉 ¡Listo! Así llega tu cliente a tu web. Explora la carta, las redes y el juego.", true);
+  }
+
+  // ----- arrastre: solo desde el cuerpo del celular, nunca desde sus botones -----
+  function down(e){
+    if (st.open || e.button>0 || e.target.closest("button,a")) return;
+    drag = {id:e.pointerId, sx:e.clientX, sy:e.clientY, x:st.x, y:st.y};
+    el.phone.setPointerCapture(e.pointerId); el.phone.classList.add("drag"); e.preventDefault();
+  }
+  function move(e){ if (!drag || e.pointerId!==drag.id) return; st.x = drag.x + e.clientX - drag.sx; st.y = drag.y + e.clientY - drag.sy; place(); }
+  function up(e){ if (!drag || e.pointerId!==drag.id) return; drag = null; el.phone.classList.remove("drag"); }
+  function key(e){
+    if (st.open) return;
+    const k = {ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key]; if (!k) return;
+    e.preventDefault(); const step = e.shiftKey ? 36 : 12; st.x += k[0]*step; st.y += k[1]*step; place();
+  }
+  function resize(){ if (el.modal && !el.modal.hidden){ layout(); if (st.open){ st.open=false; setMode(st.mode); } else place(); } }
+
+  function open(){
+    opener = document.activeElement;
+    el.modal = $("#pdModal"); el.modal.innerHTML = markup(); el.modal.hidden = false;
+    ["scene","plate","phone","screen","hint","nfc"].forEach(k => el[k] = $("#pd"+k[0].toUpperCase()+k.slice(1)));
+    document.body.style.overflow = "hidden";
+    el.phone.addEventListener("pointerdown", down); el.phone.addEventListener("pointermove", move);
+    el.phone.addEventListener("pointerup", up); el.phone.addEventListener("pointercancel", up); el.phone.addEventListener("keydown", key);
+    el.modal.addEventListener("click", e => { if (e.target === el.modal) close(); });
+    el.scene.addEventListener("scroll", () => { el.scene.scrollTop = 0; el.scene.scrollLeft = 0; });  // al enfocar el celular el navegador no debe desplazar la escena
+    addEventListener("resize", resize);
+    st = {mode:"nfc"}; layout(); setMode("nfc");
+    el.modal.querySelector(".pd-modes button").focus();
+  }
+  function close(){
+    if (!el.modal || el.modal.hidden) return;
+    if (game.root===el.screen) stopGame();
+    removeEventListener("resize", resize);
+    el.modal.hidden = true; el.modal.innerHTML = ""; document.body.style.overflow = "";
+    if (opener && opener.focus) opener.focus();
+  }
+  function reset(){ setMode(st.mode); }
+  return {open, close, setMode:m=>setMode(m), reset, openSite, _state:()=>st};
+})();
 
 function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),2400); }
 function openCart(){ $("#drawer").classList.add("show"); $("#overlay").classList.add("show"); }
@@ -856,17 +1072,22 @@ document.addEventListener("click", e => {
   else if (a==="close-modal"){ if(e.target===b) closeModal(); }
   else if (a==="pack"){ const k=PACKS[b.dataset.i]; k.items.forEach(i=>cart[i]=(cart[i]||0)+1); save(); renderCart(); openCart(); toast(`✅ ${k.nombre} agregado con 20% de descuento`); }
   else if (a==="plan"){ if(!cart[PLAN.id]) addToCart(PLAN.id,1); openCart(); toast("✅ Plan Connect Pro agregado"); }
-  else if (a==="tab") renderPhone(b.dataset.t);
-  else if (a==="start") startGame();
-  else if (a==="hit"){ if(game.on && +b.dataset.i===game.pos){ game.score++; $("#gS").textContent=game.score; clearInterval(game.mv); moveC(); game.mv=setInterval(moveC,750); } }
+  else if (a==="tab") renderPhone(b.dataset.t, b.closest(".screen").parentElement);
+  else if (a==="start") startGame(b.closest(".screen").parentElement);
+  else if (a==="hit"){ if(game.on && game.root.contains(b) && +b.dataset.i===game.pos){ game.score++; gq(".gS").textContent=game.score; clearInterval(game.mv); moveC(); game.mv=setInterval(moveC,750); } }
   else if (a==="to-form") setStep("form");
   else if (a==="to-cart") setStep("cart");
   else if (a==="to-review"){ if(validate()) setStep("review"); }
   else if (a==="send") sendOrder();
   else if (a==="open-cart") openCart();
+  else if (a==="demo-open") Demo.open();
+  else if (a==="demo-close") Demo.close();
+  else if (a==="demo-mode") Demo.setMode(b.dataset.m);
+  else if (a==="demo-reset") Demo.reset();
+  else if (a==="demo-site") Demo.openSite();
   else if (a==="close-cart") closeCart();
 });
-document.addEventListener("keydown", e => { if(e.key==="Escape"){ closeModal(); closeCart(); } });
+document.addEventListener("keydown", e => { if(e.key==="Escape"){ if(!$("#pdModal").hidden){ Demo.close(); return; } closeModal(); closeCart(); } });
 // Datos del cliente: solo en memoria, nunca se guardan (se borran datos de versiones anteriores)
 ["name360","city360","other360"].forEach(k=>localStorage.removeItem(k));
 $("#checkout").addEventListener("submit", e => e.preventDefault());
