@@ -768,6 +768,8 @@ function lev(a,b){ const d=Array.from({length:a.length+1},(_,i)=>[i]); for(let j
 function parecida(txt){ const n=norm(txt); if(n.length<3) return null;
   for (const dep in CIUDADES) for (const c of CIUDADES[dep]){ const m=norm(c); if (n===m || lev(n,m) <= (m.length>6?2:1)) return {dep,c}; } return null; }
 // ciudad validada que se usa en el resumen y en el mensaje
+const otherValid = () => { const o=clean($("#fCityOther").value,40); return o.length>=3 && /^[\p{L}][\p{L} .'-]+$/u.test(o) && !parecida(o); };
+const cityOk = () => !!$("#fCity").value && ($("#fCity").value!==OTRA || otherValid());   // ciudad elegida y válida
 const cityValue = () => $("#fCity").value===OTRA ? clean($("#fCityOther").value,40) : $("#fCity").value;
 
 function setStep(s){
@@ -796,7 +798,7 @@ function renderCart(){
     return;
   }
   if (step==="form"){
-    $("#cartFoot").innerHTML = `<div class="line"><span>Envío${cityValue()?` · ${esc(cityValue())}`:""}</span><span>${!$("#fCity").value ? "Elige tu ciudad" : isTrujillo() ? "Gratis en Trujillo" : "Por coordinar"}</span></div><div class="line total"><span>Total de productos${t.disc?` <small style="font-size:12px;color:#16a34a">(−${PCT}%)</small>`:""}</span><span>${soles(t.total)}</span></div><button class="btn btn-primary" data-act="to-review">Revisar mi pedido →</button><button class="btn-link" data-act="to-cart">← Volver al carrito</button>`;
+    $("#cartFoot").innerHTML = `<div class="line"><span>Envío${cityOk()?` · ${esc(cityValue())}`:""}</span><span>${!cityOk() ? "Elige una ciudad válida" : isTrujillo() ? "Gratis en Trujillo" : "Por coordinar"}</span></div><div class="line total"><span>Total de productos${t.disc?` <small style="font-size:12px;color:#16a34a">(−${PCT}%)</small>`:""}</span><span>${soles(t.total)}</span></div><button class="btn btn-primary" data-act="to-review">Revisar mi pedido →</button><button class="btn-link" data-act="to-cart">← Volver al carrito</button>`;
     return;
   }
   if (step==="review"){
@@ -830,7 +832,7 @@ function updateCityUI(changed){
   if (changed==="fDep"){ fillCities(); clearFields(["fCity","fCityOther","fDist","fAddr","fRef"]); }
   if (changed==="fCity"){ clearFields(["fCityOther","fDist","fAddr","fRef"]); }
   $("#otherWrap").hidden = $("#fCity").value!==OTRA;
-  const tru = isTrujillo(), filled = !!($("#fDep").value && $("#fCity").value);
+  const tru = isTrujillo(), filled = !!$("#fDep").value && cityOk();
   $("#trujilloBox").hidden = !tru;
   $("#provBox").hidden = tru || !filled;
   if (step==="form") renderCart();
@@ -1142,7 +1144,7 @@ document.addEventListener("keydown", e => { if(e.key==="Escape"){ if(!$("#pdModa
 $("#checkout").addEventListener("submit", e => e.preventDefault());
 $("#checkout").addEventListener("input", e => {
   if (e.target.id==="fPhone") e.target.value = e.target.value.replace(/[^\d\s+]/g,"");
-  if (e.target.id==="fCityOther" && step==="form") renderCart();
+  if (e.target.id==="fCityOther"){ updateCityUI(); }
   const f=e.target.closest(".fld"); if(f&&f.classList.contains("bad")){ f.classList.remove("bad"); f.querySelector(".err").textContent=""; }
 });
 $("#checkout").addEventListener("change", e => { if (e.target.id==="fDep"||e.target.id==="fCity") updateCityUI(e.target.id); });
