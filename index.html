@@ -865,19 +865,15 @@ function validate(){
 }
 
 function buildMessage(){
-  const t=totals(), tru=isTrujillo(), L="━━━━━━━━━━━━━━", ph=phoneDigits($("#fPhone").value);
-  const out=[`🛒 NUEVO PEDIDO — 360 CONNECT`,L,``,`👤 DATOS DEL CLIENTE`,
-    `Nombre: ${clean($("#fName").value,60)}`,`WhatsApp: +51 ${ph.replace(/(\d{3})(\d{3})(\d{3})/,"$1 $2 $3")}`,
-    `Departamento: ${$("#fDep").value}`,`Ciudad: ${cityValue()}`,``,`📍 DATOS DE ENTREGA`];
-  if (tru) out.push(`Distrito: ${$("#fDist").value}`,`Dirección: ${clean($("#fAddr").value)}`,`Referencia: ${clean($("#fRef").value)}`,`🚚 Delivery GRATIS en Trujillo.`);
-  else out.push(`📦 Envío a provincia.`,`Agencia y costo de envío pendientes de coordinación.`);
-  out.push(``,L,``,`🛍️ DETALLE DEL PEDIDO`,``);
-  Object.keys(cart).forEach((id,i)=>{ const p=find(id), q=cart[id];
-    out.push(`${i+1}. ${p.nombre}`,`   Cantidad: ${q}`,`   Precio unitario: ${money(p.precio)}`,`   Subtotal: ${money(q*p.precio)}`,``); });
-  out.push(L,``,`💰 RESUMEN DE COMPRA`,`Subtotal: ${money(t.sub)}`);
-  if (t.disc) out.push(`Descuento (${PCT}%): -${money(t.disc)}`);
-  out.push(`Total de productos: ${money(t.total)}`,`Envío: ${tru?"Gratis en Trujillo":"Por coordinar"}`,``,L,``,
-    `✅ SOLICITUD DE PEDIDO`,`Hola, deseo realizar este pedido con 360 CONNECT. Quedo atento a la confirmación de disponibilidad, entrega y pago.`);
+  const t=totals(), tru=isTrujillo(), ph=phoneDigits($("#fPhone").value).replace(/(\d{3})(\d{3})(\d{3})/,"$1 $2 $3");
+  const out=[`🛒 Pedido 360 Connect`];
+  Object.keys(cart).forEach(id=>{ const p=find(id), q=cart[id]; out.push(`${q} × ${p.nombre} — ${money(q*p.precio)}`); });
+  out.push(``);
+  if (t.disc) out.push(`Subtotal: ${money(t.sub)}`,`Descuento ${PCT}%: −${money(t.disc)}`);
+  out.push(tru ? `Total: ${money(t.total)} · Envío gratis` : `Total de productos: ${money(t.total)} · Envío por coordinar`);
+  out.push(``,`📍 Entrega a ${clean($("#fName").value,60)} · +51 ${ph}`,
+    `${cityValue()}, ${$("#fDep").value}${tru?` · distrito ${$("#fDist").value}`:""}`);
+  if (tru) out.push(`${clean($("#fAddr").value)} · Ref. ${clean($("#fRef").value)}`);
   return out.join("\n");
 }
 
