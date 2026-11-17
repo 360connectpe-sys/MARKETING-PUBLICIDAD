@@ -271,7 +271,8 @@ footer a:hover{color:var(--cyan)}
 
 /* CHECKOUT */
 .f-step{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;margin:4px 0 2px}
-#checkout{display:grid;gap:12px;padding-bottom:8px}#checkout[hidden],#review[hidden],#trujilloBox[hidden],#provBox[hidden]{display:none}
+#checkout{display:grid;gap:12px;padding-bottom:8px}#checkout[hidden],#review[hidden],#trujilloBox[hidden],#provBox[hidden],#otherWrap[hidden]{display:none}
+.fld select:disabled{background:#f3f6fb;color:#8793b0}
 #trujilloBox{display:grid;gap:12px;background:#f6f9ff;border:1px solid #dbe7ff;border-radius:16px;padding:14px}
 .fld label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:5px}
 .fld input,.fld select{width:100%;padding:12px 14px;border:1.5px solid #d6e3ff;border-radius:12px;font:16px 'Poppins';background:#fff;color:var(--text)}
@@ -291,8 +292,6 @@ footer a:hover{color:var(--cyan)}
 .d-foot .line.total{margin-bottom:12px}
 .d-foot .hint{margin-bottom:8px}@media(max-width:520px){.d-foot{padding:14px 18px}.d-foot .line{margin-bottom:3px}.d-foot .line.total{font-size:18px;margin:4px 0 10px}.d-body{padding:10px 18px}.c-item{padding:9px 0}}
 /* DEMO PLACA NFC + QR */
-.pd-cta{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:8px}
-.pd-cta small{color:var(--muted);font-size:13px}
 .pd-modal{position:fixed;inset:0;z-index:85;background:rgba(6,15,38,.78);display:flex;align-items:center;justify-content:center;padding:16px}
 .pd-modal[hidden]{display:none}
 .pd-box{background:#fff;border-radius:26px;width:min(820px,100%);max-height:100%;overflow-y:auto;overscroll-behavior:contain;padding:18px 20px 16px;display:flex;flex-direction:column;gap:12px;animation:pop .25s}
@@ -371,7 +370,7 @@ footer a:hover{color:var(--cyan)}
 @media(max-width:520px){
   .grid{grid-template-columns:1fr 1fr;gap:12px}.p-body{padding:12px}.p-body h3{font-size:14px}.p-body p{display:none}.p-price{font-size:20px}.p-price small{display:block;font-size:11px}.p-row{flex-direction:column;align-items:stretch;gap:8px}.p-row .qty{justify-content:space-between}.add{padding:9px 8px;font-size:13px}.p-badge{font-size:10px;padding:4px 8px;top:8px;left:8px}.see{display:none}
   section{padding:56px 0}
-  .hero{padding:36px 0 44px}.hero-stats,.mascot,.platforms{display:none}.hero-ctas{flex-wrap:nowrap;gap:8px}.hero-ctas .btn{flex:1;padding:12px 10px;font-size:14px}.hero h1{font-size:clamp(32px,9.4vw,38px);line-height:1.12;margin:14px 0 12px}.hero p.lead{font-size:16.5px;line-height:1.55}.hero-ctas{margin:24px 0 4px}.hero-stats div{padding:8px 12px}.mascot{max-width:260px;margin-top:20px}.chip{display:none}.bubble{font-size:12px;padding:8px 12px;top:-10px}.promo-bar{font-size:12px}
+  .hero{padding:36px 0 44px}.hero-stats,.mascot,.platforms{display:none}.hero-ctas{flex-wrap:nowrap;gap:10px}.hero-ctas .btn{flex:1;min-height:50px;padding:12px 10px;font-size:15px}.hero h1{font-size:clamp(32px,9.4vw,38px);line-height:1.12;margin:14px 0 12px}.hero p.lead{font-size:16.5px;line-height:1.55}.hero-ctas{margin:24px 0 4px}.hero-stats div{padding:8px 12px}.mascot{max-width:260px;margin-top:20px}.chip{display:none}.bubble{font-size:12px;padding:8px 12px;top:-10px}.promo-bar{font-size:12px}
   .benefits,.plan-feats{grid-template-columns:1fr}
   .nav img{height:34px}
   .cart-btn .lbl{display:none}
@@ -410,7 +409,7 @@ footer a:hover{color:var(--cyan)}
       <p class="lead">Más <b>reseñas</b>, más <b>seguidores</b> y más <b>clientes</b> con nuestras placas inteligentes.</p>
       <div class="hero-ctas">
         <a href="#productos" class="btn btn-primary">🛒 Ver productos</a>
-        <a href="#plan-web" class="btn btn-glass">🎮 Plan NFC + Web</a>
+        <button class="btn btn-glass" data-act="demo-open">📲 Prueba la placa</button>
       </div>
       <div class="hero-stats">
         <div><b>NFC + QR</b>Doble acceso</div>
@@ -478,7 +477,6 @@ footer a:hover{color:var(--cyan)}
       <div class="step reveal"><div class="n">2</div><h3>Envía tu pedido</h3><p>Tu pedido nos llega por WhatsApp. Nos pasas el nombre de tu negocio y tus redes para configurarla.</p></div>
       <div class="step reveal"><div class="n">3</div><h3>¡Recibe y conecta!</h3><p>Tus clientes tocan la placa con su celular o escanean el QR y llegan directo a tu perfil.</p></div>
     </div>
-    <div class="pd-cta reveal"><button class="btn btn-primary" data-act="demo-open">📲 Prueba la placa</button><small>Simulación interactiva: acerca el celular por NFC o escanea el QR</small></div>
   </div>
 </section>
 
@@ -610,7 +608,8 @@ footer a:hover{color:var(--cyan)}
       <div class="fld"><label for="fName">Nombre y apellido *</label><input id="fName" autocomplete="name" maxlength="60" placeholder="Ej. María Pérez"><small class="err"></small></div>
       <div class="fld"><label for="fPhone">WhatsApp *</label><div class="ph"><span>+51</span><input id="fPhone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="11" placeholder="9XX XXX XXX"></div><small class="err"></small></div>
       <div class="fld"><label for="fDep">Departamento *</label><select id="fDep"><option value="">Selecciona…</option><option>Amazonas</option><option>Áncash</option><option>Apurímac</option><option>Arequipa</option><option>Ayacucho</option><option>Cajamarca</option><option>Callao</option><option>Cusco</option><option>Huancavelica</option><option>Huánuco</option><option>Ica</option><option>Junín</option><option>La Libertad</option><option>Lambayeque</option><option>Lima</option><option>Loreto</option><option>Madre de Dios</option><option>Moquegua</option><option>Pasco</option><option>Piura</option><option>Puno</option><option>San Martín</option><option>Tacna</option><option>Tumbes</option><option>Ucayali</option></select><small class="err"></small></div>
-      <div class="fld"><label for="fCity">Ciudad *</label><input id="fCity" list="cityList" maxlength="40" autocomplete="address-level2" placeholder="Ej. Trujillo"><datalist id="cityList"></datalist><small class="err"></small></div>
+      <div class="fld"><label for="fCity">Ciudad *</label><select id="fCity" disabled><option value="">Primero elige el departamento</option></select><small class="err"></small></div>
+      <div class="fld" id="otherWrap" hidden><label for="fCityOther">Escribe tu ciudad *</label><input id="fCityOther" maxlength="40" autocomplete="address-level2" placeholder="Nombre de tu ciudad o distrito"><small class="err"></small></div>
       <div id="trujilloBox" hidden>
         <div class="fld"><label for="fDist">Distrito *</label><select id="fDist"><option value="">Selecciona…</option><option>Trujillo</option><option>El Porvenir</option><option>Florencia de Mora</option><option>Huanchaco</option><option>La Esperanza</option><option>Laredo</option><option>Moche</option><option>Poroto</option><option>Salaverry</option><option>Simbal</option><option>Víctor Larco Herrera</option></select><small class="err"></small></div>
         <div class="fld"><label for="fAddr">Dirección completa *</label><input id="fAddr" autocomplete="street-address" maxlength="120" placeholder="Av./Calle, número, Mz./Lt."><small class="err"></small></div>
@@ -733,8 +732,43 @@ const esc = v => String(v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">"
 const clean = (v,max=120) => String(v||"").normalize("NFC").replace(/[\u0000-\u001F\u007F<>`{}\[\]\\|^~*_]/g," ").replace(/\s+/g," ").trim().slice(0,max);
 const norm = v => clean(v).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
 const phoneDigits = v => { let d = String(v||"").replace(/\D/g,""); if (d.length===11 && d.startsWith("51")) d = d.slice(2); return d; };
-const isTrujillo = () => norm($("#fCity").value)==="trujillo" && $("#fDep").value==="La Libertad";
-const CITY_HINTS = {"La Libertad":["Trujillo","Chepén","Pacasmayo","Virú","Huamachuco","Otuzco"],"Lima":["Lima"],"Lambayeque":["Chiclayo"],"Piura":["Piura","Sullana"],"Áncash":["Chimbote","Huaraz"],"Cajamarca":["Cajamarca"],"Arequipa":["Arequipa"],"Cusco":["Cusco"],"Callao":["Callao"]};
+// Ciudades principales por departamento. "Otra ciudad" permite escribirla, pero no puede parecerse a una de la lista.
+const CIUDADES = {
+  "Amazonas":["Chachapoyas","Bagua","Bagua Grande","Jumbilla","Lámud","Mendoza","Santa María de Nieva"],
+  "Áncash":["Huaraz","Chimbote","Nuevo Chimbote","Casma","Huarmey","Caraz","Carhuaz","Yungay","Recuay","Huari","Pomabamba","Sihuas"],
+  "Apurímac":["Abancay","Andahuaylas","Chalhuanca","Chincheros","Tambobamba","Antabamba","Chuquibambilla"],
+  "Arequipa":["Arequipa","Camaná","Mollendo","Majes","Chivay","Aplao","Chala","Cotahuasi","Chuquibamba"],
+  "Ayacucho":["Ayacucho","Huanta","Puquio","San Miguel","Coracora","Cangallo"],
+  "Cajamarca":["Cajamarca","Jaén","Chota","Cutervo","Celendín","Bambamarca","San Ignacio","Cajabamba","Contumazá"],
+  "Callao":["Callao","Ventanilla","Bellavista","La Perla","Carmen de la Legua","La Punta","Mi Perú"],
+  "Cusco":["Cusco","Sicuani","Quillabamba","Urubamba","Calca","Espinar","Anta"],
+  "Huancavelica":["Huancavelica","Lircay","Pampas","Acobamba","Castrovirreyna"],
+  "Huánuco":["Huánuco","Tingo María","Ambo","La Unión","Llata"],
+  "Ica":["Ica","Chincha Alta","Pisco","Nasca","Palpa"],
+  "Junín":["Huancayo","Tarma","La Oroya","Jauja","Satipo","La Merced","Chupaca","Concepción","Junín"],
+  "La Libertad":["Trujillo","Chepén","Pacasmayo","Guadalupe","Ascope","Casa Grande","Chocope","Virú","Chao","Otuzco","Huamachuco","Santiago de Chuco","Julcán","Tayabamba","Quiruvilca"],
+  "Lambayeque":["Chiclayo","Lambayeque","Ferreñafe","Pimentel","Monsefú","Motupe","Olmos"],
+  "Lima":["Lima","Huacho","Huaral","Barranca","Cañete","Chancay","Huaura","Canta","Matucana","Yauyos","Cajatambo","Oyón"],
+  "Loreto":["Iquitos","Yurimaguas","Nauta","Requena","Contamana","Caballococha"],
+  "Madre de Dios":["Puerto Maldonado","Iberia","Iñapari","Salvación"],
+  "Moquegua":["Moquegua","Ilo","Omate"],
+  "Pasco":["Cerro de Pasco","Oxapampa","Villa Rica","Yanahuanca"],
+  "Piura":["Piura","Sullana","Talara","Paita","Chulucanas","Catacaos","Sechura","Ayabaca","Huancabamba"],
+  "Puno":["Puno","Juliaca","Ilave","Azángaro","Ayaviri","Juli","Yunguyo","Desaguadero"],
+  "San Martín":["Tarapoto","Moyobamba","Rioja","Juanjuí","Tocache","Bellavista","Lamas","Nueva Cajamarca"],
+  "Tacna":["Tacna","Candarave","Locumba","Tarata"],
+  "Tumbes":["Tumbes","Zarumilla","Zorritos","Aguas Verdes"],
+  "Ucayali":["Pucallpa","Atalaya","Aguaytía"]
+};
+const OTRA = "__otra__";
+const isTrujillo = () => $("#fDep").value==="La Libertad" && $("#fCity").value==="Trujillo";
+// distancia de edición, para detectar ciudades mal escritas ("Trujilo")
+function lev(a,b){ const d=Array.from({length:a.length+1},(_,i)=>[i]); for(let j=1;j<=b.length;j++) d[0][j]=j;
+  for(let i=1;i<=a.length;i++) for(let j=1;j<=b.length;j++) d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1)); return d[a.length][b.length]; }
+function parecida(txt){ const n=norm(txt); if(n.length<3) return null;
+  for (const dep in CIUDADES) for (const c of CIUDADES[dep]){ const m=norm(c); if (n===m || lev(n,m) <= (m.length>6?2:1)) return {dep,c}; } return null; }
+// ciudad validada que se usa en el resumen y en el mensaje
+const cityValue = () => $("#fCity").value===OTRA ? clean($("#fCityOther").value,40) : $("#fCity").value;
 
 function setStep(s){
   if (!Object.keys(cart).length) s = "cart";
@@ -762,7 +796,7 @@ function renderCart(){
     return;
   }
   if (step==="form"){
-    $("#cartFoot").innerHTML = `<div class="line total"><span>Total de productos${t.disc?` <small style="font-size:12px;color:#16a34a">(−${PCT}%)</small>`:""}</span><span>${soles(t.total)}</span></div><button class="btn btn-primary" data-act="to-review">Revisar mi pedido →</button><button class="btn-link" data-act="to-cart">← Volver al carrito</button>`;
+    $("#cartFoot").innerHTML = `<div class="line"><span>Envío${cityValue()?` · ${esc(cityValue())}`:""}</span><span>${!$("#fCity").value ? "Elige tu ciudad" : isTrujillo() ? "Gratis en Trujillo" : "Por coordinar"}</span></div><div class="line total"><span>Total de productos${t.disc?` <small style="font-size:12px;color:#16a34a">(−${PCT}%)</small>`:""}</span><span>${soles(t.total)}</span></div><button class="btn btn-primary" data-act="to-review">Revisar mi pedido →</button><button class="btn-link" data-act="to-cart">← Volver al carrito</button>`;
     return;
   }
   if (step==="review"){
@@ -785,11 +819,18 @@ function renderCart(){
     <button class="btn btn-primary" data-act="to-form">Continuar con mi pedido →</button>`;
 }
 
-function updateCityUI(){
-  const dep=$("#fDep").value, city=$("#fCity").value;
-  if (norm(city)==="trujillo" && !dep) $("#fDep").value="La Libertad";
-  $("#cityList").innerHTML = (CITY_HINTS[$("#fDep").value]||[]).map(c=>`<option value="${esc(c)}">`).join("");
-  const tru = isTrujillo(), filled = $("#fDep").value && clean(city).length>1;
+function clearFields(ids){ ids.forEach(id=>{ const e=$("#"+id); e.value=""; const f=e.closest(".fld"); f.classList.remove("bad"); f.querySelector(".err").textContent=""; }); }
+function fillCities(){
+  const dep=$("#fDep").value, sel=$("#fCity");
+  sel.innerHTML = dep ? `<option value="">Selecciona tu ciudad…</option>` + CIUDADES[dep].map(c=>`<option>${esc(c)}</option>`).join("") + `<option value="${OTRA}">Otra ciudad de ${esc(dep)}…</option>`
+                      : `<option value="">Primero elige el departamento</option>`;
+  sel.disabled = !dep;
+}
+function updateCityUI(changed){
+  if (changed==="fDep"){ fillCities(); clearFields(["fCity","fCityOther","fDist","fAddr","fRef"]); }
+  if (changed==="fCity"){ clearFields(["fCityOther","fDist","fAddr","fRef"]); }
+  $("#otherWrap").hidden = $("#fCity").value!==OTRA;
+  const tru = isTrujillo(), filled = !!($("#fDep").value && $("#fCity").value);
   $("#trujilloBox").hidden = !tru;
   $("#provBox").hidden = tru || !filled;
   if (step==="form") renderCart();
@@ -797,13 +838,19 @@ function updateCityUI(){
 
 function setErr(id,msg){ const f=$("#"+id).closest(".fld"); f.classList.toggle("bad",!!msg); f.querySelector(".err").textContent=msg||""; return !msg; }
 function validate(){
-  const name=clean($("#fName").value,60), ph=phoneDigits($("#fPhone").value), dep=$("#fDep").value, city=clean($("#fCity").value,40);
+  const name=clean($("#fName").value,60), ph=phoneDigits($("#fPhone").value), dep=$("#fDep").value;
   const ok = [
     setErr("fName", !name ? "Escribe tu nombre y apellido." : !/^[\p{L}][\p{L}'. -]+\s+[\p{L}][\p{L}'. -]*$/u.test(name) ? "Escribe nombre y apellido (solo letras)." : ""),
     setErr("fPhone", !ph ? "Escribe tu número de WhatsApp." : !/^9\d{8}$/.test(ph) ? "Debe tener 9 dígitos y empezar con 9." : ""),
     setErr("fDep", !dep ? "Selecciona tu departamento." : ""),
-    setErr("fCity", city.length<2 ? "Escribe tu ciudad." : norm(city)==="trujillo" && dep!=="La Libertad" ? "Trujillo pertenece a La Libertad: revisa el departamento." : "")
+    setErr("fCity", !dep ? "" : !$("#fCity").value ? "Selecciona tu ciudad de la lista." : "")
   ];
+  if ($("#fCity").value===OTRA){
+    const o=clean($("#fCityOther").value,40), sim=parecida(o);
+    ok.push(setErr("fCityOther", o.length<3 ? "Escribe el nombre de tu ciudad."
+      : !/^[\p{L}][\p{L} .'-]+$/u.test(o) ? "Usa solo letras en el nombre de la ciudad."
+      : sim ? `¿Quisiste decir ${sim.c} (${sim.dep})? Corrige la ciudad eligiéndola de la lista.` : ""));
+  }
   if (isTrujillo()){
     ok.push(setErr("fDist", !$("#fDist").value ? "Selecciona tu distrito." : ""));
     ok.push(setErr("fAddr", clean($("#fAddr").value).length<6 ? "Escribe tu dirección completa." : ""));
@@ -819,7 +866,7 @@ function buildMessage(){
   const t=totals(), tru=isTrujillo(), L="━━━━━━━━━━━━━━", ph=phoneDigits($("#fPhone").value);
   const out=[`🛒 NUEVO PEDIDO — 360 CONNECT`,L,``,`👤 DATOS DEL CLIENTE`,
     `Nombre: ${clean($("#fName").value,60)}`,`WhatsApp: +51 ${ph.replace(/(\d{3})(\d{3})(\d{3})/,"$1 $2 $3")}`,
-    `Departamento: ${$("#fDep").value}`,`Ciudad: ${tru?"Trujillo":clean($("#fCity").value,40)}`,``,`📍 DATOS DE ENTREGA`];
+    `Departamento: ${$("#fDep").value}`,`Ciudad: ${cityValue()}`,``,`📍 DATOS DE ENTREGA`];
   if (tru) out.push(`Distrito: ${$("#fDist").value}`,`Dirección: ${clean($("#fAddr").value)}`,`Referencia: ${clean($("#fRef").value)}`,`🚚 Delivery GRATIS en Trujillo.`);
   else out.push(`📦 Envío a provincia.`,`Agencia y costo de envío pendientes de coordinación.`);
   out.push(``,L,``,`🛍️ DETALLE DEL PEDIDO`,``);
@@ -999,7 +1046,7 @@ const Demo = (() => {
   function screenIdleHint(){ hint(st.mode==="nfc" ? "👆 Acerca la parte superior del celular a la placa" : "📷 Mueve el celular hasta que el marco encierre el código QR"); }
 
   function openSite(){
-    if (!st.hit) return;
+    if (!st.hit || st.open) return;
     st.open = true; el.nfc.classList.remove("hot");
     const pw = Math.min(300, st.W - 24), ph = st.H - 20;
     el.phone.classList.add("anim","open");
@@ -1036,7 +1083,9 @@ const Demo = (() => {
     ["scene","plate","phone","screen","hint","nfc"].forEach(k => el[k] = $("#pd"+k[0].toUpperCase()+k.slice(1)));
     document.body.style.overflow = "hidden";
     el.phone.addEventListener("pointerdown", down); el.phone.addEventListener("pointermove", move);
-    el.phone.addEventListener("pointerup", up); el.phone.addEventListener("pointercancel", up); el.phone.addEventListener("keydown", key);
+    el.phone.addEventListener("pointerup", up);
+    // en pantallas táctiles el navegador puede omitir el "click" si se toca justo después de arrastrar: abrimos al levantar el dedo
+    el.phone.addEventListener("pointerup", e => { if (e.pointerType !== "mouse" && e.target.closest('[data-act="demo-site"]')) openSite(); }); el.phone.addEventListener("pointercancel", up); el.phone.addEventListener("keydown", key);
     el.modal.addEventListener("click", e => { if (e.target === el.modal) close(); });
     el.scene.addEventListener("scroll", () => { el.scene.scrollTop = 0; el.scene.scrollLeft = 0; });  // al enfocar el celular el navegador no debe desplazar la escena
     addEventListener("resize", resize);
@@ -1093,10 +1142,10 @@ document.addEventListener("keydown", e => { if(e.key==="Escape"){ if(!$("#pdModa
 $("#checkout").addEventListener("submit", e => e.preventDefault());
 $("#checkout").addEventListener("input", e => {
   if (e.target.id==="fPhone") e.target.value = e.target.value.replace(/[^\d\s+]/g,"");
-  if (e.target.id==="fCity") updateCityUI();
+  if (e.target.id==="fCityOther" && step==="form") renderCart();
   const f=e.target.closest(".fld"); if(f&&f.classList.contains("bad")){ f.classList.remove("bad"); f.querySelector(".err").textContent=""; }
 });
-$("#checkout").addEventListener("change", e => { if (e.target.id==="fDep"||e.target.id==="fCity") updateCityUI(); });
+$("#checkout").addEventListener("change", e => { if (e.target.id==="fDep"||e.target.id==="fCity") updateCityUI(e.target.id); });
 
 $("#year").textContent = new Date().getFullYear();
 renderGrid(); renderPacks(); renderCart(); renderPhone("menu");
