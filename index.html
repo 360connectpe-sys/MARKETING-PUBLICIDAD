@@ -7,7 +7,7 @@
 <meta name="description" content="Placas NFC con código QR para Google, TikTok, Instagram y WhatsApp. Más reseñas y más seguidores con un solo toque. Envíos a todo el Perú.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="360 Connect | Tu negocio, a un solo toque">
-<meta property="og:description" content="Placas NFC + QR para Google, TikTok, Instagram y WhatsApp. 30% de descuento llevando 3. Envíos a todo el Perú.">
+<meta property="og:description" content="Placas NFC + QR para Google, TikTok, Instagram y WhatsApp. 20% de descuento llevando 3. Envíos a todo el Perú.">
 <meta property="og:image" content="https://360connectpe.lat/img/connecti.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a1a3d">
@@ -73,8 +73,8 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 /* HERO */
 .hero{padding:76px 0 96px}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(36px,5.8vw,64px);line-height:1.06;font-weight:800;margin:18px 0}
-.hero p.lead{font-size:18px;color:#c3d1f1;max-width:530px}
+.hero h1{font-size:clamp(36px,5.4vw,62px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:18px 0 16px;max-width:600px}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:#c3d1f1;max-width:470px}
 .hero p.lead b{color:#fff}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0}
 .hero-stats{display:flex;gap:14px;flex-wrap:wrap}
@@ -269,6 +269,27 @@ footer a:hover{color:var(--cyan)}
 .note{font-size:12px;color:var(--muted);margin-top:8px;text-align:center}
 .d-foot .btn{width:100%}
 
+/* CHECKOUT */
+.f-step{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;margin:4px 0 2px}
+#checkout{display:grid;gap:12px;padding-bottom:8px}#checkout[hidden],#review[hidden],#trujilloBox[hidden],#provBox[hidden]{display:none}
+#trujilloBox{display:grid;gap:12px;background:#f6f9ff;border:1px solid #dbe7ff;border-radius:16px;padding:14px}
+.fld label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:5px}
+.fld input,.fld select{width:100%;padding:12px 14px;border:1.5px solid #d6e3ff;border-radius:12px;font:16px 'Poppins';background:#fff;color:var(--text)}
+.fld input:focus,.fld select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,112,255,.12)}
+.fld.bad input,.fld.bad select{border-color:#e11d48}
+.err{display:block;color:#e11d48;font-size:12px;margin-top:4px}.err:empty{display:none}
+.ph{display:flex}.ph span{display:grid;place-items:center;padding:0 12px;background:#eef3fb;border:1.5px solid #d6e3ff;border-right:0;border-radius:12px 0 0 12px;font-weight:600;color:var(--navy)}
+.ph input{border-radius:0 12px 12px 0}
+.ok-note{font-size:13px;font-weight:600;color:#166534}
+.info-note{background:#eef6ff;color:#1e3a8a;border-radius:12px;padding:11px 13px;font-size:13px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--text);cursor:pointer}
+.chk input{width:20px;height:20px;margin-top:1px;accent-color:var(--blue);flex:none}
+.chk a{color:var(--blue);text-decoration:underline}
+.msg-prev{white-space:pre-wrap;word-break:break-word;font:13px/1.55 'Poppins',sans-serif;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:14px;color:var(--text);margin-top:8px}
+.btn-link{background:none;border:0;color:var(--muted);font:600 14px 'Poppins';padding:10px;cursor:pointer;width:100%}
+.btn-link:hover{color:var(--blue)}
+.d-foot .line.total{margin-bottom:12px}
+.d-foot .hint{margin-bottom:8px}@media(max-width:520px){.d-foot{padding:14px 18px}.d-foot .line{margin-bottom:3px}.d-foot .line.total{font-size:18px;margin:4px 0 10px}.d-body{padding:10px 18px}.c-item{padding:9px 0}}
 /* MODAL */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:80;padding:16px;background:rgba(6,15,38,.75)}
 .modal.show{display:flex}
@@ -296,7 +317,7 @@ footer a:hover{color:var(--cyan)}
 @media(max-width:520px){
   .grid{grid-template-columns:1fr 1fr;gap:12px}.p-body{padding:12px}.p-body h3{font-size:14px}.p-body p{display:none}.p-price{font-size:20px}.p-price small{display:block;font-size:11px}.p-row{flex-direction:column;align-items:stretch;gap:8px}.p-row .qty{justify-content:space-between}.add{padding:9px 8px;font-size:13px}.p-badge{font-size:10px;padding:4px 8px;top:8px;left:8px}.see{display:none}
   section{padding:56px 0}
-  .hero{padding:28px 0 36px}.hero-stats,.mascot,.platforms{display:none}.hero-ctas{flex-wrap:nowrap;gap:8px}.hero-ctas .btn{flex:1;padding:12px 10px;font-size:14px}.hero h1{font-size:34px}.hero h1{margin:12px 0}.hero p.lead{font-size:16px}.hero-ctas{margin:20px 0}.hero-stats div{padding:8px 12px}.mascot{max-width:260px;margin-top:20px}.chip{display:none}.bubble{font-size:12px;padding:8px 12px;top:-10px}.promo-bar{font-size:12px}
+  .hero{padding:36px 0 44px}.hero-stats,.mascot,.platforms{display:none}.hero-ctas{flex-wrap:nowrap;gap:8px}.hero-ctas .btn{flex:1;padding:12px 10px;font-size:14px}.hero h1{font-size:clamp(32px,9.4vw,38px);line-height:1.12;margin:14px 0 12px}.hero p.lead{font-size:16.5px;line-height:1.55}.hero-ctas{margin:24px 0 4px}.hero-stats div{padding:8px 12px}.mascot{max-width:260px;margin-top:20px}.chip{display:none}.bubble{font-size:12px;padding:8px 12px;top:-10px}.promo-bar{font-size:12px}
   .benefits,.plan-feats{grid-template-columns:1fr}
   .nav img{height:34px}
   .cart-btn .lbl{display:none}
@@ -310,7 +331,7 @@ footer a:hover{color:var(--cyan)}
 <body>
 <script>document.documentElement.classList.add("js")</script>
 
-<div class="promo-bar">🔥 <b>30% de descuento</b> llevando 3 placas o más (puedes combinarlas) · 🚚 Delivery <b>GRATIS</b> en Trujillo</div>
+<div class="promo-bar">🔥 <b>20% DE DESCUENTO</b> llevando 3 placas o más. ¡Combina modelos! 🚚 Delivery <b>GRATIS</b> en Trujillo.</div>
 
 <header>
   <div class="wrap nav">
@@ -331,8 +352,8 @@ footer a:hover{color:var(--cyan)}
   <div class="wrap hero-grid">
     <div class="reveal">
       <span class="tag">📲 Tecnología NFC + QR</span>
-      <h1>Tu negocio,<br><span class="grad">a un solo toque.</span></h1>
-      <p class="lead">Placas inteligentes para que tus clientes te dejen <b>reseñas en Google</b>, te sigan en <b>TikTok e Instagram</b> o te escriban por <b>WhatsApp</b>, con solo acercar su celular o escanear el QR.</p>
+      <h1>Conecta tu negocio <span class="grad">con un solo toque.</span></h1>
+      <p class="lead">Más <b>reseñas</b>, más <b>seguidores</b> y más <b>clientes</b> con nuestras placas inteligentes.</p>
       <div class="hero-ctas">
         <a href="#productos" class="btn btn-primary">🛒 Ver productos</a>
         <a href="#plan-web" class="btn btn-glass">🎮 Plan NFC + Web</a>
@@ -385,9 +406,9 @@ footer a:hover{color:var(--cyan)}
 <!-- PACKS -->
 <section id="packs" style="background:#e9f1ff">
   <div class="wrap center">
-    <span class="tag reveal">Ahorra 30%</span>
+    <span class="tag reveal">Ahorra 20%</span>
     <h2 class="title reveal">Packs listos para tu negocio</h2>
-    <p class="sub reveal">Ya vienen con el 30% de descuento. Si prefieres otros modelos, arma tu propio pack: con 3 placas o más el descuento se aplica solo.</p>
+    <p class="sub reveal">Ya vienen con el 20% de descuento. Si prefieres otros modelos, arma tu propio pack: con 3 placas o más el descuento se aplica solo.</p>
     <div class="packs" id="packsGrid"></div>
   </div>
 </section>
@@ -423,7 +444,7 @@ footer a:hover{color:var(--cyan)}
         <div class="amt">S/ 350<small>6 placas NFC + QR al estilo que prefieras + página web</small></div>
         <button class="btn btn-primary" data-act="plan">Quiero este plan 🛒</button>
       </div>
-      <p class="plan-note">Coordinamos por WhatsApp el estilo de tus 6 placas y el contenido de tu web. El 30% de descuento aplica solo a placas sueltas.</p>
+      <p class="plan-note">Coordinamos por WhatsApp el estilo de tus 6 placas y el contenido de tu web. El 20% de descuento aplica solo a placas sueltas.</p>
     </div>
     <div class="phone-wrap reveal">
       <div class="phone"><div class="screen">
@@ -480,7 +501,7 @@ footer a:hover{color:var(--cyan)}
       <details><summary>¿Qué es NFC?</summary><p>Es la misma tecnología de los pagos sin contacto. El cliente acerca su celular a la placa y se abre tu enlace automáticamente, sin apps.</p></details>
       <details><summary>¿Y si el celular del cliente no tiene NFC?</summary><p>No hay problema: todas las placas también tienen código QR, que se escanea con la cámara del celular.</p></details>
       <details><summary>¿La placa viene con mis datos?</summary><p>Sí. Después de tu pedido nos envías por WhatsApp el nombre comercial de tu negocio y tus redes sociales, y configuramos el NFC y el QR con tu página.</p></details>
-      <details><summary>¿Cómo funciona el 30% de descuento?</summary><p>Si llevas 3 placas o más (pueden ser diferentes), se aplica un 30% de descuento a las placas. El carrito lo calcula automáticamente.</p></details>
+      <details><summary>¿Cómo funciona el 20% de descuento?</summary><p>Si llevas 3 placas o más (pueden ser diferentes), se aplica un 20% de descuento a las placas. El carrito lo calcula automáticamente.</p></details>
       <details><summary>¿Qué incluye el Plan Connect Pro de S/ 350?</summary><p>6 placas NFC + QR en el estilo que prefieras y una página web para tu negocio con menú, redes sociales, juegos y un ranking donde los mejores jugadores ganan el premio que tú definas (por ejemplo, un descuento).</p></details>
       <details><summary>¿Cómo pago?</summary><p>Aceptamos Yape, Plin, tarjetas y transferencias. Coordinamos el pago contigo por WhatsApp al confirmar tu pedido.</p></details>
       <details><summary>¿Hacen envíos fuera de Trujillo?</summary><p>Sí, a todo el Perú por la agencia que prefieras. El costo de envío se coordina por WhatsApp. En Trujillo el delivery es gratis.</p></details>
@@ -518,7 +539,7 @@ footer a:hover{color:var(--cyan)}
       </ul>
     </div>
   </div>
-  <div class="wrap copy">© <span id="year"></span> 360 Connect. Todos los derechos reservados.</div>
+  <div class="wrap copy">© <span id="year"></span> 360 Connect. Todos los derechos reservados. · <a href="terminos.html">Términos de compra</a> · <a href="privacidad.html">Política de privacidad</a></div>
 </footer>
 
 <a class="float-wa" href="https://wa.me/51974337299" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
@@ -527,8 +548,26 @@ footer a:hover{color:var(--cyan)}
 
 <div class="overlay" id="overlay" data-act="close-cart"></div>
 <aside class="drawer" id="drawer" aria-label="Carrito de compras">
-  <div class="d-head"><h3>🛒 Tu carrito</h3><button class="x" data-act="close-cart" aria-label="Cerrar">✕</button></div>
-  <div class="d-body" id="cartItems"></div>
+  <div class="d-head"><h3 id="dTitle">🛒 Tu carrito</h3><button class="x" data-act="close-cart" aria-label="Cerrar">✕</button></div>
+  <div class="d-body"><div id="cartItems"></div>
+    <form id="checkout" hidden novalidate>
+      <p class="f-step">Paso 2 de 3 · Tus datos</p>
+      <div class="fld"><label for="fName">Nombre y apellido *</label><input id="fName" autocomplete="name" maxlength="60" placeholder="Ej. María Pérez"><small class="err"></small></div>
+      <div class="fld"><label for="fPhone">WhatsApp *</label><div class="ph"><span>+51</span><input id="fPhone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="11" placeholder="9XX XXX XXX"></div><small class="err"></small></div>
+      <div class="fld"><label for="fDep">Departamento *</label><select id="fDep"><option value="">Selecciona…</option><option>Amazonas</option><option>Áncash</option><option>Apurímac</option><option>Arequipa</option><option>Ayacucho</option><option>Cajamarca</option><option>Callao</option><option>Cusco</option><option>Huancavelica</option><option>Huánuco</option><option>Ica</option><option>Junín</option><option>La Libertad</option><option>Lambayeque</option><option>Lima</option><option>Loreto</option><option>Madre de Dios</option><option>Moquegua</option><option>Pasco</option><option>Piura</option><option>Puno</option><option>San Martín</option><option>Tacna</option><option>Tumbes</option><option>Ucayali</option></select><small class="err"></small></div>
+      <div class="fld"><label for="fCity">Ciudad *</label><input id="fCity" list="cityList" maxlength="40" autocomplete="address-level2" placeholder="Ej. Trujillo"><datalist id="cityList"></datalist><small class="err"></small></div>
+      <div id="trujilloBox" hidden>
+        <div class="fld"><label for="fDist">Distrito *</label><select id="fDist"><option value="">Selecciona…</option><option>Trujillo</option><option>El Porvenir</option><option>Florencia de Mora</option><option>Huanchaco</option><option>La Esperanza</option><option>Laredo</option><option>Moche</option><option>Poroto</option><option>Salaverry</option><option>Simbal</option><option>Víctor Larco Herrera</option></select><small class="err"></small></div>
+        <div class="fld"><label for="fAddr">Dirección completa *</label><input id="fAddr" autocomplete="street-address" maxlength="120" placeholder="Av./Calle, número, Mz./Lt."><small class="err"></small></div>
+        <div class="fld"><label for="fRef">Referencia de ubicación *</label><input id="fRef" maxlength="120" placeholder="Ej. Frente al parque, puerta azul"><small class="err"></small></div>
+        <p class="ok-note">🚚 Delivery GRATIS en Trujillo.</p>
+      </div>
+      <p id="provBox" class="info-note" hidden>📦 Realizamos envíos a provincias. Coordinaremos contigo la agencia de transporte y el costo de envío por WhatsApp.</p>
+      <div class="fld"><label class="chk"><input type="checkbox" id="fTerms"><span>Acepto los <a href="terminos.html" target="_blank" rel="noopener">Términos de compra</a> y la <a href="privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.</span></label><small class="err"></small></div>
+      <p class="note" style="text-align:left;margin:0">🔒 Usaremos tus datos solo para coordinar tu pedido y la entrega. No se guardan en esta web: viajan únicamente en tu mensaje de WhatsApp.</p>
+    </form>
+    <div id="review" hidden><p class="f-step">Paso 3 de 3 · Revisa tu pedido</p><p class="note" style="text-align:left">Este es el mensaje que se enviará a 360 Connect por WhatsApp:</p><div class="msg-prev" id="msgPrev"></div></div>
+  </div>
   <div class="d-foot" id="cartFoot"></div>
 </aside>
 
@@ -540,7 +579,7 @@ footer a:hover{color:var(--cyan)}
    CONFIGURACIÓN — aquí puedes cambiar número, precios y productos
    ========================================================= */
 const WHATSAPP = "51974337299";      // número con código de Perú (51)
-const DESCUENTO = 0.30;              // 30 %
+const DESCUENTO = 0.20;              // 20 %
 const MIN_PROMO = 3;                 // placas mínimas para el descuento
 
 const PRODUCTOS = [
@@ -564,14 +603,14 @@ const PRODUCTOS = [
    desc:"“Contact us on WhatsApp”. Que tus clientes te escriban al instante, sin guardar tu número."}
 ];
 
-// Packs: cada uno suma sus placas al carrito (el 30% se aplica solo)
+// Packs: cada uno suma sus placas al carrito (el 20% se aplica solo)
 const PACKS = [
   {nombre:"⭐ Pack Reseñas", desc:"Para llenar tu negocio de reseñas en Google.", items:["g-soporte-blanca","g-adhesiva-blanca","g-tarjeta"]},
   {nombre:"🚀 Pack Completo", desc:"Reseñas + todas tus redes. El más elegido.", items:["g-soporte-negra","tiktok","ig-clasica","whatsapp"], best:true},
   {nombre:"📱 Pack Redes", desc:"Más seguidores y contacto directo.", items:["tiktok","ig-clasica","whatsapp"]}
 ];
 
-// Plan con página web (no entra en la promo del 30%)
+// Plan con página web (no entra en la promo del 20%)
 const PLAN = {id:"plan-pro", nombre:"Plan Connect Pro · 6 placas NFC + página web", precio:350, img:"img/connecti.jpg", promo:false};
 /* ========================================================= */
 
@@ -629,55 +668,117 @@ function totals(){
 
 function addToCart(id,q){ cart[id]=(cart[id]||0)+q; save(); renderCart(); }
 
+const PCT = Math.round(DESCUENTO*100);
+let step = "cart";
+const TITLES = {cart:"🛒 Tu carrito", form:"📝 Tus datos", review:"✅ Revisa tu pedido"};
+const money = n => "S/" + n.toFixed(2);
+const esc = v => String(v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+// Limpia el texto: quita caracteres de control y símbolos de código, espacios dobles y limita largo
+const clean = (v,max=120) => String(v||"").normalize("NFC").replace(/[\u0000-\u001F\u007F<>`{}\[\]\\|^~*_]/g," ").replace(/\s+/g," ").trim().slice(0,max);
+const norm = v => clean(v).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+const phoneDigits = v => { let d = String(v||"").replace(/\D/g,""); if (d.length===11 && d.startsWith("51")) d = d.slice(2); return d; };
+const isTrujillo = () => norm($("#fCity").value)==="trujillo" && $("#fDep").value==="La Libertad";
+const CITY_HINTS = {"La Libertad":["Trujillo","Chepén","Pacasmayo","Virú","Huamachuco","Otuzco"],"Lima":["Lima"],"Lambayeque":["Chiclayo"],"Piura":["Piura","Sullana"],"Áncash":["Chimbote","Huaraz"],"Cajamarca":["Cajamarca"],"Arequipa":["Arequipa"],"Cusco":["Cusco"],"Callao":["Callao"]};
+
+function setStep(s){
+  if (!Object.keys(cart).length) s = "cart";
+  step = s;
+  $("#dTitle").textContent = TITLES[s];
+  $("#cartItems").hidden = s!=="cart"; $("#checkout").hidden = s!=="form"; $("#review").hidden = s!=="review";
+  renderCart();
+  $(".d-body").scrollTop = 0;
+}
+
+function summaryLines(t){
+  return `<div class="line"><span>Subtotal (${t.units} und.)</span><span>${soles(t.sub)}</span></div>
+    ${t.disc ? `<div class="line disc"><span>Descuento (${PCT}%)</span><span>− ${soles(t.disc)}</span></div>`:""}
+    <div class="line"><span>Envío</span><span>${step==="cart" ? "Gratis en Trujillo / Por coordinar" : (isTrujillo()?"Gratis en Trujillo":"Por coordinar")}</span></div>
+    <div class="line total"><span>Total de productos</span><span>${soles(t.total)}</span></div>`;
+}
+
 function renderCart(){
   const t = totals(), ids = Object.keys(cart);
   const c = $("#cartCount"); c.textContent = t.units; c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
   if (!ids.length){
+    if (step!=="cart"){ setStep("cart"); return; }
     $("#cartItems").innerHTML = `<div class="empty"><img src="img/connecti.jpg" alt=""><p><b>Tu carrito está vacío</b><br>Connecti te espera en el catálogo 😉</p></div>`;
     $("#cartFoot").innerHTML = `<a href="#productos" class="btn btn-primary" data-act="close-cart">Ver productos</a>`;
     return;
   }
+  if (step==="form"){
+    $("#cartFoot").innerHTML = `<div class="line total"><span>Total de productos${t.disc?` <small style="font-size:12px;color:#16a34a">(−${PCT}%)</small>`:""}</span><span>${soles(t.total)}</span></div><button class="btn btn-primary" data-act="to-review">Revisar mi pedido →</button><button class="btn-link" data-act="to-cart">← Volver al carrito</button>`;
+    return;
+  }
+  if (step==="review"){
+    $("#msgPrev").textContent = buildMessage();
+    $("#cartFoot").innerHTML = `<button class="btn btn-wa" data-act="send">💬 Enviar pedido por WhatsApp</button><button class="btn-link" data-act="to-form">← Editar mis datos</button>
+      <p class="note">Tu pedido se confirma cuando te respondamos por WhatsApp. El pago (Yape, Plin, tarjeta o transferencia) se coordina por ahí.</p>`;
+    return;
+  }
   $("#cartItems").innerHTML = ids.map(id => { const p=find(id); return `
     <div class="c-item"><img src="${p.img}" alt="">
-      <div><h4>${p.nombre}</h4><div class="pr">S/ ${p.precio} c/u</div><button class="rm" data-act="rm" data-id="${id}">Quitar</button></div>
+      <div><h4>${esc(p.nombre)}</h4><div class="pr">S/ ${p.precio} c/u</div><button class="rm" data-act="rm" data-id="${id}">Quitar</button></div>
       ${qtyHtml("cqty",id,cart[id])}
     </div>`; }).join("");
-  const falta = MIN_PROMO - t.pU, city = localStorage.getItem("city360") || "";
+  const falta = MIN_PROMO - t.pU;
   let hint = "";
   if (t.pU>0) hint = falta>0
-    ? `<div class="hint">🎁 Agrega <b>${falta}</b> placa${falta>1?'s':''} más y obtén <b>30% de descuento</b>.<div class="bar"><i style="width:${t.pU/MIN_PROMO*100}%"></i></div></div>`
-    : `<div class="hint ok">🎉 ¡Genial! Tienes <b>30% de descuento</b> en tus placas.</div>`;
-  $("#cartFoot").innerHTML = `${hint}
-    <div class="line"><span>Subtotal (${t.units} und.)</span><span>${soles(t.sub)}</span></div>
-    ${t.disc ? `<div class="line disc"><span>Descuento 30%</span><span>− ${soles(t.disc)}</span></div>`:""}
-    <div class="line"><span>Envío</span><span id="shipTxt">${city==="trujillo"?"GRATIS (Trujillo)":"A coordinar"}</span></div>
-    <div class="line total"><span>Total</span><span>${soles(t.total)}</span></div>
-    ${t.disc ? `<div class="saving">💚 ¡Estás ahorrando ${soles(t.disc)}!</div>`:""}
-    <div class="form">
-      <div><label for="fName">Tu nombre</label><input id="fName" placeholder="Ej. María Pérez" value="${(localStorage.getItem('name360')||'').replace(/"/g,'&quot;')}"></div>
-      <div><label for="fCity">Ciudad de envío</label>
-        <select id="fCity"><option value="">Selecciona…</option><option value="trujillo" ${city==="trujillo"?"selected":""}>Trujillo (delivery gratis)</option><option value="otra" ${city==="otra"?"selected":""}>Otra ciudad del Perú</option></select></div>
-      <div id="otherWrap" style="display:${city==="otra"?"block":"none"}"><input id="fOther" placeholder="¿Qué ciudad?" value="${(localStorage.getItem('other360')||'').replace(/"/g,'&quot;')}"></div>
-    </div>
-    <button class="btn btn-wa" data-act="buy">💬 Comprar por WhatsApp</button>
-    <p class="note">Te escribiremos para coordinar el pago (Yape, Plin, tarjeta o transferencia) y la configuración de tu pedido.</p>`;
+    ? `<div class="hint">🎁 Agrega <b>${falta}</b> placa${falta>1?'s':''} más y obtén <b>${PCT}% de descuento</b>.<div class="bar"><i style="width:${t.pU/MIN_PROMO*100}%"></i></div></div>`
+    : `<div class="hint ok">🎉 ¡Tienes <b>${PCT}% de descuento</b>! Estás ahorrando <b>${soles(t.disc)}</b>.</div>`;
+  $("#cartFoot").innerHTML = `${hint}${summaryLines(t)}
+    <button class="btn btn-primary" data-act="to-form">Continuar con mi pedido →</button>`;
 }
 
-function buy(){
-  const name = $("#fName").value.trim(), city=$("#fCity").value, other=($("#fOther")||{}).value?.trim()||"";
-  if(!name){ toast("Escribe tu nombre 🙂"); $("#fName").focus(); return; }
-  if(!city){ toast("Selecciona tu ciudad 📍"); $("#fCity").focus(); return; }
-  if(city==="otra" && !other){ toast("Indica tu ciudad 📍"); $("#fOther").focus(); return; }
-  const t = totals();
-  let m = `¡Hola 360 Connect! 👋 Quiero hacer este pedido:\n\n`;
-  for (const id in cart){ const p=find(id); m += `• ${cart[id]} x ${p.nombre} (S/ ${p.precio}) = S/ ${(cart[id]*p.precio).toFixed(2)}\n`; }
-  m += `\nSubtotal: ${soles(t.sub)}`;
-  if (t.disc) m += `\nDescuento 30% en placas: -${soles(t.disc)}`;
-  m += `\n*Total: ${soles(t.total)}*`;
-  m += `\nEnvío: ${city==="trujillo" ? "Trujillo – delivery gratis" : other + " – costo a coordinar"}`;
-  if (cart[PLAN.id]) m += `\n\nPara el Plan Connect Pro quiero coordinar el estilo de mis 6 placas y el contenido de mi web.`;
-  m += `\n\nNombre: ${name}\n\nQuedo atento(a) para coordinar el pago y enviar los datos de mi negocio. ¡Gracias!`;
-  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`, "_blank");
+function updateCityUI(){
+  const dep=$("#fDep").value, city=$("#fCity").value;
+  if (norm(city)==="trujillo" && !dep) $("#fDep").value="La Libertad";
+  $("#cityList").innerHTML = (CITY_HINTS[$("#fDep").value]||[]).map(c=>`<option value="${esc(c)}">`).join("");
+  const tru = isTrujillo(), filled = $("#fDep").value && clean(city).length>1;
+  $("#trujilloBox").hidden = !tru;
+  $("#provBox").hidden = tru || !filled;
+  if (step==="form") renderCart();
+}
+
+function setErr(id,msg){ const f=$("#"+id).closest(".fld"); f.classList.toggle("bad",!!msg); f.querySelector(".err").textContent=msg||""; return !msg; }
+function validate(){
+  const name=clean($("#fName").value,60), ph=phoneDigits($("#fPhone").value), dep=$("#fDep").value, city=clean($("#fCity").value,40);
+  const ok = [
+    setErr("fName", !name ? "Escribe tu nombre y apellido." : !/^[\p{L}][\p{L}'. -]+\s+[\p{L}][\p{L}'. -]*$/u.test(name) ? "Escribe nombre y apellido (solo letras)." : ""),
+    setErr("fPhone", !ph ? "Escribe tu número de WhatsApp." : !/^9\d{8}$/.test(ph) ? "Debe tener 9 dígitos y empezar con 9." : ""),
+    setErr("fDep", !dep ? "Selecciona tu departamento." : ""),
+    setErr("fCity", city.length<2 ? "Escribe tu ciudad." : norm(city)==="trujillo" && dep!=="La Libertad" ? "Trujillo pertenece a La Libertad: revisa el departamento." : "")
+  ];
+  if (isTrujillo()){
+    ok.push(setErr("fDist", !$("#fDist").value ? "Selecciona tu distrito." : ""));
+    ok.push(setErr("fAddr", clean($("#fAddr").value).length<6 ? "Escribe tu dirección completa." : ""));
+    ok.push(setErr("fRef", clean($("#fRef").value).length<4 ? "Escribe una referencia para ubicarte." : ""));
+  }
+  ok.push(setErr("fTerms", !$("#fTerms").checked ? "Debes aceptar los términos y la política de privacidad." : ""));
+  const bad = ok.indexOf(false);
+  if (bad>=0){ const el=$("#checkout .fld.bad input, #checkout .fld.bad select"); if(el){ el.focus({preventScroll:true}); el.scrollIntoView({block:"center",behavior:"smooth"}); } toast("Revisa los campos marcados ✋"); }
+  return bad<0;
+}
+
+function buildMessage(){
+  const t=totals(), tru=isTrujillo(), L="━━━━━━━━━━━━━━", ph=phoneDigits($("#fPhone").value);
+  const out=[`🛒 NUEVO PEDIDO — 360 CONNECT`,L,``,`👤 DATOS DEL CLIENTE`,
+    `Nombre: ${clean($("#fName").value,60)}`,`WhatsApp: +51 ${ph.replace(/(\d{3})(\d{3})(\d{3})/,"$1 $2 $3")}`,
+    `Departamento: ${$("#fDep").value}`,`Ciudad: ${tru?"Trujillo":clean($("#fCity").value,40)}`,``,`📍 DATOS DE ENTREGA`];
+  if (tru) out.push(`Distrito: ${$("#fDist").value}`,`Dirección: ${clean($("#fAddr").value)}`,`Referencia: ${clean($("#fRef").value)}`,`🚚 Delivery GRATIS en Trujillo.`);
+  else out.push(`📦 Envío a provincia.`,`Agencia y costo de envío pendientes de coordinación.`);
+  out.push(``,L,``,`🛍️ DETALLE DEL PEDIDO`,``);
+  Object.keys(cart).forEach((id,i)=>{ const p=find(id), q=cart[id];
+    out.push(`${i+1}. ${p.nombre}`,`   Cantidad: ${q}`,`   Precio unitario: ${money(p.precio)}`,`   Subtotal: ${money(q*p.precio)}`,``); });
+  out.push(L,``,`💰 RESUMEN DE COMPRA`,`Subtotal: ${money(t.sub)}`);
+  if (t.disc) out.push(`Descuento (${PCT}%): -${money(t.disc)}`);
+  out.push(`Total de productos: ${money(t.total)}`,`Envío: ${tru?"Gratis en Trujillo":"Por coordinar"}`,``,L,``,
+    `✅ SOLICITUD DE PEDIDO`,`Hola, deseo realizar este pedido con 360 CONNECT. Quedo atento a la confirmación de disponibilidad, entrega y pago.`);
+  return out.join("\n");
+}
+
+function sendOrder(){
+  if (!validate()){ setStep("form"); return; }
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildMessage())}`, "_blank", "noopener");
 }
 
 /* ---------- Detalle de producto ---------- */
@@ -687,7 +788,7 @@ function openModal(id){
     <img src="${p.img}" alt="${p.nombre}">
     <div class="m-info"><span class="tag" style="align-self:flex-start">${p.badge}</span>
       <h3>${p.nombre}</h3><p>${p.desc}</p>
-      <ul><li>📲 Funciona con NFC y con código QR</li><li>⚙️ La configuramos con el enlace de tu negocio</li><li>🚚 Envíos a todo el Perú · gratis en Trujillo</li><li>🎁 30% de descuento llevando 3 o más</li></ul>
+      <ul><li>📲 Funciona con NFC y con código QR</li><li>⚙️ La configuramos con el enlace de tu negocio</li><li>🚚 Envíos a todo el Perú · gratis en Trujillo</li><li>🎁 20% de descuento llevando 3 placas o más</li></ul>
       <div class="p-price">S/ ${p.precio} <small>c/u</small></div>
       <div class="p-row" id="mRow">${qtyHtml("mqty",id,1)}<button class="btn btn-primary add" data-act="madd">Agregar 🛒</button></div>
     </div>`;
@@ -753,23 +854,28 @@ document.addEventListener("click", e => {
   else if (a==="mqty"){ modalQty=Math.max(1,Math.min(99,modalQty+d)); $("#mRow .qty span").textContent=modalQty; }
   else if (a==="madd"){ addToCart(modalId,modalQty); toast(`✅ ${modalQty} x ${find(modalId).nombre} agregado`); closeModal(); }
   else if (a==="close-modal"){ if(e.target===b) closeModal(); }
-  else if (a==="pack"){ const k=PACKS[b.dataset.i]; k.items.forEach(i=>cart[i]=(cart[i]||0)+1); save(); renderCart(); openCart(); toast(`✅ ${k.nombre} agregado con 30% de descuento`); }
+  else if (a==="pack"){ const k=PACKS[b.dataset.i]; k.items.forEach(i=>cart[i]=(cart[i]||0)+1); save(); renderCart(); openCart(); toast(`✅ ${k.nombre} agregado con 20% de descuento`); }
   else if (a==="plan"){ if(!cart[PLAN.id]) addToCart(PLAN.id,1); openCart(); toast("✅ Plan Connect Pro agregado"); }
   else if (a==="tab") renderPhone(b.dataset.t);
   else if (a==="start") startGame();
   else if (a==="hit"){ if(game.on && +b.dataset.i===game.pos){ game.score++; $("#gS").textContent=game.score; clearInterval(game.mv); moveC(); game.mv=setInterval(moveC,750); } }
-  else if (a==="buy") buy();
+  else if (a==="to-form") setStep("form");
+  else if (a==="to-cart") setStep("cart");
+  else if (a==="to-review"){ if(validate()) setStep("review"); }
+  else if (a==="send") sendOrder();
   else if (a==="open-cart") openCart();
   else if (a==="close-cart") closeCart();
 });
 document.addEventListener("keydown", e => { if(e.key==="Escape"){ closeModal(); closeCart(); } });
-document.addEventListener("input", e => {
-  if (e.target.id==="fName") localStorage.setItem("name360", e.target.value);
-  if (e.target.id==="fOther") localStorage.setItem("other360", e.target.value);
+// Datos del cliente: solo en memoria, nunca se guardan (se borran datos de versiones anteriores)
+["name360","city360","other360"].forEach(k=>localStorage.removeItem(k));
+$("#checkout").addEventListener("submit", e => e.preventDefault());
+$("#checkout").addEventListener("input", e => {
+  if (e.target.id==="fPhone") e.target.value = e.target.value.replace(/[^\d\s+]/g,"");
+  if (e.target.id==="fCity") updateCityUI();
+  const f=e.target.closest(".fld"); if(f&&f.classList.contains("bad")){ f.classList.remove("bad"); f.querySelector(".err").textContent=""; }
 });
-document.addEventListener("change", e => {
-  if (e.target.id==="fCity"){ localStorage.setItem("city360", e.target.value); $("#otherWrap").style.display = e.target.value==="otra"?"block":"none"; $("#shipTxt").textContent = e.target.value==="trujillo"?"GRATIS (Trujillo)":"A coordinar"; }
-});
+$("#checkout").addEventListener("change", e => { if (e.target.id==="fDep"||e.target.id==="fCity") updateCityUI(); });
 
 $("#year").textContent = new Date().getFullYear();
 renderGrid(); renderPacks(); renderCart(); renderPhone("menu");
